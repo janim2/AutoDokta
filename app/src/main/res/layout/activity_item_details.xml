@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Details"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="200.0dp"
+        android:paddingLeft="8.0dp"
+        android:paddingTop="4.0dp"
+        android:paddingRight="8.0dp"
+        android:paddingBottom="4.0dp"
+        android:src="@color/stay_color" />
+
+    <LinearLayout
+        android:id="@+id/layout_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="8.0dp"
+        android:paddingTop="4.0dp"
+        android:paddingRight="8.0dp"
+        android:paddingBottom="4.0dp"
+        android:padding="4dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.8"
+            android:padding="4.0dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metal Cannister "
+                android:id="@+id/name"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GHC 8,999"
+                android:id="@+id/price"
+                android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ic_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.3"
+            android:src="@drawable/ic_favorite_border_black_18dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:padding="8dp"
+        android:ellipsize="end"
+        android:id="@+id/description"
+        android:text="Full 5X5 pure aluminium alloy metal cannister for Toyota base seating with inclined metal suspenders" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Call"
+        android:onClick="onClick"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

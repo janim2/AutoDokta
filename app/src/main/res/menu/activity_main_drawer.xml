@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_item5"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+
+
+    <item android:title="@string/help_support">
+        <menu>
+            <item
+                android:id="@+id/contact_us"
+                android:title="@string/contact_us" />
+            <item
+                android:id="@+id/terms_conditions"
+                android:title="@string/terms_conditions" />
+
+            <item
+                android:id="@+id/help_center"
+                android:title="@string/help_center" />
+
+            <item
+                android:id="@+id/services"
+                android:title="Services" />
+
+            <item
+                android:id="@+id/purchases"
+                android:title="Purchases" />
+        </menu>
+    </item>
+
+</menu>

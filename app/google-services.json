@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "89840719939",
+    "firebase_url": "https://cars-9c22a.firebaseio.com",
+    "project_id": "cars-9c22a",
+    "storage_bucket": "cars-9c22a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89840719939:android:00a7ba8c0a52c43d",
+        "android_client_info": {
+          "package_name": "com.autodokta.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89840719939-6re3h44nnspfp2p7erbrrgdei1hhlsqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoqa_hjROEInN5ACqnlE5tLLSK_6kzLz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89840719939-6re3h44nnspfp2p7erbrrgdei1hhlsqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89840719939:android:632bfb9156ab03e2",
+        "android_client_info": {
+          "package_name": "com.spareparts.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89840719939-pckqjd4jie159u59clpqv4i2cfa39mvl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spareparts.app",
+            "certificate_hash": "6b1b5f18b54d718a043c1cb28e2bd518bd08972c"
+          }
+        },
+        {
+          "client_id": "89840719939-6re3h44nnspfp2p7erbrrgdei1hhlsqt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoqa_hjROEInN5ACqnlE5tLLSK_6kzLz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89840719939-6re3h44nnspfp2p7erbrrgdei1hhlsqt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
