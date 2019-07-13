@@ -4,6 +4,7 @@ package com.autodokta.app;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.autodokta.app.helpers.Space;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,12 +29,13 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ToolsandGarage extends Fragment {
+//    <!--testing-->
 
     ArrayList resulttoolsGarage = new ArrayList<CarParts>();
     RecyclerView PostRecyclerView;
     RecyclerView.Adapter mPostAdapter;
     RecyclerView.LayoutManager mPostLayoutManager;
-    String imageurl, name, description, price;
+    String imageurl, name, description, price, sellersNumber;
     ProgressBar loading;
 
 
@@ -51,13 +54,18 @@ public class ToolsandGarage extends Fragment {
 
         PostRecyclerView = (RecyclerView) tools.findViewById(R.id.myRecyclerView);
         PostRecyclerView.setHasFixedSize(true);
+//
+//        mPostLayoutManager = new LinearLayoutManager(getActivity());
+        mPostLayoutManager = new GridLayoutManager(getActivity(),
+                2,LinearLayoutManager.VERTICAL,false);
 
-        mPostLayoutManager = new LinearLayoutManager(getActivity());
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
 
         getToolsIds();
 
         mPostAdapter = new PartsAdapter(getTools(),getActivity());
+        PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
+
         PostRecyclerView.setAdapter(mPostAdapter);
         return tools;
     }
@@ -109,6 +117,10 @@ public class ToolsandGarage extends Fragment {
                             price = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("buyersNumber")){
+                            sellersNumber = child.getValue().toString();
+                        }
+
 
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -118,7 +130,9 @@ public class ToolsandGarage extends Fragment {
 
                     String toolsid = key;
 
-                    CarParts obj = new CarParts(toolsid,imageurl,name,description,price);
+                    boolean isNew = false;
+
+                    CarParts obj = new CarParts(toolsid,imageurl,name,description,price,isNew, sellersNumber);
                     resulttoolsGarage.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

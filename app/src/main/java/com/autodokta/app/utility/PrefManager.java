@@ -11,6 +11,8 @@ public class PrefManager {
     SharedPreferences.Editor editor;
     Context _context;
 
+    //    <!--testing-->
+
     // shared pref mode
     int PRIVATE_MODE = 0;
 

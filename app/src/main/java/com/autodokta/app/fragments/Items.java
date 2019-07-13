@@ -10,6 +10,8 @@ import java.util.Map;
 @IgnoreExtraProperties
 public class Items {
 
+    //    <!--testing-->
+
     public String uid;
     public String name;
     public String description;

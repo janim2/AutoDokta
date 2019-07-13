@@ -45,6 +45,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
         return vh;
     }
 
+//    <!--testing-->
 
     @Override
     public void onBindViewHolder(PartsAdapter.ViewHolder holder, final int position) {
@@ -74,6 +75,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
                 intent.putExtra("thename",itemList.get(position).getname());
                 intent.putExtra("theprice",itemList.get(position).getPrice());
                 intent.putExtra("thedescription",itemList.get(position).getDescription());
+                intent.putExtra("thesellersNumber",itemList.get(position).getsellersNumber());
                 v.getContext().startActivity(intent);
             }
         });

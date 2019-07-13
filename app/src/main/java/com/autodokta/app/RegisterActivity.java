@@ -2,8 +2,8 @@ package com.autodokta.app;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +20,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private EditText inputEmail, inputPassword;
+//    app crashes because of this
+//    E/AndroidRuntime: FATAL EXCEPTION: TokenRefresher
+
+    private EditText inputEmail, inputPassword, firstname, lastname, username,
+            address, phone_number;
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     DatabaseReference mDatabase;
+
+    String sfirstname,slastname,susername,saddress,stelephone,email,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,48 +42,86 @@ public class RegisterActivity extends AppCompatActivity {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
-        btnSignIn = (Button) findViewById(R.id.sign_in_button);
+//        btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
+
+        firstname = (EditText) findViewById(R.id.firstname);
+        lastname = (EditText) findViewById(R.id.lastname);
+        username = (EditText) findViewById(R.id.username);
+        address = (EditText) findViewById(R.id.address);
+        phone_number = (EditText) findViewById(R.id.phone_number);
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
-        btnResetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this, ResetPasswordActivity.class));
-            }
-        });
+//        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(RegisterActivity.this, ResetPasswordActivity.class));
+//            }
+//        });
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        btnSignIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+                sfirstname = firstname.getText().toString().trim();
+                slastname = lastname.getText().toString().trim();
+                susername = username.getText().toString().trim();
+                saddress = address.getText().toString().trim();
+                stelephone = phone_number.getText().toString().trim();
+                email = inputEmail.getText().toString().trim();
+                password = inputPassword.getText().toString().trim();
+
+                if (TextUtils.isEmpty(sfirstname)) {
+                    firstname.setError("Required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(slastname)) {
+                    lastname.setError("Required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(susername)) {
+                    username.setError("Required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(saddress)) {
+                    address.setError("Required");
+                    return;
+                }
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    inputEmail.setError("Required");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(stelephone)) {
+                    phone_number.setError("Required");
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    inputPassword.setError("Required");
                     return;
                 }
 
                 if (password.length() < 6) {
-                    Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                    inputPassword.setError("Password too short");
                     return;
                 }
+
 
                 progressBar.setVisibility(View.VISIBLE);
                 //create user
@@ -85,7 +129,7 @@ public class RegisterActivity extends AppCompatActivity {
                         .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(RegisterActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(RegisterActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
@@ -94,8 +138,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     Toast.makeText(RegisterActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                                    onAuthSuccess(auth.getCurrentUser().getUid());
+                                    onAuthSuccess(auth.getCurrentUser().getUid(),sfirstname,slastname,susername,saddress,stelephone);
                                     finish();
                                 }
                             }
@@ -106,9 +149,14 @@ public class RegisterActivity extends AppCompatActivity {
 //    end of registration logic
     }
 
-    private void onAuthSuccess(String user) {
-        String userId = auth.getCurrentUser().getUid();
-        mDatabase.child("users").child("userID").setValue(user);
+    private void onAuthSuccess(String user,String fname, String lname, String username, String address, String phoneNumber) {
+        mDatabase.child("users").child(user).child("firstname").setValue(fname);
+        mDatabase.child("users").child(user).child("lastname").setValue(lname);
+        mDatabase.child("users").child(user).child("username").setValue(username);
+        mDatabase.child("users").child(user).child("address").setValue(address);
+        mDatabase.child("users").child(user).child("number").setValue(phoneNumber);
+        mDatabase.child("users").child(user).child("profileimage").setValue("none");
+
     }
 
 }

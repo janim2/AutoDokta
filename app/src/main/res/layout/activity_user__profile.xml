@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/profile_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/man"
+                android:id="@+id/profilecircleView"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_mode_edit_black_18dp"
+            android:layout_gravity="end"
+            android:id="@+id/editimage"
+            android:layout_marginRight="20dp"/>
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="18dp"
+            android:textSize="16dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="First name"
+            android:visibility="gone"
+            android:layout_margin="10sp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/fnameedit_text"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Last name "
+            android:visibility="gone"
+            android:layout_margin="10sp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/lnameedit_text"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="8dp"
+            android:text="Email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:hint="Email "
+            android:layout_margin="10sp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/emailedit_text"/>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="User Name" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username "
+            android:visibility="gone"
+            android:layout_margin="10sp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/usernameedit_text"/>
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="Address" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Address"
+            android:layout_margin="10sp"
+            android:visibility="gone"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/addressedit_text"/>
+
+
+        <TextView
+            android:id="@+id/mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="30dp"
+            android:text="Phone Number:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Phone Number "
+            android:layout_margin="10sp"
+            android:visibility="gone"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/numberedit_text"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="SUBMIT"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:id="@+id/submit"
+            android:visibility="gone"
+            android:layout_marginTop="30dp"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

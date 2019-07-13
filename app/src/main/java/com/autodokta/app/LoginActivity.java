@@ -3,8 +3,12 @@ package com.autodokta.app;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,18 +34,8 @@ public class LoginActivity extends BaseActivity {
     private ProgressBar progressBar;
     private Button btnSignup, btnLogin, btnReset;
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-//        Checking User Session
-//        if user is loggedin
-        if (auth.getCurrentUser() != null){
-            startActivity(new Intent(LoginActivity.this,MainActivity.class));
-            finish();
-        }
-    }
-
+    Menu menu;
+    MenuItem menuItem;
 
     private void signIn() {
         Log.d(TAG, "signIn");
@@ -61,7 +55,10 @@ public class LoginActivity extends BaseActivity {
                         hideProgressDialog();
 
                         if (task.isSuccessful()) {
-                            onAuthSuccess(task.getResult().getUser());
+//                            onAuthSuccess(task.getResult().getUser());
+                            Toast.makeText(LoginActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
+                            finish();
+                            startActivity(new Intent(LoginActivity.this,MainActivity.class));
                         } else {
                             Toast.makeText(LoginActivity.this, "Sign In Failed",
                                     Toast.LENGTH_SHORT).show();
@@ -74,7 +71,6 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         //Get Firebase auth instance
@@ -139,9 +135,12 @@ public class LoginActivity extends BaseActivity {
                                         Toast.makeText(LoginActivity.this, "login failed", Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    startActivity(intent);
+//                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                                    startActivity(intent);
                                     finish();
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(intent);
                                 }
                             }
                         });
@@ -158,7 +157,7 @@ public class LoginActivity extends BaseActivity {
         writeNewUser(user.getUid(), username, user.getEmail());
 
         // Go to MainActivity
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//        startActivity(new Intent(LoginActivity.this, MainActivity.class));
         finish();
     }
 

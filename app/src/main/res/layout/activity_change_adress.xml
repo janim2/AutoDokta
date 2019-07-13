@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeAdress">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR ADDRESS"
+                android:textSize="15sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cannot fetch address."
+                android:textColorHint="@color/grey_light"
+                android:layout_marginTop="5dp"
+                android:id="@+id/editaddress"
+                android:textColor="@android:color/black"
+                android:background="@android:drawable/editbox_background"
+                android:textSize="15sp"
+                android:padding="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="EDIT"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:id="@+id/editbutton"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="MODIFY CART"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:id="@+id/editCart"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:id="@+id/loading"/>
+    </FrameLayout>
+
+
+
+</ScrollView>

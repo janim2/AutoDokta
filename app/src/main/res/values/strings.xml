@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Auto Dokta</string>
+    //    <!--testing-->
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -61,5 +62,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nointernet">No Internet Connection. \n Tap to Refresh</string>
+    <string name="delivery_method"><b>Home and Office Delivery</b> \nDelivered between 2 days for GHC 10.00</string>
+
+    <string name="autodoktapay">You already have an account registered on AutoDokta Pay.You may proceed and complete your payment in one click!\nIf you have any balance,please select this option to use it.</string>
+
+    <string name="mtninstructions">1. Dial *170# OR On your Phone Menu, locate "MY MTN" and select Mobile Money.\n\n2. Select "Transfer Money"\n\n3. Select "Other Networks".\n\n4. Choose "AirtelTigo"\n\n5. Enter mobile Number "0266711801"\n\n6. Confirm mobile number "0266711801"/n/n7. Enter Amount. Eg. 50 for GHS 50.00\n\n8. Enter Order Number as reference. You will see your order number after clicking on Confirm Order.\n\n9. Enter your Mobile Money pin.\n\n10. You will recieve an SMS or Email confirming message of successsful payment. </string>
+    <string name="confirm"><b>1. Confirmation</b>\n\nCongratulations, Your order was successfully submmitted and our customer service may contact you for verification.If you are paying via mobile money, please make payment within 24 hours to avoid cancellation of order.</string>
+    <string name="shipping"><b>2. Shipping</b>\n\nYour order will be prepared for shipment once it is confirmed. You will receive updates.</string>
+    <string name="track"><b>3. Track</b>You can track your order by clicking on My Garage</string>
 
 </resources>

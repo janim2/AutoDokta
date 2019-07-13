@@ -4,6 +4,7 @@ package com.autodokta.app;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.autodokta.app.helpers.Space;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,12 +29,13 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class Wheels extends Fragment {
+//    <!--testing-->
 
     ArrayList resultWheels = new ArrayList<CarParts>();
     RecyclerView PostRecyclerView;
     RecyclerView.Adapter mPostAdapter;
     RecyclerView.LayoutManager mPostLayoutManager;
-    String imageurl, name, description, price;
+    String imageurl, name, description, price, sellersNumber;
     ProgressBar loading;
 
 
@@ -52,12 +55,17 @@ public class Wheels extends Fragment {
         PostRecyclerView = (RecyclerView) wheels.findViewById(R.id.myRecyclerView);
         PostRecyclerView.setHasFixedSize(true);
 
-        mPostLayoutManager = new LinearLayoutManager(getActivity());
+//        mPostLayoutManager = new LinearLayoutManager(getActivity());
+        mPostLayoutManager = new GridLayoutManager(getActivity(),
+                2,LinearLayoutManager.VERTICAL,false);
+
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
 
         getWheelIds();
 
         mPostAdapter = new PartsAdapter(getWheels(),getActivity());
+        PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
+
         PostRecyclerView.setAdapter(mPostAdapter);
         return  wheels;
     }
@@ -109,6 +117,10 @@ public class Wheels extends Fragment {
                             price = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("buyersNumber")){
+                            sellersNumber = child.getValue().toString();
+                        }
+
 
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -117,8 +129,9 @@ public class Wheels extends Fragment {
                     }
 
                     String wheelid = key;
+                    boolean isNew = false;
 
-                    CarParts obj = new CarParts(wheelid,imageurl,name,description,price);
+                    CarParts obj = new CarParts(wheelid,imageurl,name,description,price,isNew, sellersNumber);
                     resultWheels.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

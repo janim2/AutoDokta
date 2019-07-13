@@ -1,99 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceOrderDetails">
 
-tools:context=".RegisterActivity">
-
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/colorPrimaryDark"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="@dimen/activity_horizontal_margin">
-
-
-
-
-    <android.support.design.widget.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/email"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/engine"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="email"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="@android:color/white" />
+            android:orientation="vertical"
+            android:padding="10dp">
 
-    </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We have no records on you"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/gen_black"/>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register here"
+                android:textSize="15sp"
+                android:id="@+id/service_description"
+                android:layout_marginTop="5dp"/>
 
-        <EditText
-            android:id="@+id/password"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="First Name"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/firstname"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textColorHint="@android:color/black"
+                    android:background="@drawable/buttondesign"/>
+                />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Last Name"
+                    android:id="@+id/lastname"
+                    android:paddingLeft="10dp"
+                    android:inputType="textPersonName"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:layout_margin="5dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textColorHint="@android:color/black"
+                    android:background="@drawable/buttondesign"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More Details Needed"
+                android:inputType="text"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/holo_red_dark"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:paddingLeft="10dp"
+                android:id="@+id/username"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/holo_red_dark"
+                android:background="@drawable/buttondesign"
+                android:layout_marginTop="10dp"
+                android:hint="Username"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:inputType="textMultiLine"
+                android:id="@+id/address"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/holo_red_dark"
+                android:background="@drawable/buttondesign"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:hint="Address"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttondesign"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:hint="Phone Number"
+                android:id="@+id/phone_number"
+                android:paddingLeft="10dp"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/holo_red_dark"
+                android:inputType="phone"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttondesign"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:hint="Email"
+                android:id="@+id/email"
+                android:paddingLeft="10dp"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/holo_red_dark"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/buttondesign"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:hint="Password"
+                android:paddingLeft="10dp"
+                android:id="@+id/password"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/holo_red_dark"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"/>
+
+        <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
-            android:hint="Password"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Register --> Login"
+            android:textColor="@android:color/white"
+            android:id="@+id/sign_up_button"
+            android:textSize="20sp"
+            android:background="@color/colorPrimary"
+            />
 
-            android:imeOptions="actionUnspecified"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:textColor="@android:color/white" />
 
-    </android.support.design.widget.TextInputLayout>
 
-    <Button
-        android:id="@+id/sign_up_button"
-        style="?android:textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorAccent"
-        android:text="SignUp"
-        android:textColor="@android:color/black"
-        android:textStyle="bold" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_reset_password"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dip"
-        android:background="@null"
-        android:text="Forget Password"
-        android:textAllCaps="false"
-        android:textColor="@color/colorAccent" />
+</ScrollView>
 
-    <!-- Link to Login Screen -->
 
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dip"
-        android:background="@null"
-        android:text="Login"
-        android:textAllCaps="false"
-        android:textColor="@color/gen_white"
-        android:textSize="15dp" />
-</LinearLayout>
-
-<ProgressBar
-    android:id="@+id/progressBar"
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:layout_gravity="center|bottom"
-    android:layout_marginBottom="20dp"
-    android:visibility="gone" />
-</android.support.design.widget.CoordinatorLayout>
 

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompleteOrder">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@color/colorPrimary">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:src="@drawable/back"-->
+                <!--android:id="@+id/goorback"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="Complete Order"-->
+                <!--android:textSize="20sp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_marginLeft="20dp"/>-->
+
+        <!--</Toolbar>-->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery and Payment"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            android:padding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR ADDRESS"
+                android:textSize="15sp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHANGE ADDRESS"
+                android:gravity="end"
+                android:textSize="14sp"
+                android:id="@+id/changeaddress"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/loading"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unable to fetch address"
+            android:id="@+id/address"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:textSize="15sp"
+            android:padding="20dp"/>
+
+         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DELIVERY METHOD"
+            android:textSize="15sp"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delivery_method"
+            android:background="@android:color/white"
+            android:textSize="15sp"
+            android:padding="20dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Items Total"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"/>
+
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="GHC 100.00"
+                 android:id="@+id/itemprizes"
+                 android:textColor="@android:color/black"
+                 android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Shipping Fees"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"/>
+
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="GHC 10.00"
+                 android:textStyle="bold"
+                 android:textColor="@android:color/black"
+                 android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Total"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"/>
+
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="GHC 10.00"
+                 android:textStyle="bold"
+                 android:textSize="20sp"
+                 android:id="@+id/totaltotal"
+                 android:textColor="@color/colorPrimary"
+                 android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="NEXT"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:id="@+id/next"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="MODIFY CART"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:id="@+id/modifyCart"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

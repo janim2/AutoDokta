@@ -8,14 +8,43 @@ public class CarParts {
     public String name;
     public String description;
     public String price;
+    public String sellersNumber;
 
-    public CarParts(String partId, String image, String name, String description, String price) {
+    public String quantity;
+
+
+    private boolean isNew = false;
+
+    public CarParts(String partId, String image, String name, String description, String price, boolean isNew, String sellersNumber) {
 
         this.partId = partId;
         this.image = image;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.isNew = isNew;
+        this.sellersNumber = sellersNumber;
+    }
+
+    public CarParts(){
+
+    }
+
+    public CarParts(String partId, String image, String name, String description, String price, boolean isNew, String sellersNumber,String quantity) {
+
+        this.partId = partId;
+        this.image = image;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.isNew = isNew;
+        this.sellersNumber = sellersNumber;
+        this.quantity = quantity;
+    }
+
+
+    public boolean isNew() {
+        return isNew;
     }
 
     public String getPartId(){return partId; }
@@ -28,6 +57,11 @@ public class CarParts {
 
     public String getPrice(){return price; }
 
+    public String getsellersNumber(){return sellersNumber; }
+
+    public String getQuantity(){
+        return quantity;
+    }
 
 
 }

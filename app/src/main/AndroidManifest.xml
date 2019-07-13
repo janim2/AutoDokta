@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -19,31 +20,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.autodokta.app.ResetPasswordActivity"></activity>
-        <activity android:name="com.autodokta.app.LoginActivity">
+        <activity android:name=".User_Profile"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Garage" />
+        <activity android:name=".orderComplete" />
+        <activity android:name=".ChangeAdress" />
+        <activity
+            android:name=".orderSummary"
+            android:parentActivityName=".PaymentMethod" />
+        <activity
+            android:name=".PaymentMethod"
+            android:parentActivityName=".CompleteOrder" />
+        <activity
+            android:name=".CompleteOrder"
+            android:parentActivityName=".Cart" />
+        <activity
+            android:name=".Cart"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ServiceOrderDetails"
+            android:parentActivityName=".ServicesActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.autodokta.app.RegisterActivity" />
-        <activity android:name="com.autodokta.app.MainActivity" />
-        <activity android:name="com.autodokta.app.PurchasesActivity" />
-        <activity android:name="com.autodokta.app.ServicesActivity" />
-        <activity android:name="com.autodokta.app.HelpCenterActivity" />
-        <activity android:name="com.autodokta.app.TermsActivity" />
-        <activity android:name="com.autodokta.app.ContactUsActivity" />
+        <activity android:name=".PurchasesActivity" />
         <activity
-            android:name="com.autodokta.app.IndexActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:name=".ServicesActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".HelpCenterActivity" />
+        <activity android:name=".TermsActivity" />
+        <activity android:name=".ContactUsActivity" />
         <activity
-            android:name="com.autodokta.app.ItemDetailsActivity"
+            android:name=".IndexActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.autodokta.app.AboutUsActivity"
+            android:name=".ItemDetailsActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AboutUsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
+    <!--testing-->
 </manifest>

@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="As one of the ReVOLT Group companies, ReVOLT Auto was established to be a one stop Auto shop in Ghana. ReVOLT was established to provide all vehicle owners and users easy and timely access to all auto parts at the comfort of homes, offices and wherever they are located. With ReVOLT Auto there is no need to travel to any Auto Parts (spare parts) hub to get quality and affordable Auto parts of their choice. We provide a catalogue that puts power in the hands of our Customer which allows them to quickly choose the exact parts they are searching for at ease." />
+        android:text="As one of the Auto Dokta Group companies, Auto Dokta was established to be a one stop Auto shop in Ghana. Auto Dokta was established to provide all vehicle owners and users easy and timely access to all auto parts at the comfort of homes, offices and wherever they are located. With Auto Dokta there is no need to travel to any Auto Parts (spare parts) hub to get quality and affordable Auto parts of their choice. We provide a catalogue that puts power in the hands of our Customer which allows them to quickly choose the exact parts they are searching for at ease." />
 
     <TextView
         android:padding="8dp"

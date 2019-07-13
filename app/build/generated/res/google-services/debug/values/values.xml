@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">89840719939-6re3h44nnspfp2p7erbrrgdei1hhlsqt.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://cars-9c22a.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">89840719939</string>
+    <string name="google_api_key" translatable="false">AIzaSyCoqa_hjROEInN5ACqnlE5tLLSK_6kzLz0</string>
+    <string name="google_app_id" translatable="false">1:89840719939:android:00a7ba8c0a52c43d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCoqa_hjROEInN5ACqnlE5tLLSK_6kzLz0</string>
+    <string name="google_storage_bucket" translatable="false">cars-9c22a.appspot.com</string>
+    <string name="project_id" translatable="false">cars-9c22a</string>
+</resources>

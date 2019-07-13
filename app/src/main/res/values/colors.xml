@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#60EE09</color>
-    <color name="colorPrimaryDark">#50C408</color>
+    <color name="colorPrimary">	#056639</color>
+    <color name="colorGrey">	#7E7E7E</color>
+    <color name="colorPrimaryDark">#006639</color>
+    <color name="colorGreyDark">#6E6E6E</color>
     <color name="colorAccent">#651FFF</color>
+    <color name="lightest_grey">#D8D8D8</color>
+    <color name="resetColorAccent">#D81B60</color>
+    //    <!--testing-->
+
+
+    <color name="colorGreen">#60EE09</color>
+    <color name="colorGreenDark">#50C408</color>
+    <color name="resetgreen">#008577</color>
+
+
+
 
     <color name="gen_black">#000000</color>
     <color name="gen_white">#FFFFFF</color>

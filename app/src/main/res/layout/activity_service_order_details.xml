@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServiceOrderDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service type here"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:id="@+id/servicetype"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service Description"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/gen_black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item description here"
+                android:textSize="15sp"
+                android:id="@+id/service_description"
+                android:layout_marginTop="5dp"/>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="More Details Needed"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/holo_red_dark"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Date"
+                        android:paddingLeft="10dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textColorHint="@android:color/black"
+                        android:background="@drawable/buttondesign"/>
+                    />
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Time"
+                        android:paddingLeft="10dp"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:layout_margin="5dp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textColorHint="@android:color/black"
+                        android:background="@drawable/buttondesign"/>
+
+
+
+
+            </LinearLayout>
+            >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"
+                    android:hint="Name"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="15sp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Location"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:hint="Phone Number"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:inputType="phone"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Order"
+            android:textColor="@android:color/white"
+            android:id="@+id/order"
+            android:textSize="20sp"
+            android:background="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
