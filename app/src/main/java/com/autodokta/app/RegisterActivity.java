@@ -139,6 +139,12 @@ public class RegisterActivity extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     onAuthSuccess(auth.getCurrentUser().getUid(),sfirstname,slastname,susername,saddress,stelephone);
+//                                       send verification email to the user
+                                    sendVerificationEmail();
+
+//                                    After email is sent,logout the user and finish this activity
+                                    FirebaseAuth.getInstance().signOut();
+                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                     finish();
                                 }
                             }
