@@ -154,6 +154,21 @@ public class RegisterActivity extends AppCompatActivity {
         });
 //    end of registration logic
     }
+    
+     public void sendVerificationEmail(){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null){
+            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()){
+                        Toast.makeText(RegisterActivity.this,"Signup successful.Verification email sent",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
 
     private void onAuthSuccess(String user,String fname, String lname, String username, String address, String phoneNumber) {
         mDatabase.child("users").child(user).child("firstname").setValue(fname);
