@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -139,6 +140,12 @@ public class RegisterActivity extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     onAuthSuccess(auth.getCurrentUser().getUid(),sfirstname,slastname,susername,saddress,stelephone);
+//                                    send verification email to the user
+                                    sendVerificationEmail();
+
+//                                    After email is sent,logout the user and finish this activity
+                                    FirebaseAuth.getInstance().signOut();
+                                    startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                                     finish();
                                 }
                             }
@@ -147,6 +154,21 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 //    end of registration logic
+    }
+
+    private void sendVerificationEmail() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null){
+            user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if (task.isSuccessful()){
+                        Toast.makeText(RegisterActivity.this,"Signup successful.Verification email sent",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     private void onAuthSuccess(String user,String fname, String lname, String username, String address, String phoneNumber) {

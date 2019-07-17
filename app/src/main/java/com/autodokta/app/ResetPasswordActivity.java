@@ -13,11 +13,12 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ResetPasswordActivity extends AppCompatActivity {
 
     private EditText inputEmail;
-    private Button btnReset, btnBack;
+    private Button btnReset, btnBack, resend_v_link;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
 
@@ -29,6 +30,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.email);
         btnReset = (Button) findViewById(R.id.btn_reset_password);
         btnBack = (Button) findViewById(R.id.btn_back);
+        resend_v_link = (Button) findViewById(R.id.resend_v_link);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         auth = FirebaseAuth.getInstance();
@@ -64,13 +66,35 @@ public class ResetPasswordActivity extends AppCompatActivity {
                         progressBar.setVisibility(View.GONE);
                     }
                 });
-
             }
         });
 
 //    end of Reset action logic
 
+        resend_v_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resendVerificationLink();
+            }
+        });
 
     }
+
+    private void resendVerificationLink() {
+        progressBar.setVisibility(View.VISIBLE);
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(firebaseUser!=null){
+//            firebaseUser.reload();
+//            if(!firebaseUser.isEmailVerified()) {
+                firebaseUser.sendEmailVerification();
+                Toast.makeText(ResetPasswordActivity.this, "Email Sent!", Toast.LENGTH_LONG).show();
+            }else {
+                Toast.makeText(ResetPasswordActivity.this, "Your email has been verified! You can login now.", Toast.LENGTH_LONG).show();
+            }
+//        }
+        progressBar.setVisibility(View.GONE);
+    }
+
 }
 
