@@ -29,7 +29,6 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ToolsandGarage extends Fragment {
-//    <!--testing-->
 
     ArrayList resulttoolsGarage = new ArrayList<CarParts>();
     RecyclerView PostRecyclerView;

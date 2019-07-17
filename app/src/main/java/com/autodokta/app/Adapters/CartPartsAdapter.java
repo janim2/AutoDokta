@@ -94,8 +94,6 @@ import java.util.ArrayList;
 //                    Toast.makeText(v.getContext(),"Coming Soon",Toast.LENGTH_LONG).show();
 //                }
 //            });
-            //    <!--testing-->
-
 
             subtract.setOnClickListener(new View.OnClickListener() {
                 @Override

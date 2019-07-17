@@ -9,8 +9,6 @@ public class ImageUrlUtils {
     static ArrayList<String> wishlistImageUri = new ArrayList<>();
     static ArrayList<String> cartListImageUri = new ArrayList<>();
 
-    //    <!--testing-->
-
     public static String[] getImageUrls() {
         String[] urls = new String[] {
                 "https://static.pexels.com/photos/5854/sea-woman-legs-water-medium.jpg",

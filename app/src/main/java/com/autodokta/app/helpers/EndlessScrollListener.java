@@ -9,8 +9,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
  * Created by amardeep on 1/4/2018.
  */
 
-//    <!--testing-->
-
 public abstract class EndlessScrollListener extends RecyclerView.OnScrollListener {
     // The minimum amount of items to have below your current scroll position
     // before loading more.

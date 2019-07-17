@@ -18,10 +18,8 @@ public class HackyViewPager extends ViewPager {
         super(context, attrs);
         isLocked = false;
     }
-//        <!--testing-->
 
-
-	@Override
+    @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
     	if (!isLocked) {
 	        try {

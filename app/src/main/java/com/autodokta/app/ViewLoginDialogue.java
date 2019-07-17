@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class ViewLoginDialogue {
-//    <!--testing-->
 
     public void showDialog(Activity activity, String msg){
         final Dialog dialog = new Dialog(activity);

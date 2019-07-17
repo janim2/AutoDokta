@@ -92,8 +92,6 @@ public class ExpandablelistAdapter extends BaseExpandableListAdapter {
 //        }
         return  convertView;
     }
-    //    <!--testing-->
-
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {

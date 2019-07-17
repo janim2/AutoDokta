@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class TodoDetailsActivity extends AppCompatActivity {
 
-        String title,message;
-        TextView nametxtView,messagetxtView;
+        String title,message, thedate;
+        TextView nametxtView,messagetxtView,the_datetxtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +25,15 @@ public class TodoDetailsActivity extends AppCompatActivity {
 
         nametxtView = (TextView)findViewById(R.id.todoName);
         messagetxtView = (TextView)findViewById(R.id.todoMessage);
+        the_datetxtView = (TextView)findViewById(R.id.todoDate);
 
         title = intent.getStringExtra("title");
         message = intent.getStringExtra("message");
+        thedate = intent.getStringExtra("the_date");
 
-        nametxtView.setText("Title:" + title);
-        messagetxtView.setText("Message:" + message);
+        nametxtView.setText(title);
+        messagetxtView.setText(message);
+        the_datetxtView.setText(thedate);
 
 
 

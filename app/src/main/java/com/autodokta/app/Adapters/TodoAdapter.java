@@ -63,6 +63,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.ViewHolder> {
                 Intent intent = new Intent(v.getContext(), TodoDetailsActivity.class);
                 intent.putExtra("title",itemList.get(i).getTodo_Item_Title());
                 intent.putExtra("message",itemList.get(i).getTodo_Item_Message());
+                intent.putExtra("the_date",itemList.get(i).getTodo_Item_Date());
                 v.getContext().startActivity(intent);
             }
         });

@@ -5,7 +5,6 @@ import com.google.firebase.database.IgnoreExtraProperties;
 // [START blog_user_class]
 @IgnoreExtraProperties
 public class User {
-//    <!--testing-->
 
     public String username;
     public String email;

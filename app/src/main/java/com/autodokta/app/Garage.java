@@ -31,7 +31,7 @@ public class Garage extends AppCompatActivity {
     RecyclerView.LayoutManager todoLayoutManager;
     String todo_title;
     ProgressBar loading;
-    String todo_name,todo_message;
+    String todo_name,todo_message, thedate;
     FirebaseUser user;
 
     FloatingActionButton add_a_todo;
@@ -108,9 +108,14 @@ public class Garage extends AppCompatActivity {
                             if(child.getKey().equals("message")){
                                 todo_message = child.getValue().toString();
                             }
+
+                            if(child.getKey().equals("date")){
+                                thedate = child.getValue().toString();
+                            }
+
                         }
 
-                        TodoItems obj = new TodoItems(key,todo_name,todo_message);
+                        TodoItems obj = new TodoItems(key,todo_name,todo_message,thedate);
                         todo_items.add(obj);
                         todo_items_recyclerView.setAdapter(todoAdapter);
                         todoAdapter.notifyDataSetChanged();

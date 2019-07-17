@@ -13,7 +13,6 @@ public class ServiceOrderDetails extends AppCompatActivity {
     Button order;
     TextView servicetype, servicedescriptionTextView;
     Intent getService;
-//    <!--testing-->
 
     String servicename, servicedescription;
 

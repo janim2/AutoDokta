@@ -13,7 +13,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class ViewCartDialogue {
-//    <!--testing-->
 
     public void showDialog(final Activity activity, String msg, final String user, final String cartItemId){
         final Dialog dialog = new Dialog(activity);

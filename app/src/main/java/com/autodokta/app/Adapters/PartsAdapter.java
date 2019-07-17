@@ -45,7 +45,6 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
         return vh;
     }
 
-//    <!--testing-->
 
     @Override
     public void onBindViewHolder(PartsAdapter.ViewHolder holder, final int position) {

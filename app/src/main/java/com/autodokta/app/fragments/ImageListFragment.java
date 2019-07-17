@@ -180,6 +180,4 @@ public class ImageListFragment extends Fragment {
             price.setText(model.price);
         }
     }
-//        <!--testing-->
-
 }

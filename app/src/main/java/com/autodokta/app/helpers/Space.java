@@ -12,8 +12,6 @@ public class Space extends RecyclerView.ItemDecoration {
     private boolean includeEdge;
     private int headerNum;
 
-    //    <!--testing-->
-
     public Space(int spanCount, int spacing, boolean includeEdge, int headerNum) {
         this.spanCount = spanCount;
         this.spacing = spacing;

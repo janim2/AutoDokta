@@ -13,7 +13,6 @@ public class ServicesActivity extends AppCompatActivity {
 
     Button submitted;
     LinearLayout car_insuranceLayout, aircondtioningLayout, autoMechanicLayout,brakepadLayout, brakefluidLayout,punctureLayout, engineoilLayout, exhausstLayout;
-//    <!--testing-->
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

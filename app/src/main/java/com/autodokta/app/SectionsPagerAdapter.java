@@ -15,7 +15,6 @@ import java.util.List;
  * Class that stores fragments for tabs
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
-//    <!--testing-->
 
     private static final String TAG = "SectionsPagerAdapter";
 

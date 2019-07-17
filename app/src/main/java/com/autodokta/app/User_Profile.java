@@ -321,6 +321,4 @@ public class User_Profile extends AppCompatActivity {
 
     }
 
-//    testing
-
 }
