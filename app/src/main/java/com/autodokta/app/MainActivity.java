@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
     public static int notificationCountCart = 0;
     FirebaseAuth mAuth;
     Menu menu;
-    MenuItem menuItem, profilemenuitem;
+    MenuItem menuItem, profilemenuitem, garageMenuItem;
     FrameLayout layout;
     TextView cartnumberTextView;
 
@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity
 //        getting the menuitem that i want to change
         menuItem = menu.findItem(R.id.logout);
         profilemenuitem = menu.findItem(R.id.profile);
+        garageMenuItem = menu.findItem(R.id.garage);
 
 
         layout.setOnClickListener(new View.OnClickListener() {
@@ -152,6 +153,7 @@ public class MainActivity extends AppCompatActivity
         }else{
             layout.setVisibility(View.GONE);
             profilemenuitem.setVisible(false);
+            garageMenuItem.setVisible(false);
             menuItem.setTitle("Login");
             menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
@@ -299,8 +301,8 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
-        if (id == R.id.help_center){
-            startActivity(new Intent(MainActivity.this,HelpCenterActivity.class));
+        if (id == R.id.garage){
+            startActivity(new Intent(MainActivity.this,Garage.class));
             return true;
         }
 

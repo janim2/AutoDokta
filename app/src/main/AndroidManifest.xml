@@ -20,8 +20,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".User_Profile"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Add_a_TodoActivity"
+            android:parentActivityName=".Garage"></activity>
+        <activity
+            android:name=".User_Profile"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".Garage" />
         <activity android:name=".orderComplete" />
         <activity android:name=".ChangeAdress" />
@@ -59,6 +62,8 @@
         <activity android:name=".HelpCenterActivity" />
         <activity android:name=".TermsActivity" />
         <activity android:name=".ContactUsActivity" />
+        <activity android:name=".TodoDetailsActivity"
+            android:parentActivityName=".Garage"/>
         <activity
             android:name=".IndexActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -71,5 +76,4 @@
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
-    <!--testing-->
 </manifest>
