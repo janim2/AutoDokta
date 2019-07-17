@@ -138,31 +138,27 @@ public class LoginActivity extends BaseActivity {
 //                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 //                                    startActivity(intent);
                                     finish();
-//                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                                    startActivity(intent);
-                                    checkIfEmailVerified();
+//                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                                     startActivity(intent);
+                                      checkIfEmailVerified();
                                 }
                             }
                         });
             }
         });
+
+
     }
-
-    private void checkIfEmailVerified() {
+    
+     private void checkIfEmailVerified(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        try {
-            if (user.isEmailVerified()){
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                Toast.makeText(LoginActivity.this,"login successful",Toast.LENGTH_SHORT).show();
-            }else {
-                Toast.makeText(LoginActivity.this,"Verify email",Toast.LENGTH_SHORT).show();
-                FirebaseAuth.getInstance().signOut();
-            }
-        }catch (NullPointerException e){
-
+        if (user.isEmailVerified()){
+            startActivity(new Intent(LoginActivity.this,MainActivity.class));
+            Toast.makeText(LoginActivity.this,"login successful",Toast.LENGTH_SHORT).show();
+        }else {
+            FirebaseAuth.getInstance().signOut();
         }
-
     }
 
     private void onAuthSuccess(FirebaseUser user) {

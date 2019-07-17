@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -140,7 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
                                 } else {
                                     onAuthSuccess(auth.getCurrentUser().getUid(),sfirstname,slastname,susername,saddress,stelephone);
-//                                    send verification email to the user
+//                                       send verification email to the user
                                     sendVerificationEmail();
 
 //                                    After email is sent,logout the user and finish this activity
@@ -155,8 +154,8 @@ public class RegisterActivity extends AppCompatActivity {
         });
 //    end of registration logic
     }
-
-    private void sendVerificationEmail() {
+    
+     public void sendVerificationEmail(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null){
             user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
