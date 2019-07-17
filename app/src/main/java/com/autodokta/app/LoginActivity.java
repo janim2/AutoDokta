@@ -138,10 +138,9 @@ public class LoginActivity extends BaseActivity {
 //                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 //                                    startActivity(intent);
                                     finish();
-//                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                                     startActivity(intent);
-                                      checkIfEmailVerified();
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(intent);
                                 }
                             }
                         });
@@ -149,16 +148,6 @@ public class LoginActivity extends BaseActivity {
         });
 
 
-    }
-    
-     private void checkIfEmailVerified(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user.isEmailVerified()){
-            startActivity(new Intent(LoginActivity.this,MainActivity.class));
-            Toast.makeText(LoginActivity.this,"login successful",Toast.LENGTH_SHORT).show();
-        }else {
-            FirebaseAuth.getInstance().signOut();
-        }
     }
 
     private void onAuthSuccess(FirebaseUser user) {
