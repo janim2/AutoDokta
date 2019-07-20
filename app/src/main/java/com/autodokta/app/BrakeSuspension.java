@@ -80,7 +80,7 @@ public class BrakeSuspension extends Fragment {
                         FetchBrakes(child.getKey());
                     }
                 }else{
-                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
 
                 }
             }

@@ -83,7 +83,7 @@ public class Offers extends Fragment {
                         FetchParts(child.getKey());
                     }
                 }else{
-                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
 
                 }
             }

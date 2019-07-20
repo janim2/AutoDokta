@@ -13,15 +13,79 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="YOUR ADDRESS"
+                android:text="ADDRESS DETAILS"
                 android:textSize="15sp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name * "
+                android:textSize="13sp"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cannot fetch Name."
+                android:textColorHint="@color/grey_light"
+                android:layout_marginTop="5dp"
+                android:id="@+id/firstname_address"
+                android:textColor="@android:color/black"
+                android:background="@android:drawable/editbox_background"
+                android:textSize="12sp"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name *"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cannot fetch Name."
+                android:textColorHint="@color/grey_light"
+                android:layout_marginTop="5dp"
+                android:id="@+id/lastname_address"
+                android:textColor="@android:color/black"
+                android:background="@android:drawable/editbox_background"
+                android:textSize="12sp"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Phone Number * "
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cannot fetch address."
+                android:textColorHint="@color/grey_light"
+                android:layout_marginTop="5dp"
+                android:id="@+id/mobile_number_address"
+                android:textColor="@android:color/black"
+                android:background="@android:drawable/editbox_background"
+                android:textSize="12sp"
+                android:padding="12dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YOUR ADDRESS"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -32,8 +96,40 @@
                 android:id="@+id/editaddress"
                 android:textColor="@android:color/black"
                 android:background="@android:drawable/editbox_background"
-                android:textSize="15sp"
-                android:padding="20dp"/>
+                android:textSize="12sp"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="State / Region *"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/state_change"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City *"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/address_city"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:padding="12dp"/>
 
             <Button
                 android:layout_width="match_parent"

@@ -81,7 +81,7 @@ public class InteriorAccessories extends Fragment {
                         FetchInteriorPart(child.getKey());
                     }
                 }else{
-                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
+//                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
 
                 }
             }
