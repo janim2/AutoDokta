@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thank You!"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@android:color/white"
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Order No  30988322"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:layout_marginTop="20dp"
                 android:id="@+id/ordernumber"
                 android:layout_gravity="center_horizontal"
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:text="NEXT STEPS"
             android:textColor="@color/colorGrey"
             android:layout_marginTop="10dp"
@@ -58,7 +58,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:text="@string/confirm"
             android:textColor="@color/gen_black"
             android:layout_marginTop="20dp"
@@ -67,7 +67,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:text="@string/shipping"
             android:textColor="@color/gen_black"
             android:layout_marginTop="20dp"
@@ -76,7 +76,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:text="@string/track"
             android:textColor="@color/gen_black"
             android:layout_marginTop="20dp"
@@ -86,21 +86,21 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="SEE YOUR GARAGE"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/seeorders"
             android:layout_marginTop="20dp"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="CONTINUE SHOPPING"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/continuetoShop"
             android:layout_marginTop="10dp"/>
     </LinearLayout>

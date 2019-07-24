@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Item Name"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:id="@+id/itemname"
                 android:textColor="@android:color/black"/>
 
@@ -51,20 +51,20 @@
 
      <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
          android:padding="5dp"
         android:orientation="horizontal">
 
          <ImageView
              android:layout_width="match_parent"
-             android:layout_height="30dp"
+             android:layout_height="25dp"
              android:id="@+id/addtofavourite"
              android:src="@drawable/ic_favorite_border_black_18dp"
              android:layout_weight="2"/>
 
          <ImageView
              android:layout_width="match_parent"
-             android:layout_height="30dp"
+             android:layout_height="25dp"
              android:id="@+id/removeitem"
              android:src="@drawable/ic_delete_black_24dp"
              android:layout_weight="2"/>
@@ -95,6 +95,7 @@
                      android:layout_height="match_parent"
                      android:src="@drawable/subtract"
                      android:id="@+id/thesubtract"
+                     android:padding="2dp"
                      android:layout_weight="1"/>
 
                  <TextView
@@ -104,7 +105,7 @@
                      android:gravity="center"
                      android:id="@+id/itemquantity"
                      android:textColor="@android:color/black"
-                     android:textSize="17sp"
+                     android:textSize="15sp"
                      android:layout_weight="1"/>
 
 
@@ -113,6 +114,7 @@
                      android:layout_height="match_parent"
                      android:src="@drawable/add"
                      android:id="@+id/additem"
+                     android:padding="2dp"
                      android:layout_weight="1"/>
              </LinearLayout>
          </LinearLayout>

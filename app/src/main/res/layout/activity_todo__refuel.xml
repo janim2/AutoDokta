@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Todo_Refuel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Date"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/date_input"
+            android:layout_height="40dp"
+            android:text="Select date"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/odometer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Odometer"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/odometer_input"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:hint="Odometer reading"
+            android:background="@android:drawable/editbox_background"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/fuel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Fuel"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/fuel_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Gas"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/gas_input"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:hint="Gas"
+            android:background="@android:drawable/editbox_background"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:text="SAVE" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:id="@+id/loading"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Successful"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/success_message"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+</ScrollView>

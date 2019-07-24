@@ -48,25 +48,25 @@
             android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="First name"
-            android:visibility="gone"
-            android:layout_margin="10sp"
-            android:background="@android:drawable/editbox_background"
-            android:textColor="@android:color/black"
-            android:id="@+id/fnameedit_text"/>
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:hint="First name"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:id="@+id/fnameedit_text"/>-->
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Last name "
-            android:visibility="gone"
-            android:layout_margin="10sp"
-            android:background="@android:drawable/editbox_background"
-            android:textColor="@android:color/black"
-            android:id="@+id/lnameedit_text"/>
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:hint="Last name "-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:id="@+id/lnameedit_text"/>-->
 
         <TextView
             android:id="@+id/email"
@@ -79,15 +79,15 @@
             android:layout_marginTop="8dp"
             android:text="Email" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:visibility="gone"
-            android:hint="Email "
-            android:layout_margin="10sp"
-            android:background="@android:drawable/editbox_background"
-            android:textColor="@android:color/black"
-            android:id="@+id/emailedit_text"/>
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:hint="Email "-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:id="@+id/emailedit_text"/>-->
 
 
         <TextView
@@ -99,15 +99,15 @@
             android:layout_marginTop="8dp"
             android:text="User Name" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Username "
-            android:visibility="gone"
-            android:layout_margin="10sp"
-            android:background="@android:drawable/editbox_background"
-            android:textColor="@android:color/black"
-            android:id="@+id/usernameedit_text"/>
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:hint="Username "-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:id="@+id/usernameedit_text"/>-->
 
 
         <TextView
@@ -119,15 +119,15 @@
             android:layout_marginTop="8dp"
             android:text="Address" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Address"
-            android:layout_margin="10sp"
-            android:visibility="gone"
-            android:background="@android:drawable/editbox_background"
-            android:textColor="@android:color/black"
-            android:id="@+id/addressedit_text"/>
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:hint="Address"-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:visibility="gone"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:id="@+id/addressedit_text"/>-->
 
 
         <TextView
@@ -140,23 +140,60 @@
             android:layout_marginBottom="30dp"
             android:text="Phone Number:" />
 
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:hint="Phone Number "-->
+            <!--android:layout_margin="10sp"-->
+            <!--android:visibility="gone"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:id="@+id/numberedit_text"/>-->
+
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Phone Number "
+            android:layout_height="40dp"
+            android:hint="Old Password "
             android:layout_margin="10sp"
             android:visibility="gone"
+            android:textSize="15sp"
             android:background="@android:drawable/editbox_background"
             android:textColor="@android:color/black"
-            android:id="@+id/numberedit_text"/>
+            android:id="@+id/oldpassword"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="New Password "
+            android:layout_margin="10sp"
+            android:visibility="gone"
+            android:textSize="15sp"
+            android:background="@android:drawable/editbox_background"
+            android:textColor="@android:color/black"
+            android:id="@+id/newpassword"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/loading"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10sp"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/holo_green_dark"
+            android:id="@+id/text_status"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="SUBMIT"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/submit"
             android:visibility="gone"
             android:layout_marginTop="30dp"/>

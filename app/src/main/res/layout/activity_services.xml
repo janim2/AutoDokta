@@ -19,13 +19,13 @@
             android:layout_height="wrap_content"
             android:text="Services Rendered"
             android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textColor="@android:color/black"
             android:layout_marginTop="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:orientation="horizontal"
             android:id="@+id/car_insurance"
             android:background="@drawable/displaystyle"
@@ -49,14 +49,14 @@
                     android:layout_height="match_parent"
                     android:text="Vehicle Insurance"
                     android:gravity="center_vertical"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:orientation="horizontal"
             android:id="@+id/air_conditioning"
             android:background="@drawable/displaystyle"
@@ -80,14 +80,14 @@
                     android:layout_height="match_parent"
                     android:text="Air Conditioning"
                     android:gravity="center_vertical"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:background="@drawable/displaystyle"
             android:orientation="horizontal"
             android:id="@+id/auto_mechanic"
@@ -111,14 +111,14 @@
                     android:layout_height="match_parent"
                     android:text="Auto Mechanic"
                     android:gravity="center_vertical"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:orientation="horizontal"
             android:background="@drawable/displaystyle"
             android:id="@+id/bfluidreplacememt"
@@ -141,7 +141,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Brake Fluid Refilling"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:gravity="center_vertical"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -149,7 +149,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:orientation="horizontal"
             android:background="@drawable/displaystyle"
             android:id="@+id/puncture"
@@ -172,7 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Puncture And Tyre Replacement"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:gravity="center_vertical"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -180,7 +180,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:id="@+id/engineoil"
             android:background="@drawable/displaystyle"
             android:orientation="horizontal"
@@ -203,7 +203,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Engine Oil And Filter Change"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     android:gravity="center_vertical"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -380,7 +380,7 @@
             android:layout_height="wrap_content"
             android:text="Service Not Listed?"
             android:layout_marginTop="20dp"
-            android:textSize="20sp"
+            android:textSize="17sp"
 
             android:textColor="@android:color/holo_red_dark"
             />

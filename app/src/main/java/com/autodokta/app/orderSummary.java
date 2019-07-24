@@ -67,7 +67,8 @@ public class orderSummary extends AppCompatActivity {
         if(spaymenttype.contains("auto")){
             paymentImage.setImageResource(R.mipmap.ic_launcher);
             totalPayment.setText("Pay with AutoDokta Pay.");
-        }else{
+        }
+        else{
             paymentImage.setImageResource(R.drawable.mtnlogo);
             totalPayment.setText("Pay with MTN Mobile Money.");
         }

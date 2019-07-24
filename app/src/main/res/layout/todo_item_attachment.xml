@@ -6,7 +6,7 @@
     android:layout_height="50dp">
 
     <TextView
-        android:id="@+id/my_title"
+        android:id="@+id/vehicle_name"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textColor="@android:color/black"
@@ -16,6 +16,13 @@
         android:text="" />
 
     <ImageView
+        android:id="@+id/todo_details"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:src="@drawable/seo"
+        android:layout_weight="1" />
+
+  <ImageView
         android:id="@+id/task_delete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -133,21 +133,21 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:text="EDIT"
                 android:background="@color/colorPrimary"
                 android:textColor="@android:color/white"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:id="@+id/editbutton"
                 android:layout_marginTop="20dp"/>
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:text="MODIFY CART"
                 android:background="@color/colorPrimary"
                 android:textColor="@android:color/white"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:id="@+id/editCart"
                 android:layout_marginTop="10dp"/>
         </LinearLayout>

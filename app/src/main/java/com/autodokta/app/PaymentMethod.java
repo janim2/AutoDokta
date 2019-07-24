@@ -41,9 +41,9 @@ public class PaymentMethod extends AppCompatActivity {
         setContentView(R.layout.activity_payment_method);
         getSupportActionBar().setTitle("Payment");
 
-        autoRbutton = (RadioButton) findViewById(R.id.autodpayRadio);
+//        autoRbutton = (RadioButton) findViewById(R.id.autodpayRadio);
         mtnRadio = (RadioButton) findViewById(R.id.mtnRadio);
-        autoRLayout = (LinearLayout) findViewById(R.id.atpayLayout);
+//        autoRLayout = (LinearLayout) findViewById(R.id.atpayLayout);
         mtnLayout = (LinearLayout) findViewById(R.id.mtnlayout);
 
         next = (Button) findViewById(R.id.next);
@@ -61,20 +61,20 @@ public class PaymentMethod extends AppCompatActivity {
 
         }
 
-        autoRbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                autoRbutton.isChecked();
-                autoRLayout.setVisibility(View.VISIBLE);
-                mtnLayout.setVisibility(View.GONE);
-            }
-        });
+//        autoRbutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                autoRbutton.isChecked();
+//                autoRLayout.setVisibility(View.VISIBLE);
+//                mtnLayout.setVisibility(View.GONE);
+//            }
+//        });
 
         mtnRadio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mtnRadio.isChecked();
-                autoRLayout.setVisibility(View.GONE);
+//                autoRLayout.setVisibility(View.GONE);
                 mtnLayout.setVisibility(View.VISIBLE);
             }
         });
@@ -82,21 +82,20 @@ public class PaymentMethod extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(autoRbutton.isChecked() || mtnRadio.isChecked()){
-                    if(autoRbutton.isChecked()){
-                        Intent ordersummary = new Intent(PaymentMethod.this,orderSummary.class);
-                        ordersummary.putExtra("orderTotal", totalSale);
-                        ordersummary.putExtra("paymentType","autoDokta");
-                        startActivity(ordersummary);
-                    }
+               // if(mtnRadio.isChecked() ){ //|| autoRbutton.isChecked()){
+//                    if(autoRbutton.isChecked()){
+//                        Intent ordersummary = new Intent(PaymentMethod.this,orderSummary.class);
+//                        ordersummary.putExtra("orderTotal", totalSale);
+//                        ordersummary.putExtra("paymentType","autoDokta");
+//                        startActivity(ordersummary);
+//                    }
 
                     if(mtnRadio.isChecked()){
                         Intent ordersummary = new Intent(PaymentMethod.this,orderSummary.class);
                         ordersummary.putExtra("orderTotal", totalSale);
                         ordersummary.putExtra("paymentType","mtn");
                         startActivity(ordersummary);
-                    }
-                }else{
+                    }else{
                     Toast.makeText(PaymentMethod.this,"Select Payment Method",Toast.LENGTH_LONG).show();
                 }
 

@@ -20,8 +20,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Add_a_TodoActivity"
-            android:parentActivityName=".Garage"></activity>
+        <activity android:name=".Todo_inner_Service"
+            android:parentActivityName=".Todo_Services"></activity>
+        <activity
+            android:name=".Todo_Refuel"
+            android:parentActivityName=".Todo_Services" />
+        <activity
+            android:name=".Todo_Income"
+            android:parentActivityName=".Todo_Services" />
+        <activity
+            android:name=".Todo_Services"
+            android:parentActivityName=".Garage" />
+        <activity
+            android:name=".Add_a_TodoActivity"
+            android:parentActivityName=".Garage" />
         <activity
             android:name=".User_Profile"
             android:parentActivityName=".MainActivity" />
@@ -62,8 +74,9 @@
         <activity android:name=".HelpCenterActivity" />
         <activity android:name=".TermsActivity" />
         <activity android:name=".ContactUsActivity" />
-        <activity android:name=".TodoDetailsActivity"
-            android:parentActivityName=".Garage"/>
+        <activity
+            android:name=".TodoDetailsActivity"
+            android:parentActivityName=".Garage" />
         <activity
             android:name=".IndexActivity"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -715,6 +715,7 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color red
 color resetColorAccent
 color resetgreen
 color ripple_material_dark
@@ -1197,7 +1198,6 @@ id activity_chooser_view_content
 id add
 id additem
 id address
-id addressedit_text
 id addtofavourite
 id adjust_height
 id adjust_width
@@ -1274,7 +1274,6 @@ id editaddress
 id editbutton
 id editimage
 id email
-id emailedit_text
 id emptycart
 id end
 id end_padder
@@ -1290,7 +1289,6 @@ id fill_vertical
 id filled
 id firstname
 id fixed
-id fnameedit_text
 id forever
 id fullname
 id garage
@@ -1298,7 +1296,6 @@ id ghost_view
 id gone
 id group_divider
 id groups
-id help_center
 id home
 id homeAsUp
 id ic_wishlist
@@ -1332,7 +1329,6 @@ id line1
 id line3
 id listMode
 id list_item
-id lnameedit_text
 id loading
 id login
 id loginbutton
@@ -1355,13 +1351,14 @@ id nav_item5
 id nav_view
 id navigation_header_container
 id never
+id newpassworde_text
 id next
 id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id numberedit_text
+id oldpassworde_text
 id order
 id ordernumber
 id outline
@@ -1392,6 +1389,7 @@ id recyclerViewCart
 id recyclerViewProducts
 id recyclerview
 id removeitem
+id resend_v_link
 id right
 id right_icon
 id right_side
@@ -1446,6 +1444,7 @@ id submenuarrow
 id submit
 id submit_area
 id submitted
+id successful
 id sumaryprizes
 id summary_address
 id summarytotal
@@ -1487,7 +1486,6 @@ id unlabeled
 id up
 id useLogo
 id username
-id usernameedit_text
 id view_offset_helper
 id viewpager
 id visible

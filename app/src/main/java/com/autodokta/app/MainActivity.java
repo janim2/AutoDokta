@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
     Menu menu;
     MenuItem menuItem, profilemenuitem, garageMenuItem;
     FrameLayout layout;
-    TextView cartnumberTextView;
+    TextView cartnumberTextView, guest_or_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity
         mAuth = FirebaseAuth.getInstance();
         layout = (FrameLayout)findViewById(R.id.cartframe);
         cartnumberTextView = (TextView) findViewById(R.id.cartnumber);
+//        guest_or_user = (TextView) findViewById(R.id.guest_or_user);
 
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity
 
         ViewPager viewPager = findViewById(R.id.viewpager);
         TabLayout tabLayout = findViewById(R.id.tabs);
+//        guest_or_user = navigationView.findViewById(R.id.guest_or_user);
 
         if (viewPager != null) {
             setupViewPager(viewPager);
@@ -149,6 +151,7 @@ public class MainActivity extends AppCompatActivity
 //        checking to see if user is logged In
         if(mAuth.getCurrentUser()!=null){
             getCount(mAuth.getCurrentUser());
+//            guest_or_user.setText("Welcome user");
 
         }else{
             layout.setVisibility(View.GONE);

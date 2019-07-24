@@ -50,6 +50,7 @@
     <color name="tainted">#CBC9BFBF</color>
 
     <color name="whiteTextColor">#fff</color>
+    <color name="red">#FF0000</color>
 
 
 </resources>

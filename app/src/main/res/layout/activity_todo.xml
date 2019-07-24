@@ -12,30 +12,131 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!--<TextView-->
+            <!--android:id="@+id/todoNametxt"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:text="Title" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/name"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@android:drawable/editbox_background"-->
+            <!--android:inputType="text"/>-->
+
         <TextView
-            android:id="@+id/todoNametxt"
+            android:id="@+id/vehicle"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Title" />
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:text="Vehicle" />
+
+        <Spinner
+            android:id="@+id/vehicle_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <TextView
+            android:id="@+id/vehicle_name"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Vehicle Name" />
 
         <EditText
-            android:id="@+id/name"
-            android:layout_height="50dp"
+            android:id="@+id/vehicle_name_edt"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Vehicle Name"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/vehicle_manufacturer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:text="Vehicle Manufacturer" />
+
+        <Spinner
+            android:id="@+id/manufacturer_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <EditText
+            android:id="@+id/model"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:hint="Model"
             android:background="@android:drawable/editbox_background"
             android:inputType="text"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:text="Vehicle year made" />
+
+        <Spinner
+            android:id="@+id/year_spinner"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <TextView
+            android:id="@+id/fuel"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:text="Fuel type" />
+
+        <Spinner
+            android:id="@+id/fuel_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:textSize="15sp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <EditText
+            android:id="@+id/capacity"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:hint="Fuel Capacity(Gal)"
+            android:background="@android:drawable/editbox_background"
+            android:inputType="number"/>
 
         <TextView
             android:id="@+id/todo_message"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Message"
+            android:text="Notes"
             android:layout_marginTop="8dp"/>
 
         <EditText
             android:id="@+id/message"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
+            android:textSize="15sp"
             android:background="@android:drawable/editbox_background"
             android:inputType="text"/>
 
@@ -44,6 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginTop="8dp"
+            android:textSize="15sp"
             android:text="Date" />
 
         <TextView
@@ -58,11 +160,13 @@
 
         <Button
             android:id="@+id/add_task"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimary"
+            android:textSize="15sp"
             android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
             android:text="ADD TASK" />
 
     </LinearLayout>

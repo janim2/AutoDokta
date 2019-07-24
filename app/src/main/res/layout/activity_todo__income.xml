@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Todo_Income">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Date"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/date_input"
+            android:layout_height="40dp"
+            android:text="Select date"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/odometer_input"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:hint="Odometer reading"
+            android:background="@android:drawable/editbox_background"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/value_input"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:inputType="numberDecimal"
+            android:hint="Income from vehicle"
+            android:background="@android:drawable/editbox_background"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Income Source"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/income_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <EditText
+            android:id="@+id/notes_input"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="Notes"
+            android:layout_marginTop="10dp"
+            android:textStyle="normal"
+            android:inputType="text"
+            android:background="@android:drawable/editbox_background"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/saveIncome"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:textSize="15sp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:text="SAVE INCOME" />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:id="@+id/loading"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Successful"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/success_message"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

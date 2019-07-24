@@ -7,8 +7,8 @@ android {
         applicationId "com.autodokta.app"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 13
-        versionName "13.0"
+        versionCode 24
+        versionName "24.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -43,4 +43,3 @@ dependencies {
     implementation files('libs/universal-image-loader-1.9.5.jar')
 }
 apply plugin: 'com.google.gms.google-services'
-//    <!--testing-->

@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Your Cart Is Empty"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:gravity="center"
             android:textStyle="bold"
             android:id="@+id/emptycart"
@@ -88,22 +88,22 @@
         </LinearLayout>
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="CHECKOUT"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/cacheout"
             android:visibility="gone"
             android:layout_marginTop="20dp"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="CALL TO ORDER"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/calltoorder"
             android:visibility="gone"
             android:layout_marginTop="10dp"/>

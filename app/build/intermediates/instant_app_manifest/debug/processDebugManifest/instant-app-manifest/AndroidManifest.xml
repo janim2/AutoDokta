@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.autodokta.app"
     android:targetSandboxVersion="2"
-    android:versionCode="13"
-    android:versionName="13.0" > <!-- testing -->
+    android:versionCode="15"
+    android:versionName="15.0" > <!-- testing -->
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="28" />

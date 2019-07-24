@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="MY GARAGE"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             android:padding="20sp"
             />

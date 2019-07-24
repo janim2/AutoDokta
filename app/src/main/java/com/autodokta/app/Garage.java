@@ -31,7 +31,8 @@ public class Garage extends AppCompatActivity {
     RecyclerView.LayoutManager todoLayoutManager;
     String todo_title;
     ProgressBar loading;
-    String todo_name,todo_message, thedate;
+    String todo_name,todo_message, thedate, fuel_type,manufacturer,vehicle_fuel_capa,vehicle_model,
+    vehicle_name,vehicle_type,vehicle_year;
     FirebaseUser user;
 
     FloatingActionButton add_a_todo;
@@ -73,7 +74,12 @@ public class Garage extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
                         for(DataSnapshot child : dataSnapshot.getChildren()){
-                            getTodoItemsNow(child.getKey());
+                            if(child.getKey()!=null){
+                                getTodoItemsNow(child.getKey());
+                            }else{
+                                loading.setVisibility(View.GONE);
+                                Toast.makeText(Garage.this,"Nothing in Garage",Toast.LENGTH_LONG).show();
+                            }
                         }
                     }else{
                         Toast.makeText(Garage.this,"Cannot get ID",Toast.LENGTH_LONG).show();
@@ -101,10 +107,9 @@ public class Garage extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
                         for(DataSnapshot child : dataSnapshot.getChildren()){
-                            if(child.getKey().equals("name")){
-                                todo_name = child.getValue().toString();
-                            }
-
+//                            if(child.getKey().equals("name")){
+//                                todo_name = child.getValue().toString();
+//                            }
                             if(child.getKey().equals("message")){
                                 todo_message = child.getValue().toString();
                             }
@@ -113,9 +118,40 @@ public class Garage extends AppCompatActivity {
                                 thedate = child.getValue().toString();
                             }
 
+                            if(child.getKey().equals("fuel_type")){
+                                fuel_type = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("manufacturer")){
+                                manufacturer = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("vehicle_fuel_capa")){
+                                vehicle_fuel_capa = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("vehicle_model")){
+                                vehicle_model = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("vehicle_name")){
+                                vehicle_name = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("vehicle_type")){
+                                vehicle_type = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("vehicle_year")){
+                                vehicle_year = child.getValue().toString();
+                            }
+
+
+
                         }
 
-                        TodoItems obj = new TodoItems(key,todo_name,todo_message,thedate);
+                        TodoItems obj = new TodoItems(key,todo_message,thedate,vehicle_name,vehicle_model,
+                                vehicle_year,vehicle_fuel_capa,manufacturer,fuel_type,vehicle_type);
                         todo_items.add(obj);
                         todo_items_recyclerView.setAdapter(todoAdapter);
                         todoAdapter.notifyDataSetChanged();

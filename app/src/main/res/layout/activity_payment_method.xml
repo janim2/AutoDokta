@@ -15,81 +15,81 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SELECT PAYMENT METHOD"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:padding="20sp"/>
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="AutoDokta Pay"
-                android:id="@+id/autodpayRadio"/>
+            <!--<RadioButton-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="AutoDokta Pay"-->
+                <!--android:id="@+id/autodpayRadio"/>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/atpayLayout"
-                android:visibility="gone"
-                android:background="@android:color/white">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:id="@+id/atpayLayout"-->
+                <!--android:visibility=""-->
+                <!--android:background="@android:color/white">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/autodoktapay"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:textAlignment="textStart"
-                    android:paddingRight="10dp"
-                    android:paddingLeft="50dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/autodoktapay"-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textAlignment="textStart"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:paddingLeft="50dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Please select your mobile money operator after you get redirected to AutoDokta Pay."
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="50dp"
-                    android:textAlignment="textStart"
-                    android:paddingRight="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:paddingLeft="50dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Please select your mobile money operator after you get redirected to AutoDokta Pay."-->
+                    <!--android:textSize="15sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginTop="50dp"-->
+                    <!--android:textAlignment="textStart"-->
+                    <!--android:paddingRight="10dp"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:paddingLeft="50dp"/>-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:layout_marginLeft="50dp"
-                    android:orientation="horizontal">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginBottom="30dp"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--android:orientation="horizontal">-->
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
+                    <!--<ImageView-->
+                        <!--android:layout_width="60dp"-->
+                        <!--android:layout_height="match_parent"-->
 
-                        android:tooltipText="AutoDokta Pay"
-                        android:layout_weight="1"
-                        android:src="@mipmap/ic_launcher"/>
+                        <!--android:tooltipText="AutoDokta Pay"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:src="@mipmap/ic_launcher"/>-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:layout_gravity="center"
-                        android:text="AutoDokta Pay"
-                        android:src="@mipmap/ic_launcher"/>
-
-
-
-
-                </LinearLayout>
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:text="AutoDokta Pay"-->
+                        <!--android:src="@mipmap/ic_launcher"/>-->
 
 
 
-            </LinearLayout>
+
+                <!--</LinearLayout>-->
+
+
+
+            <!--</LinearLayout>-->
 
             <RadioButton
                 android:layout_width="match_parent"
@@ -215,7 +215,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Total"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:layout_weight="1"/>
 
@@ -224,7 +224,7 @@
                 android:layout_height="match_parent"
                 android:text="GHC 10.00"
                 android:textStyle="bold"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:id="@+id/totaltotal"
                 android:textColor="@color/colorPrimary"
                 android:layout_weight="1"/>
@@ -233,21 +233,21 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="NEXT"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/next"
             android:layout_marginTop="20dp"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:text="MODIFY CART"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:id="@+id/modifyCart"
             android:layout_marginTop="10dp"/>
 

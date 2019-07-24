@@ -69,6 +69,6 @@
     <string name="mtninstructions">1. Dial *170# OR On your Phone Menu, locate "MY MTN" and select Mobile Money.\n\n2. Select "Transfer Money"\n\n3. Select "Other Networks".\n\n4. Choose "AirtelTigo"\n\n5. Enter mobile Number "0266711801"\n\n6. Confirm mobile number "0266711801"/n/n7. Enter Amount. Eg. 50 for GHS 50.00\n\n8. Enter Order Number as reference. You will see your order number after clicking on Confirm Order.\n\n9. Enter your Mobile Money pin.\n\n10. You will recieve an SMS or Email confirming message of successsful payment. </string>
     <string name="confirm"><b>1. Confirmation</b>\n\nCongratulations, Your order was successfully submmitted and our customer service may contact you for verification.If you are paying via mobile money, please make payment within 24 hours to avoid cancellation of order.</string>
     <string name="shipping"><b>2. Shipping</b>\n\nYour order will be prepared for shipment once it is confirmed. You will receive updates.</string>
-    <string name="track"><b>3. Track</b>You can track your order by clicking on My Garage</string>
+    <string name="track"><b>3. Track</b>\nYou can track your order by clicking on My Garage</string>
 
 </resources>

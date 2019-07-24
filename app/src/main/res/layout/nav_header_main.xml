@@ -28,6 +28,7 @@
         android:text="Guest"
         android:textStyle="bold"
         android:textSize="18sp"
+        android:id="@+id/guest_or_user"
         style="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />

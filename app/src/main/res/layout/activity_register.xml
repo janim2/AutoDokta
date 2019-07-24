@@ -48,7 +48,7 @@
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:hint="First Name"
                     android:paddingLeft="10dp"
                     android:id="@+id/firstname"
@@ -59,12 +59,11 @@
                     android:textColor="@android:color/holo_red_dark"
                     android:textColorHint="@android:color/black"
                     android:background="@drawable/buttondesign"/>
-                />
 
 
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:hint="Last Name"
                     android:id="@+id/lastname"
                     android:paddingLeft="10dp"
@@ -94,7 +93,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:textSize="15sp"
                 android:paddingLeft="10dp"
                 android:id="@+id/username"
@@ -107,7 +106,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:textSize="15sp"
                 android:inputType="textMultiLine"
                 android:id="@+id/address"
@@ -120,7 +119,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:background="@drawable/buttondesign"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp"
@@ -133,7 +132,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:background="@drawable/buttondesign"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp"
@@ -146,7 +145,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:background="@drawable/buttondesign"
                 android:layout_marginTop="10dp"
                 android:textSize="15sp"
@@ -169,12 +168,12 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginTop="50dp"
             android:text="Register --> Login"
             android:textColor="@android:color/white"
             android:id="@+id/sign_up_button"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@color/colorPrimary"
             />
 

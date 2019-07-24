@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 
 import com.autodokta.app.Adapters.CarParts;
 import com.autodokta.app.Adapters.PartsAdapter;
+import com.autodokta.app.Adapters.Related_items_PartsAdapter;
 import com.autodokta.app.helpers.Space;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -125,7 +128,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
 //        related_items_RecyclerView.setLayoutManager(related_items_mPostLayoutManager);
 
         getRelatedItems_ID();
-        related_items_mPostAdapter = new PartsAdapter(getrelatedParts(),ItemDetailsActivity.this);
+        related_items_mPostAdapter = new Related_items_PartsAdapter(getrelatedParts(),ItemDetailsActivity.this);
         related_items_RecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
             public boolean onInterceptTouchEvent(@NonNull RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
@@ -151,6 +154,27 @@ public class ItemDetailsActivity extends AppCompatActivity {
         related_items_RecyclerView.addItemDecoration(new Space(2,20,true,0));
         related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.items_details_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.share:
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("text/plain");
+                String sharebody = simage;
+                share.putExtra(Intent.EXTRA_SUBJECT,sname);
+                share.putExtra(Intent.EXTRA_TEXT,sharebody);
+                startActivity(Intent.createChooser(share,"Share via"));
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void getRelatedItems_ID() {
