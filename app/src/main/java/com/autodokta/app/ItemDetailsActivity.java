@@ -1,9 +1,12 @@
 package com.autodokta.app;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +16,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,7 +46,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     String spartid, simage, sname, sprice, sdescription, sSellersNumber;
 
     Button buyNow;
-    ImageView image;
+    ImageView image, product_image;
     TextView name, description, price;
 
 //    initialization of image loader
@@ -60,6 +64,16 @@ public class ItemDetailsActivity extends AppCompatActivity {
     RecyclerView.LayoutManager related_items_mPostLayoutManager;
     String related_item_imageurl, related_item_name, related_item_description, related_item_price, related_item_sellersNumber;
 
+    //initializing the dialogue class
+    Dialog item_details_dialogue;
+
+    ImageButton close_button;
+
+    private float downXpos = 0;
+    private float downYpos = 0;
+    private boolean touchcaptured = false;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +90,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
         description = findViewById(R.id.description);
         price = findViewById(R.id.price);
         buyNow = findViewById(R.id.buyNow);
+
+        item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
         spartid = intent.getStringExtra("partid");
         simage = intent.getStringExtra("theimage");
@@ -98,6 +114,13 @@ public class ItemDetailsActivity extends AppCompatActivity {
         name.setText(sname);
         description.setText(sdescription);
         price.setText(sprice);
+
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showImagePopup(ItemDetailsActivity.this, simage);
+            }
+        });
 
         buyNow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,7 +166,24 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
             @Override
             public void onTouchEvent(@NonNull RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
-
+                switch(motionEvent.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        downXpos = motionEvent.getX();
+                        downYpos = motionEvent.getY();
+                        touchcaptured = false;
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        recyclerView.getParent().requestDisallowInterceptTouchEvent(false);
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        float xdisplacement = Math.abs(motionEvent.getX() - downXpos);
+                        float ydisplacement = Math.abs(motionEvent.getY() - downYpos);
+                        if( !touchcaptured && xdisplacement > ydisplacement && xdisplacement > 10) {
+                            recyclerView.getParent().requestDisallowInterceptTouchEvent(true);
+                            touchcaptured = true;
+                        }
+                        break;
+                }
             }
 
             @Override
@@ -155,6 +195,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -333,5 +374,39 @@ public class ItemDetailsActivity extends AppCompatActivity {
         return  relatedParts;
     }
 
+
+    private void showImagePopup(FragmentActivity activity,String imageString) {
+        item_details_dialogue.setContentView(R.layout.custom_image_dialogue);
+            close_button = (ImageButton)item_details_dialogue.findViewById(R.id.btnClose);
+          product_image = (ImageView)item_details_dialogue.findViewById(R.id.popup_image);
+//        id_and_gender = (TextView)view_student_dialogue.findViewById(R.id.id_and_gender);
+//        dobthetext = (TextView)view_student_dialogue.findViewById(R.id.dobthetext);
+//        dob_date = (TextView)view_student_dialogue.findViewById(R.id.dob_date);
+//        addedontext = (TextView)view_student_dialogue.findViewById(R.id.addedontheext);
+//        addedondate = (TextView)view_student_dialogue.findViewById(R.id.addedondate);
+
+//        st_name.setText(name);
+//        id_and_gender.setText(id_gender);
+//        dob_date.setText(dob);
+//        addedondate.setText(addedon);
+
+        //prep work before image is loaded is to load it into the cache
+        DisplayImageOptions theImageOptions = new DisplayImageOptions.Builder().cacheInMemory(true).
+                cacheOnDisk(true).build();
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext()).
+                defaultDisplayImageOptions(theImageOptions).build();
+        ImageLoader.getInstance().init(config);
+
+        imageLoader.displayImage(imageString,product_image);
+
+        close_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                item_details_dialogue.dismiss();
+            }
+        });
+        item_details_dialogue.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.whiteTextColor)));
+        item_details_dialogue.show();
+    }
 
 }

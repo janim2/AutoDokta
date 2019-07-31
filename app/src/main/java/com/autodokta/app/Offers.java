@@ -8,11 +8,19 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.algolia.instantsearch.core.helpers.Searcher;
+import com.algolia.instantsearch.ui.helpers.InstantSearch;
+import com.algolia.search.saas.Client;
+import com.algolia.search.saas.Query;
+import com.autodokta.app.SearchItems.ResultsListView;
 import com.autodokta.app.helpers.Space;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,7 +37,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Offers extends Fragment {
+public class Offers extends Fragment{
     ArrayList resultParts = new ArrayList<CarParts>();
     RecyclerView PostRecyclerView;
     RecyclerView.Adapter mPostAdapter;
@@ -37,12 +45,9 @@ public class Offers extends Fragment {
     String imageurl, name, description, price, sellersNumber;
     ProgressBar loading;
 
-
-
     public Offers() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,6 +71,7 @@ public class Offers extends Fragment {
         PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
 
         PostRecyclerView.setAdapter(mPostAdapter);
+
         return offers;
 
 
@@ -150,6 +156,5 @@ public class Offers extends Fragment {
     public ArrayList<CarParts> getParts(){
         return  resultParts;
     }
-
 
 }

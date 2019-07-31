@@ -1,11 +1,11 @@
 package com.autodokta.app;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
@@ -19,15 +19,20 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.algolia.instantsearch.core.helpers.Searcher;
+import com.algolia.instantsearch.ui.helpers.InstantSearch;
+import com.algolia.search.saas.Client;
+import com.algolia.search.saas.Query;
+import com.autodokta.app.SearchItems.ResultsListView;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.autodokta.app.fragments.ImageListFragment;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,10 +47,15 @@ public class MainActivity extends AppCompatActivity
 
     public static int notificationCountCart = 0;
     FirebaseAuth mAuth;
-    Menu menu;
+    public Menu menu;
     MenuItem menuItem, profilemenuitem, garageMenuItem;
     FrameLayout layout;
     TextView cartnumberTextView, guest_or_user;
+    public NavigationView navigationView;
+
+    // Constants
+    private static final int LOAD_MORE_THRESHOLD = 5;
+    private static final int HITS_PER_PAGE = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         //getting the navigation view
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         ViewPager viewPager = findViewById(R.id.viewpager);
@@ -118,6 +128,13 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        getSupportFragmentManager().popBackStack();
+//    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
@@ -126,16 +143,15 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.cartframe:
-//                if(mAuth.getCurrentUser()!=null){
-//                    startActivity(new Intent(MainActivity.this,Cart.class));
-//
-//                }else{
-//                 Toast.makeText(MainActivity.this,"Login",Toast.LENGTH_LONG).show();
-//                }
-//                return true;
-//        }
+        switch (item.getItemId()){
+            case R.id.action_search:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new
+//                        Search_fragment()).addToBackStack(null).commit();
+//                moviesListView.setVisibility(View.VISIBLE);
+//                searchDialogue();
+                startActivity(new Intent(MainActivity.this,Search_Activity.class));
+                return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -334,4 +350,19 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+
+//    public void searchDialogue(){
+//        searchDialogue.setContentView(R.layout.fragment_search_fragment);
+//        ResultsListView listView = (ResultsListView) searchDialogue.findViewById(R.id.listview_movies);
+//        Client client = new Client("latency", "dce4286c2833e8cf4b7b1f2d3fa1dbcb");
+//        searcher = Searcher.create(client.initIndex("movies"));
+//        helper = new InstantSearch(listView, searcher);
+//
+//        searcher.setQuery(new Query().setAttributesToRetrieve("title", "image", "rating", "year")
+//                .setAttributesToHighlight("title")
+//                .setHitsPerPage(HITS_PER_PAGE));
+//
+//        searchDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.whiteTextColor)));
+//        searchDialogue.show();
+//    }
 }

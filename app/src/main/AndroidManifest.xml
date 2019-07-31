@@ -20,8 +20,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Todo_inner_Service"
-            android:parentActivityName=".Todo_Services"></activity>
+        <activity android:name=".Search_Activity"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
+            android:name=".Todo_inner_Service"
+            android:parentActivityName=".Todo_Services" />
         <activity
             android:name=".Todo_Refuel"
             android:parentActivityName=".Todo_Services" />

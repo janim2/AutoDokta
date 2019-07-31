@@ -20,6 +20,13 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+    <!--<com.autodokta.app.SearchItems.ResultsListView-->
+        <!--android:id="@+id/listview_movies"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginTop="52dp"-->
+        <!--android:background="@color/colorGrey"-->
+        <!--android:layout_height="match_parent" />-->
+
 </RelativeLayout>
 
 
