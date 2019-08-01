@@ -289,7 +289,8 @@ public class User_Profile extends AppCompatActivity {
                                     defaultDisplayImageOptions(theImageOptions).build();
                             ImageLoader.getInstance().init(config);
 //
-                            String profileimagelink = "gs://cars-9c22a.appspot.com/profileimages/" + sprofileimage;
+//                            String profileimagelink = "gs://cars-9c22a.appspot.com/profileimages/" + sprofileimage;
+                            String profileimagelink = sprofileimage;
                             imageLoader.displayImage(profileimagelink,profileimage);
                         }
                         fullname.setText(sfirstname + " " + slastname);

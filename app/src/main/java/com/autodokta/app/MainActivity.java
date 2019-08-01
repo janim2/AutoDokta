@@ -14,6 +14,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -21,14 +25,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.algolia.instantsearch.core.helpers.Searcher;
 import com.algolia.instantsearch.ui.helpers.InstantSearch;
 import com.algolia.search.saas.Client;
-import com.algolia.search.saas.Query;
+import com.autodokta.app.Adapters.CarParts;
+import com.autodokta.app.Adapters.PartsAdapter;
 import com.autodokta.app.SearchItems.ResultsListView;
+import com.autodokta.app.helpers.Space;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.autodokta.app.fragments.ImageListFragment;
@@ -37,7 +44,10 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -56,6 +66,16 @@ public class MainActivity extends AppCompatActivity
     // Constants
     private static final int LOAD_MORE_THRESHOLD = 5;
     private static final int HITS_PER_PAGE = 20;
+
+
+//    strings for loading the parts from the database
+    ArrayList resultParts = new ArrayList<CarParts>();
+    RecyclerView PostRecyclerView;
+    RecyclerView.Adapter mPostAdapter;
+    RecyclerView.LayoutManager mPostLayoutManager;
+    String imageurl, name, description, price, sellersNumber;
+    ProgressBar loading;
+//    strings ends here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,23 +109,23 @@ public class MainActivity extends AppCompatActivity
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        TabLayout tabLayout = findViewById(R.id.tabs);
-//        guest_or_user = navigationView.findViewById(R.id.guest_or_user);
-
-        if (viewPager != null) {
-            setupViewPager(viewPager);
-            tabLayout.setupWithViewPager(viewPager);
-
-            tabLayout.getTabAt(0).setText(getString(R.string.item_1));
-            tabLayout.getTabAt(1).setText(getString(R.string.item_2));
-            tabLayout.getTabAt(2).setText(getString(R.string.item_3));
-            tabLayout.getTabAt(3).setText(getString(R.string.item_4));
-            tabLayout.getTabAt(4).setText(getString(R.string.item_5));
-            tabLayout.getTabAt(5).setText(getString(R.string.item_6));
-            tabLayout.getTabAt(6).setText(getString(R.string.item_7));
-            tabLayout.getTabAt(7).setText(getString(R.string.item_8));
-        }
+//        ViewPager viewPager = findViewById(R.id.viewpager);
+//        TabLayout tabLayout = findViewById(R.id.tabs);
+////        guest_or_user = navigationView.findViewById(R.id.guest_or_user);
+//
+//        if (viewPager != null) {
+//            setupViewPager(viewPager);
+//            tabLayout.setupWithViewPager(viewPager);
+//
+//            tabLayout.getTabAt(0).setText(getString(R.string.item_1));
+//            tabLayout.getTabAt(1).setText(getString(R.string.item_2));
+//            tabLayout.getTabAt(2).setText(getString(R.string.item_3));
+//            tabLayout.getTabAt(3).setText(getString(R.string.item_4));
+//            tabLayout.getTabAt(4).setText(getString(R.string.item_5));
+//            tabLayout.getTabAt(5).setText(getString(R.string.item_6));
+//            tabLayout.getTabAt(6).setText(getString(R.string.item_7));
+//            tabLayout.getTabAt(7).setText(getString(R.string.item_8));
+//        }
 
 //        getting the menu from the navigation item;
         menu = navigationView.getMenu();
@@ -126,6 +146,25 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
+        //items to load from the database starts here
+        loading  = (ProgressBar)findViewById(R.id.loading);
+
+        PostRecyclerView = (RecyclerView) findViewById(R.id.recyclerViewProducts);
+        PostRecyclerView.setHasFixedSize(true);
+
+        mPostLayoutManager = new GridLayoutManager(MainActivity.this,2, LinearLayoutManager.VERTICAL,false);
+//        mPostLayoutManager = new LinearLayoutManager(getActivity());
+        PostRecyclerView.setLayoutManager(mPostLayoutManager);
+
+        getPartsIds();
+
+        mPostAdapter = new PartsAdapter(getParts(),MainActivity.this);
+
+        PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
+
+        PostRecyclerView.setAdapter(mPostAdapter);
+//        items ends here
     }
 
 //    @Override
@@ -138,6 +177,37 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
+//        MenuItem searchMenuItem = menu.findItem(R.id.action_search); // get my MenuItem with placeholder submenu
+//        SearchView searchView = (SearchView)searchMenuItem.getActionView();
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                s = s.toLowerCase();
+//                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("carparts").child("Offers");
+//                Query query1 = reference.orderByKey().startAt(s);//.endAt(query+"\uf8ff");
+//                query1.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        if(dataSnapshot.exists()){
+//                            for(DataSnapshot child : dataSnapshot.getChildren()){
+//                                FetchParts(child.getKey());
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//                return false;
+//            }
+//        });
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -145,15 +215,25 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_search:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new
-//                        Search_fragment()).addToBackStack(null).commit();
-//                moviesListView.setVisibility(View.VISIBLE);
-//                searchDialogue();
                 startActivity(new Intent(MainActivity.this,Search_Activity.class));
-                return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
+
+    //    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.action_search:
+////                getSupportFragmentManager().beginTransaction().replace(R.id.content_main, new
+////                        Search_fragment()).addToBackStack(null).commit();
+////                moviesListView.setVisibility(View.VISIBLE);
+////                searchDialogue();
+//                startActivity(new Intent(MainActivity.this,Search_Activity.class));
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     @Override
     protected void onStart() {
@@ -351,18 +431,85 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-//    public void searchDialogue(){
-//        searchDialogue.setContentView(R.layout.fragment_search_fragment);
-//        ResultsListView listView = (ResultsListView) searchDialogue.findViewById(R.id.listview_movies);
-//        Client client = new Client("latency", "dce4286c2833e8cf4b7b1f2d3fa1dbcb");
-//        searcher = Searcher.create(client.initIndex("movies"));
-//        helper = new InstantSearch(listView, searcher);
-//
-//        searcher.setQuery(new Query().setAttributesToRetrieve("title", "image", "rating", "year")
-//                .setAttributesToHighlight("title")
-//                .setHitsPerPage(HITS_PER_PAGE));
-//
-//        searchDialogue.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.whiteTextColor)));
-//        searchDialogue.show();
-//    }
+    private void getPartsIds() {
+
+//        DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("carparts").child("Offers");
+        DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("allParts");
+
+        partdatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot child : dataSnapshot.getChildren()){
+                        FetchParts(child.getKey());
+                    }
+                }else{
+//                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(MainActivity.this,"Cancelled",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void FetchParts(final String key) {
+//        DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child("Offers").child(key);
+        DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("allParts").child(key);
+        postData.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot child : dataSnapshot.getChildren()){
+                        if(child.getKey().equals("image")){
+                            imageurl = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("name")){
+                            name = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("description")){
+                            description = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("price")){
+                            price = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("buyersNumber")){
+                            sellersNumber = child.getValue().toString();
+                        }
+
+
+                        else{
+//                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+
+                    String partid = key;
+                    boolean isNew = false;
+                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber);
+                    resultParts.add(obj);
+                    PostRecyclerView.setAdapter(mPostAdapter);
+                    mPostAdapter.notifyDataSetChanged();
+                    loading.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(MainActivity.this,"Cancelled",Toast.LENGTH_LONG).show();
+
+            }
+        });
+    }
+
+    public ArrayList<CarParts> getParts(){
+        return  resultParts;
+    }
+
 }

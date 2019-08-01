@@ -85,6 +85,7 @@ import java.util.ArrayList;
                     DatabaseReference item = reference.child(itemList.get(position).getPartId());
                     item.removeValue();
                     Toast.makeText(v.getContext(),"Item Removed From Cart",Toast.LENGTH_LONG).show();
+                    v.getContext().startActivity(new Intent(v.getContext(),Cart.class));
                 }
             });
 

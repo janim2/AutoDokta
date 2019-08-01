@@ -90,7 +90,6 @@ public class Offers extends Fragment{
                     }
                 }else{
 //                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
-
                 }
             }
 

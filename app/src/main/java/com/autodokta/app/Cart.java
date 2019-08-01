@@ -180,40 +180,40 @@ public class Cart extends AppCompatActivity {
     }
 
     private void FetchPartsFromParts(final String key) {
-        if(key.contains("brake")){
+//        if(key.contains("brake")){
             FetchingValues(key,"Brakes");
-        }
+//        }
 
-        if(key.contains("engine")){
-            FetchingValues(key,"Engines");
-
-        }
-
-        if(key.contains("exterior")){
-            FetchingValues(key,"Exteriorparts");
-
-        }
-
-        if(key.contains("light")){
-            FetchingValues(key,"HeadLights");
-
-        }
-
-        if(key.contains("interior")){
-            FetchingValues(key,"InteriorParts");
-
-        }
-        if(key.contains("offer")){
-            FetchingValues(key,"Offers");
-        }
-
-        if(key.contains("tool")){
-            FetchingValues(key,"Tools");
-        }
-
-         if(key.contains("wheel")){
-             FetchingValues(key,"Wheels");
-         }
+//        if(key.contains("engine")){
+//            FetchingValues(key,"Engines");
+//
+//        }
+//
+//        if(key.contains("exterior")){
+//            FetchingValues(key,"Exteriorparts");
+//
+//        }
+//
+//        if(key.contains("light")){
+//            FetchingValues(key,"HeadLights");
+//
+//        }
+//
+//        if(key.contains("interior")){
+//            FetchingValues(key,"InteriorParts");
+//
+//        }
+//        if(key.contains("offer")){
+//            FetchingValues(key,"Offers");
+//        }
+//
+//        if(key.contains("tool")){
+//            FetchingValues(key,"Tools");
+//        }
+//
+//         if(key.contains("wheel")){
+//             FetchingValues(key,"Wheels");
+//         }
     }
 
     public ArrayList<CarParts> getParts(){
@@ -223,7 +223,8 @@ public class Cart extends AppCompatActivity {
     private void FetchingValues(final String key, String carPart) {
         try{
 
-            DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child(carPart).child(key);
+//            DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child(carPart).child(key);
+            DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("allParts").child(key);
             postData.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -267,24 +268,28 @@ public class Cart extends AppCompatActivity {
 
                         String partid = key;
                         boolean isNew = false;
-                        CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,quantity);
-                        resultParts.add(obj);
-                        cartRecyclerView.setAdapter(mCartAdapter);
-                        mCartAdapter.notifyDataSetChanged();
-                        loading.setVisibility(View.GONE);
-                        noCart.setVisibility(View.GONE);
+                        if(name!=null || !name.equals("")){
+                            CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,quantity);
+                            resultParts.add(obj);
+                            cartRecyclerView.setAdapter(mCartAdapter);
+                            mCartAdapter.notifyDataSetChanged();
+                            loading.setVisibility(View.GONE);
+                            noCart.setVisibility(View.GONE);
+
+                            cacheout.setVisibility(View.VISIBLE);
+                            calltoorder.setVisibility(View.VISIBLE);
+                            totalPrizeText.setText("Total Prize: " +"GHC " +totalPrize+""+".00");
+
+                        }else{
+                            loading.setVisibility(View.GONE);
+                        }
+
 //                    Toast.makeText(Cart.this,String.valueOf(totalPrize),Toast.LENGTH_LONG).show();
 
 //                    totalPrizeText.setText(totalPrize);
 
                     }
-                    cacheout.setVisibility(View.VISIBLE);
-                    calltoorder.setVisibility(View.VISIBLE);
-                    totalPrizeText.setText("Total Prize: " +"GHC " +totalPrize+""+".00");
-
-
-
-                }
+                    }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {

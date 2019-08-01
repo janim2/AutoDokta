@@ -128,7 +128,7 @@ public class ServiceOrderDetails extends AppCompatActivity implements DatePicker
 
     private void sendOrderEmail() {
         new Sending_mail("https://knust-martial-arts.000webhostapp.com/AutoDoktaService.php",
-                dateString,locationString,nameString,phoneString).execute();
+                "order",dateString,locationString,nameString,phoneString).execute();
     }
 
     private void getUserinfo() {
@@ -166,10 +166,11 @@ public class ServiceOrderDetails extends AppCompatActivity implements DatePicker
     @SuppressLint("StaticFieldLeak")
     class Sending_mail extends AsyncTask<Void, Void, String> {
 
-        String url_location,date, address, name, number;
+        String url_location,status,date, address, name, number;
 
-        public Sending_mail(String url_location,String date, String address, String name,String number) {
+        public Sending_mail(String url_location,String status,String date, String address, String name,String number) {
             this.url_location = url_location;
+            this.status = status;
             this.date = date;
             this.address = address;
             this.name = name;
@@ -197,6 +198,7 @@ public class ServiceOrderDetails extends AppCompatActivity implements DatePicker
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
 
                 String data = URLEncoder.encode("address", "UTF-8") + "=" + URLEncoder.encode(address, "UTF-8") + "&" +
+                        URLEncoder.encode("status", "UTF-8") + "=" + URLEncoder.encode(status, "UTF-8") + "&" +
                         URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8") + "&" +
                         URLEncoder.encode("date", "UTF-8") + "=" + URLEncoder.encode(date, "UTF-8") + "&" +
                         URLEncoder.encode("number", "UTF-8") + "=" + URLEncoder.encode(number, "UTF-8");

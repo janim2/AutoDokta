@@ -14,7 +14,7 @@
         <LinearLayout
             android:id="@+id/profile_header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_alignParentTop="true"
@@ -22,8 +22,8 @@
             android:background="@color/colorPrimary">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:src="@drawable/man"
                 android:id="@+id/profilecircleView"/>
@@ -44,8 +44,8 @@
             android:paddingTop="18dp"
             android:textSize="16dp"
             android:text="Name"
+            android:layout_marginLeft="20dp"
             android:textColor="@android:color/black"
-            android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <!--<EditText-->
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:textSize="12dp"
-            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="8dp"
             android:text="Email" />
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
-            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:text="User Name" />
 
@@ -115,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
-            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:text="Address" />
 
@@ -135,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dp"
-            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="30dp"
             android:text="Phone Number:" />

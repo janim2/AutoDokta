@@ -1,3 +1,0 @@
-store password : autodokta90868
-alias : autodoktakey
-key password = store password

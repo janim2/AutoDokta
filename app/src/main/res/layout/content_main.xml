@@ -14,11 +14,11 @@
     tools:showIn="@layout/app_bar_main"
     tools:context=".MainActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
 
     <!--<com.autodokta.app.SearchItems.ResultsListView-->
         <!--android:id="@+id/listview_movies"-->
@@ -26,6 +26,15 @@
         <!--android:layout_marginTop="52dp"-->
         <!--android:background="@color/colorGrey"-->
         <!--android:layout_height="match_parent" />-->
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/loading"/>
+
+    <include layout="@layout/items_content_main"/>
+
 
 </RelativeLayout>
 

@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
@@ -16,8 +17,10 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,17 +40,31 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Random;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 
 public class ItemDetailsActivity extends AppCompatActivity {
 
     String spartid, simage, sname, sprice, sdescription, sSellersNumber;
-
-    Button buyNow;
+    EditText no_such_product;
+    Button buyNow, submitted;
     ImageView image, product_image;
     TextView name, description, price;
+    ProgressBar loading;
 
 //    initialization of image loader
     ImageLoader imageLoader = ImageLoader.getInstance();
@@ -90,6 +107,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
         description = findViewById(R.id.description);
         price = findViewById(R.id.price);
         buyNow = findViewById(R.id.buyNow);
+        no_such_product = findViewById(R.id.no_such_product);
+        submitted = findViewById(R.id.submitted);
+        loading = findViewById(R.id.loading);
 
         item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
@@ -139,6 +159,18 @@ public class ItemDetailsActivity extends AppCompatActivity {
                    ViewLoginDialogue dialogue = new ViewLoginDialogue();
                    dialogue.showDialog(ItemDetailsActivity.this,"Action Needed To Continue");
                }
+            }
+        });
+
+        //submit a product that isnt there
+        submitted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!no_such_product.getText().toString().equals("")){
+                    send_notification_to_manager();
+                }else{
+                    no_such_product.setError("Required");
+                }
             }
         });
 
@@ -196,6 +228,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
     }
 
+    private void send_notification_to_manager() {
+        new Sending_mail("https://knust-martial-arts.000webhostapp.com/AutoDoktaService.php","commend","Customer",
+                no_such_product.getText().toString()).execute();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -408,5 +444,78 @@ public class ItemDetailsActivity extends AppCompatActivity {
         item_details_dialogue.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.whiteTextColor)));
         item_details_dialogue.show();
     }
+
+    class Sending_mail extends AsyncTask<Void, Void, String> {
+
+        String url_location, status,name, message;
+
+        public Sending_mail(String url_location,String status, String name, String message) {
+            this.url_location = url_location;
+            this.status = status;
+            this.name = name;
+            this.message = message;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            loading.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            Thread.currentThread().setPriority(Thread.MAX_PRIORITY);
+            try {
+                URL url = new URL(url_location);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setConnectTimeout(10000);
+                httpURLConnection.setReadTimeout(10000);
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.connect();
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+
+                String data = URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8") + "&" +
+                        URLEncoder.encode("status", "UTF-8") + "=" + URLEncoder.encode(status, "UTF-8") + "&" +
+                        URLEncoder.encode("message", "UTF-8") + "=" + URLEncoder.encode(message, "UTF-8");
+
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                StringBuffer stringBuffer = new StringBuffer();
+                String fetch;
+                while ((fetch = bufferedReader.readLine()) != null) {
+                    stringBuffer.append(fetch);
+                }
+                String string = stringBuffer.toString();
+                inputStream.close();
+                return string;
+
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+            return "please check internet connection";
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            loading.setVisibility(View.GONE);
+            if (s.equals("Product Commendation Sent")){
+                Toast.makeText(ItemDetailsActivity.this, s, LENGTH_LONG).show();
+            }
+            Toast.makeText(ItemDetailsActivity.this, s, LENGTH_LONG).show();
+
+        }
+
+    }
+
 
 }
