@@ -104,6 +104,17 @@ public class User_Profile extends AppCompatActivity {
         editiamge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//        activating the clickability of the image
+                profileimage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        checkPermission("android.permission.READ_EXTERNAL_STORAGE",
+                                "External Storage", 20);
+                        galleryAction(2000);
+
+                    }
+                });
+
                 fullname.setVisibility(View.GONE);
                 email.setVisibility(View.GONE);
                 username.setVisibility(View.GONE);
@@ -135,15 +146,6 @@ public class User_Profile extends AppCompatActivity {
             }
         });
 
-        profileimage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkPermission("android.permission.READ_EXTERNAL_STORAGE",
-                        "External Storage", 20);
-                galleryAction(2000);
-
-            }
-        });
 
         submitbutton.setOnClickListener(new View.OnClickListener() {
             @Override

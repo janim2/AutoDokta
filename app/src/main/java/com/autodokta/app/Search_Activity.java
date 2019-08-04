@@ -51,7 +51,10 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search_menu,menu);
         MenuItem searchMenuItem = menu.findItem( R.id.actionn_search ); // get my MenuItem with placeholder submenu
+
+//        automatically open search View when activity starts
         searchMenuItem.expandActionView();
+//        ends here
         SearchView searchView = (SearchView)searchMenuItem.getActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
