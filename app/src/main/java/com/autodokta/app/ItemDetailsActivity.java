@@ -1,8 +1,11 @@
 package com.autodokta.app;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -59,36 +62,36 @@ import static android.widget.Toast.LENGTH_LONG;
 
 public class ItemDetailsActivity extends AppCompatActivity {
 
-    String spartid, simage, sname, sprice, sdescription, sSellersNumber;
-    EditText no_such_product;
-    Button buyNow, submitted;
-    ImageView image, product_image;
-    TextView name, description, price;
-    ProgressBar loading;
+    private String spartid, simage, sname, sprice, sdescription, sSellersNumber, which_wishlist = "0";
+    private EditText no_such_product;
+    private Button buyNow, submitted;
+    private ImageView image, product_image, add_to_wishList;
+    private TextView name, description, price;
+    private ProgressBar loading;
 
-//    initialization of image loader
-    ImageLoader imageLoader = ImageLoader.getInstance();
+    //  private   initialization of image loader
+    private ImageLoader imageLoader = ImageLoader.getInstance();
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference reference;
+    private FirebaseUser user;
+    private String item = "";
+    private ArrayList relatedParts = new ArrayList<CarParts>();
+    private RecyclerView related_items_RecyclerView;
+    private RecyclerView.Adapter related_items_mPostAdapter;
+    private RecyclerView.LayoutManager related_items_mPostLayoutManager;
+    private String related_item_imageurl, related_item_name, related_item_description, related_item_price, related_item_sellersNumber;
 
-    FirebaseAuth firebaseAuth;
-    FirebaseAuth.AuthStateListener mAuthListener;
-    DatabaseReference reference;
-    FirebaseUser user;
-    String item = "";
+   //initializing the dialogue class
+    private Dialog item_details_dialogue;
 
-    ArrayList relatedParts = new ArrayList<CarParts>();
-    RecyclerView related_items_RecyclerView;
-    RecyclerView.Adapter related_items_mPostAdapter;
-    RecyclerView.LayoutManager related_items_mPostLayoutManager;
-    String related_item_imageurl, related_item_name, related_item_description, related_item_price, related_item_sellersNumber;
-
-    //initializing the dialogue class
-    Dialog item_details_dialogue;
-
-    ImageButton close_button;
+    private ImageButton close_button;
 
     private float downXpos = 0;
     private float downYpos = 0;
     private boolean touchcaptured = false;
+
+    private Accessories accessories;
 
 
     @Override
@@ -98,6 +101,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        accessories = new Accessories(ItemDetailsActivity.this);
         Intent intent = getIntent();
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -110,6 +114,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         no_such_product = findViewById(R.id.no_such_product);
         submitted = findViewById(R.id.submitted);
         loading = findViewById(R.id.loading);
+        add_to_wishList = findViewById(R.id.ic_wishlist);
 
         item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
@@ -174,6 +179,28 @@ public class ItemDetailsActivity extends AppCompatActivity {
             }
         });
 
+//        adding to wishlist
+            add_to_wishList.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(isNetworkAvailable()){
+                        if(which_wishlist.equals("0")){
+                            which_wishlist = "1";
+                            add_to_wishList.setImageDrawable(getResources().getDrawable(R.drawable.ic_favorite_black_24dp));
+                            adding_to_wishList();
+                        }
+                        else if(which_wishlist.equals("1")){
+                            which_wishlist = "0";
+                            add_to_wishList.setImageDrawable(getResources().getDrawable(R.drawable.ic_favorite_border_black_18dp));
+                            remove_from_wishlist();
+                        }
+                    }else{
+                        Toast.makeText(ItemDetailsActivity.this,"No internet connection",Toast.LENGTH_LONG).show();
+                    }
+
+
+                }
+            });
 //        related items pickup logic starts here
 
         related_items_RecyclerView = findViewById(R.id.recyclerView_relatedProducts);
@@ -225,6 +252,36 @@ public class ItemDetailsActivity extends AppCompatActivity {
         });
         related_items_RecyclerView.addItemDecoration(new Space(2,20,true,0));
         related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
+
+    }
+
+    private void remove_from_wishlist() {
+        DatabaseReference the_reference = FirebaseDatabase.getInstance().getReference("wishlist").child(user.getUid()).child(spartid);
+        the_reference.removeValue();
+        Toast.makeText(ItemDetailsActivity.this,"Removed from Wishlist",Toast.LENGTH_LONG).show();
+        accessories.put(spartid+"wished_or_not","no");
+    }
+
+    private void adding_to_wishList() {
+        DatabaseReference the_reference = FirebaseDatabase.getInstance().getReference("wishlist").child(user.getUid());
+        the_reference.child(spartid).child("number").setValue("1");
+        Toast.makeText(ItemDetailsActivity.this,"Added to Wishlist",Toast.LENGTH_LONG).show();
+        accessories.put(spartid+"wished_or_not","yes");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String is_whiched = accessories.getString(spartid+"wished_or_not");
+        if(is_whiched!=null){
+            if(is_whiched.equals("yes")){
+                add_to_wishList.setImageDrawable(getResources().getDrawable(R.drawable.ic_favorite_black_24dp));
+            }else{
+                add_to_wishList.setImageDrawable(getResources().getDrawable(R.drawable.ic_favorite_border_black_18dp));
+            }
+        }else {
+            add_to_wishList.setImageDrawable(getResources().getDrawable(R.drawable.ic_favorite_border_black_18dp));
+        }
 
     }
 
@@ -306,6 +363,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
                     }
                 }
+//                add wishlist; to navigation menu
+//                when click of heart button add to wishlist;
+//                make heart icon bigger
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -516,6 +576,14 @@ public class ItemDetailsActivity extends AppCompatActivity {
         }
 
     }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 
 
 }

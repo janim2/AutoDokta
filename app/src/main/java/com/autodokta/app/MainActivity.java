@@ -133,6 +133,7 @@ public class MainActivity extends AppCompatActivity
         menuItem = menu.findItem(R.id.logout);
         profilemenuitem = menu.findItem(R.id.profile);
         garageMenuItem = menu.findItem(R.id.garage);
+//        wishlistMenuItem = menu.findItem(R.id.wish_list);
 
 
         layout.setOnClickListener(new View.OnClickListener() {
@@ -177,6 +178,19 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
+        MenuItem wish_list = menu.findItem(R.id.wish_list);
+
+        if(mAuth.getCurrentUser() != null){
+            wish_list.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    startActivity(new Intent(MainActivity.this,WishList.class));
+                    return false;
+                }
+            });
+        }else{
+            wish_list.setVisible(false);
+        }
 //        MenuItem searchMenuItem = menu.findItem(R.id.action_search); // get my MenuItem with placeholder submenu
 //        SearchView searchView = (SearchView)searchMenuItem.getActionView();
 //        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -216,7 +230,9 @@ public class MainActivity extends AppCompatActivity
         switch (item.getItemId()){
             case R.id.action_search:
                 startActivity(new Intent(MainActivity.this,Search_Activity.class));
+                break;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -341,7 +357,6 @@ public class MainActivity extends AppCompatActivity
         bundle.putInt("type", 8);
         fragment.setArguments(bundle);
         adapter.addFragment(fragment);
-
 
         viewPager.setAdapter(adapter);
 
