@@ -131,7 +131,7 @@ public class ToolsandGarage extends Fragment {
 
                     boolean isNew = false;
 
-                    CarParts obj = new CarParts(toolsid,imageurl,name,description,price,isNew, sellersNumber);
+                    CarParts obj = new CarParts(toolsid,imageurl,name,description,price,isNew, sellersNumber,"","");
                     resulttoolsGarage.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

@@ -75,6 +75,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
                 intent.putExtra("theprice",itemList.get(position).getPrice());
                 intent.putExtra("thedescription",itemList.get(position).getDescription());
                 intent.putExtra("thesellersNumber",itemList.get(position).getsellersNumber());
+                intent.putExtra("therating",itemList.get(position).getProduct_rating());
                 v.getContext().startActivity(intent);
             }
         });

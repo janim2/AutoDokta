@@ -9,28 +9,17 @@ public class CarParts {
     public String description;
     public String price;
     public String sellersNumber;
-
+    public String product_rating;
     public String quantity;
 
-
     private boolean isNew = false;
-
-    public CarParts(String partId, String image, String name, String description, String price, boolean isNew, String sellersNumber) {
-
-        this.partId = partId;
-        this.image = image;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.isNew = isNew;
-        this.sellersNumber = sellersNumber;
-    }
 
     public CarParts(){
 
     }
 
-    public CarParts(String partId, String image, String name, String description, String price, boolean isNew, String sellersNumber,String quantity) {
+    public CarParts(String partId, String image, String name, String description, String price,
+                    boolean isNew, String sellersNumber,String quantity,String product_rating) {
 
         this.partId = partId;
         this.image = image;
@@ -40,6 +29,7 @@ public class CarParts {
         this.isNew = isNew;
         this.sellersNumber = sellersNumber;
         this.quantity = quantity;
+        this.product_rating = product_rating;
     }
 
 
@@ -61,6 +51,10 @@ public class CarParts {
 
     public String getQuantity(){
         return quantity;
+    }
+
+    public String getProduct_rating(){
+        return product_rating;
     }
 
 

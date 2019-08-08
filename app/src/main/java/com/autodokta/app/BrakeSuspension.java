@@ -128,7 +128,7 @@ public class BrakeSuspension extends Fragment {
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,"","");
                     resultBrakes.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

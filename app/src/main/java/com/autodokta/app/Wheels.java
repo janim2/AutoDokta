@@ -130,7 +130,7 @@ public class Wheels extends Fragment {
                     String wheelid = key;
                     boolean isNew = false;
 
-                    CarParts obj = new CarParts(wheelid,imageurl,name,description,price,isNew, sellersNumber);
+                    CarParts obj = new CarParts(wheelid,imageurl,name,description,price,isNew, sellersNumber,"","");
                     resultWheels.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

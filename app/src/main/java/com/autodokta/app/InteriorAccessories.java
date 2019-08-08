@@ -129,7 +129,7 @@ public class InteriorAccessories extends Fragment {
                     String interiorpartid = key;
 
                     boolean isNew = false;
-                    CarParts obj = new CarParts(interiorpartid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(interiorpartid,imageurl,name,description,price, isNew, sellersNumber,"","");
                     resultinteriorParts.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

@@ -130,7 +130,7 @@ public class ExteriorAccessories extends Fragment {
                     String exteriorpartid = key;
 
                     boolean isNew = false;
-                    CarParts obj = new CarParts(exteriorpartid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(exteriorpartid,imageurl,name,description,price, isNew, sellersNumber,"","");
                     resultExteriorParts.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

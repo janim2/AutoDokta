@@ -30,13 +30,13 @@ import java.util.ArrayList;
 public class WishList extends AppCompatActivity {
 
 //    strings for loading the parts from the database
-    ArrayList wishlistParts = new ArrayList<CarParts>();
-    RecyclerView wishlistRecyclerView;
-    RecyclerView.Adapter mwishlistAdapter;
-    RecyclerView.LayoutManager mwishlistLayoutManager;
-    String imageurl, name, description, price, sellersNumber;
-    ProgressBar loading;
-    TextView nowishItems;
+    private ArrayList wishlistParts = new ArrayList<CarParts>();
+    private RecyclerView wishlistRecyclerView;
+    private RecyclerView.Adapter mwishlistAdapter;
+    private RecyclerView.LayoutManager mwishlistLayoutManager;
+    private String imageurl, name, description, price, sellersNumber,product_rating;
+    private ProgressBar loading;
+    private TextView nowishItems;
 //    strings ends here
 
     @Override
@@ -130,6 +130,10 @@ public class WishList extends AppCompatActivity {
                             sellersNumber = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("rating")){
+                            product_rating = child.getValue().toString();
+                        }
+
 
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -139,7 +143,7 @@ public class WishList extends AppCompatActivity {
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,"",product_rating);
                     wishlistParts.add(obj);
                     wishlistRecyclerView.setAdapter(mwishlistAdapter);
                     mwishlistAdapter.notifyDataSetChanged();

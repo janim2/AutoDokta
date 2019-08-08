@@ -44,7 +44,7 @@ public class Cart extends AppCompatActivity {
     RecyclerView.Adapter mCartAdapter;
     ArrayList resultParts = new ArrayList<CarParts>();
     FirebaseAuth firebaseAuth;
-    String imageurl, name, description, price, sellersNumber,quantity;
+    String imageurl, name, description, price, sellersNumber,quantity,product_rating;
     Button cacheout,calltoorder;
     ImageView goBack;
 
@@ -259,6 +259,10 @@ public class Cart extends AppCompatActivity {
                                 sellersNumber = child.getValue().toString();
                             }
 
+                            if(child.getKey().equals("rating")){
+                                product_rating = child.getValue().toString();
+                            }
+
 
                             else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -269,7 +273,7 @@ public class Cart extends AppCompatActivity {
                         String partid = key;
                         boolean isNew = false;
                         if(name!=null || !name.equals("")){
-                            CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,quantity);
+                            CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,quantity,product_rating);
                             resultParts.add(obj);
                             cartRecyclerView.setAdapter(mCartAdapter);
                             mCartAdapter.notifyDataSetChanged();

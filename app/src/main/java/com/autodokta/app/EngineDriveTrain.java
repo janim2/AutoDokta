@@ -130,7 +130,7 @@ public class EngineDriveTrain extends Fragment {
 
                     String engineid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(engineid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(engineid,imageurl,name,description,price, isNew, sellersNumber,"","");
                     resultEngine.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

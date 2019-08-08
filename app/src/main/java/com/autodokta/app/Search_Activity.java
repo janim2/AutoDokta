@@ -40,12 +40,12 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
 
     private Searcher searcher;
     private InstantSearch helper;
-    String imageurl, name, description, price, sellersNumber;
+    private String imageurl, name, description, price, sellersNumber,product_rating;
 
-    ArrayList resultParts = new ArrayList<CarParts>();
-    RecyclerView PostRecyclerView;
-    RecyclerView.Adapter mPostAdapter;
-    RecyclerView.LayoutManager mPostLayoutManager;
+    private ArrayList resultParts = new ArrayList<CarParts>();
+    private RecyclerView PostRecyclerView;
+    private RecyclerView.Adapter mPostAdapter;
+    private RecyclerView.LayoutManager mPostLayoutManager;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -124,6 +124,10 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
                             sellersNumber = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("rating")){
+                            product_rating = child.getValue().toString();
+                        }
+
 
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -132,7 +136,7 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,"",product_rating);
                     resultParts.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();

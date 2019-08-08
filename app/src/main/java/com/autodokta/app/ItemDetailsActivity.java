@@ -66,7 +66,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private EditText no_such_product;
     private Button buyNow, submitted;
     private ImageView image, product_image, add_to_wishList;
-    private TextView name, description, price;
+    private TextView name, description, price, product_rating,no_reviews, see_all;
     private ProgressBar loading;
 
     //  private   initialization of image loader
@@ -80,7 +80,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private RecyclerView related_items_RecyclerView;
     private RecyclerView.Adapter related_items_mPostAdapter;
     private RecyclerView.LayoutManager related_items_mPostLayoutManager;
-    private String related_item_imageurl, related_item_name, related_item_description, related_item_price, related_item_sellersNumber;
+    private String related_item_imageurl, related_item_name, related_item_description,
+            related_item_price, related_item_sellersNumber,sproduct_rating;
 
    //initializing the dialogue class
     private Dialog item_details_dialogue;
@@ -102,7 +103,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         accessories = new Accessories(ItemDetailsActivity.this);
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -115,6 +116,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
         submitted = findViewById(R.id.submitted);
         loading = findViewById(R.id.loading);
         add_to_wishList = findViewById(R.id.ic_wishlist);
+        product_rating= findViewById(R.id.product_rating);
+        no_reviews = findViewById(R.id.no_reviews);
+        see_all = findViewById(R.id.see_all);
 
         item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
@@ -124,6 +128,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         sprice = intent.getStringExtra("theprice");
         sdescription = intent.getStringExtra("thedescription");
         sSellersNumber = intent.getStringExtra("thesellersNumber");
+        sproduct_rating = intent.getStringExtra("therating");
 
         //prep work before image is loaded is to load it into the cache
         DisplayImageOptions theImageOptions = new DisplayImageOptions.Builder().cacheInMemory(true).
@@ -139,6 +144,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         name.setText(sname);
         description.setText(sdescription);
         price.setText(sprice);
+        product_rating.setText(sproduct_rating+" / 5 (rating)");
 
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -201,6 +207,17 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
                 }
             });
+
+            //see_all_reviews button on click starts here
+        see_all.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoreview = new Intent(ItemDetailsActivity.this,ItemReview.class);
+                gotoreview.putExtra("item_rating",sproduct_rating);
+                startActivity(gotoreview);
+            }
+        });
+             //ends here
 //        related items pickup logic starts here
 
         related_items_RecyclerView = findViewById(R.id.recyclerView_relatedProducts);
@@ -312,35 +329,37 @@ public class ItemDetailsActivity extends AppCompatActivity {
     }
 
     private void getRelatedItems_ID() {
-        if(spartid.contains("offer")){
-            getItemIDs("Offers");
-        }
-        if(spartid.contains("brake")){
-            getItemIDs("Brakes");
-        }
-        if(spartid.contains("engine")){
-            getItemIDs("Engines");
-        }
-        if(spartid.contains("exterior")){
-            getItemIDs("ExteriorParts");
-        }
-        if(spartid.contains("light")){
-            getItemIDs("HeadLights");
-        }
-        if(spartid.contains("interior")){
-            getItemIDs("InteriorParts");
-        }
-        if(spartid.contains("tool")){
-            getItemIDs("Tools");
-        }
-        if(spartid.contains("wheel")){
-            getItemIDs("Wheels");
-        }
+        getItemIDs("");
+//        if(spartid.contains("offer")){
+//            getItemIDs("Offers");
+//        }
+//        if(spartid.contains("brake")){
+//            getItemIDs("Brakes");
+//        }
+//        if(spartid.contains("engine")){
+//            getItemIDs("Engines");
+//        }
+//        if(spartid.contains("exterior")){
+//            getItemIDs("ExteriorParts");
+//        }
+//        if(spartid.contains("light")){
+//            getItemIDs("HeadLights");
+//        }
+//        if(spartid.contains("interior")){
+//            getItemIDs("InteriorParts");
+//        }
+//        if(spartid.contains("tool")){
+//            getItemIDs("Tools");
+//        }
+//        if(spartid.contains("wheel")){
+//            getItemIDs("Wheels");
+//        }
     }
 
     private void getItemIDs(final String which_item) {
         try{
-            DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("carparts").child(which_item);
+//            DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("carparts").child(which_item);
+            DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference("allParts");
 
             //limiting number of items to be fetched
             Query query = partdatabase.limitToLast(3);
@@ -363,9 +382,6 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
                     }
                 }
-//                add wishlist; to navigation menu
-//                when click of heart button add to wishlist;
-//                make heart icon bigger
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -379,7 +395,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
     }
 
     private void FetchParts(final String key, String which_of_the_items) {
-        DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child(which_of_the_items).child(key);
+//        DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child(which_of_the_items).child(key);
+        DatabaseReference postData = FirebaseDatabase.getInstance().getReference("allParts").child(key);
         postData.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -405,6 +422,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                             related_item_sellersNumber = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("rating")){
+                            sproduct_rating = child.getValue().toString();
+                        }
+
 
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -415,7 +436,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
                     String partid = key;
                     boolean isNew = false;
                     CarParts obj = new CarParts(partid,related_item_imageurl,related_item_name,related_item_description,
-                            related_item_price, isNew, related_item_sellersNumber);
+                            related_item_price, isNew, related_item_sellersNumber,"",sproduct_rating);
                     relatedParts.add(obj);
                     related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
                     related_items_mPostAdapter.notifyDataSetChanged();

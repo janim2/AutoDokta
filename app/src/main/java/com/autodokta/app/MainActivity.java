@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
     RecyclerView PostRecyclerView;
     RecyclerView.Adapter mPostAdapter;
     RecyclerView.LayoutManager mPostLayoutManager;
-    String imageurl, name, description, price, sellersNumber;
+    String imageurl, name, description, price, sellersNumber, product_rating;
     ProgressBar loading;
 //    strings ends here
 
@@ -498,6 +498,9 @@ public class MainActivity extends AppCompatActivity
                             sellersNumber = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("rating")){
+                            product_rating = child.getValue().toString();
+                        }
 
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
@@ -507,7 +510,8 @@ public class MainActivity extends AppCompatActivity
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber);
+                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew,
+                            sellersNumber,"",product_rating);
                     resultParts.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();
