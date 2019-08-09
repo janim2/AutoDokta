@@ -124,13 +124,16 @@ public class Cart extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot child : dataSnapshot.getChildren()){
-
-                        if(fetchtheQuantity(child.getKey())){
-                            FetchPartsFromParts(child.getKey());
+                        if(!child.getKey().equals("")){
+                            if(fetchtheQuantity(child.getKey())){
+                                FetchPartsFromParts(child.getKey());
+                            }else{
+                                Toast.makeText(Cart.this,"Couldn't fetch quantity",Toast.LENGTH_LONG).show();
+                            }
                         }else{
-                            Toast.makeText(Cart.this,"Couldn't fetch quantity",Toast.LENGTH_LONG).show();
+                            loading.setVisibility(View.GONE);
                         }
-//                        getQuantity(child.getKey());
+
                     }
                 }else{
                     Toast.makeText(Cart.this,"Cannot get ID",Toast.LENGTH_LONG).show();

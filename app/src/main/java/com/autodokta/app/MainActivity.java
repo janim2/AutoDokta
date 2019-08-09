@@ -51,7 +51,6 @@ import java.util.ArrayList;
 
 import io.fabric.sdk.android.Fabric;
 
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -62,6 +61,7 @@ public class MainActivity extends AppCompatActivity
     FrameLayout layout;
     TextView cartnumberTextView, guest_or_user;
     public NavigationView navigationView;
+    private int cart_number;
 
     // Constants
     private static final int LOAD_MORE_THRESHOLD = 5;
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Home");
 
+        cart_number = 0;
         mAuth = FirebaseAuth.getInstance();
         layout = (FrameLayout)findViewById(R.id.cartframe);
         cartnumberTextView = (TextView) findViewById(R.id.cartnumber);
@@ -262,7 +263,7 @@ public class MainActivity extends AppCompatActivity
 
 //        checking to see if user is logged In
         if(mAuth.getCurrentUser()!=null){
-            getCount(mAuth.getCurrentUser());
+            getNumber_in_Cart();
 //            guest_or_user.setText("Welcome user");
 
         }else{
@@ -285,19 +286,47 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private void getCount(FirebaseUser user) {
+    private void getNumber_in_Cart(){
+        DatabaseReference numberofpersons = FirebaseDatabase.getInstance().getReference("cart");
+        numberofpersons.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot child : dataSnapshot.getChildren()){
+                        if(child.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
+                            getCount(child.getKey());
+                        }
+
+                        cartnumberTextView.setText("0");
+
+//                        Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void getCount(String key) {
         try {
-            DatabaseReference getcartCount = FirebaseDatabase.getInstance().getReference().child("cart").child(user.getUid());
+            DatabaseReference getcartCount = FirebaseDatabase.getInstance().getReference("cart").child(key);
             getcartCount.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
                         for(DataSnapshot child : dataSnapshot.getChildren()){
                             if(child.getKey()!=null){
-//                                Toast.makeText(MainActivity.this,child.getChildrenCount() + "",Toast.LENGTH_LONG).show();
-                                cartnumberTextView.setText(child.getChildrenCount()+"");
+                                cart_number += 1;
+//                                Toast.makeText(MainActivity.this,child+"",Toast.LENGTH_LONG).show();
+//                                Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
+//                                cartnumberTextView.setText(child.getChildrenCount()+"");
                             }
                         }
+                        cartnumberTextView.setText(String.valueOf(cart_number));
+
                     }else{
                         Toast.makeText(MainActivity.this,"Cannot get ID",Toast.LENGTH_LONG).show();
 
