@@ -30,6 +30,8 @@ import android.widget.Toast;
 import com.autodokta.app.Adapters.CarParts;
 import com.autodokta.app.Adapters.PartsAdapter;
 import com.autodokta.app.Adapters.Related_items_PartsAdapter;
+import com.autodokta.app.Adapters.ReviewAdapter;
+import com.autodokta.app.Adapters.Reviews;
 import com.autodokta.app.helpers.Space;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -64,9 +66,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
     private String spartid, simage, sname, sprice, sdescription, sSellersNumber, which_wishlist = "0";
     private EditText no_such_product;
-    private Button buyNow, submitted;
+    private Button buyNow, submitted,no_reviews;
     private ImageView image, product_image, add_to_wishList;
-    private TextView name, description, price, product_rating,no_reviews, see_all;
+    private TextView name, description, price, product_rating, see_all;
     private ProgressBar loading;
 
     //  private   initialization of image loader
@@ -77,11 +79,14 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private FirebaseUser user;
     private String item = "";
     private ArrayList relatedParts = new ArrayList<CarParts>();
+    private ArrayList reviewsArray = new ArrayList<Reviews>();
     private RecyclerView related_items_RecyclerView;
-    private RecyclerView.Adapter related_items_mPostAdapter;
+    private RecyclerView.Adapter related_items_mPostAdapter,customer_reviewAdapter;
     private RecyclerView.LayoutManager related_items_mPostLayoutManager;
     private String related_item_imageurl, related_item_name, related_item_description,
-            related_item_price, related_item_sellersNumber,sproduct_rating;
+            related_item_price, related_item_sellersNumber,sproduct_rating,
+            review_individual_rate, review_name, review_message, review_title;
+    ;
 
     private RecyclerView customer_reviewRecyclerView;
 
@@ -231,8 +236,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
             }
         });
              //ends here
-//        related items pickup logic starts here
 
+//        related items pickup logic starts here
         related_items_RecyclerView = findViewById(R.id.recyclerView_relatedProducts);
         related_items_RecyclerView.setHasFixedSize(true);
 
@@ -240,7 +245,6 @@ public class ItemDetailsActivity extends AppCompatActivity {
 //        related_items_RecyclerView.setLayoutManager(related_items_mPostLayoutManager);
 
         getRelatedItems_ID();
-//        getCustomerReview_ID();
         related_items_mPostAdapter = new Related_items_PartsAdapter(getrelatedParts(),ItemDetailsActivity.this);
         related_items_RecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
@@ -284,62 +288,86 @@ public class ItemDetailsActivity extends AppCompatActivity {
         related_items_RecyclerView.addItemDecoration(new Space(2,20,true,0));
         related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
 
+        //reviews adapter settings starts here
+        getCustomerReview_ID();
+        customer_reviewRecyclerView.setHasFixedSize(true);
+
+        customer_reviewAdapter = new ReviewAdapter(getReviewsFromDatabase(),ItemDetailsActivity.this);
+        customer_reviewRecyclerView.setAdapter(customer_reviewAdapter);
+//        reviews adapter ends here
     }
 
     private void getCustomerReview_ID() {
-        DatabaseReference numberofpersons = FirebaseDatabase.getInstance().getReference("reviews");
-        numberofpersons.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference("review").child(spartid);
+
+        partdatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot child : dataSnapshot.getChildren()){
-                        if(child.getKey().equals(spartid)){
-                            Toast.makeText(ItemDetailsActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
-
-//                            get3reviews(child.getKey());
-                        }else{
-                            no_reviews.setVisibility(View.VISIBLE);
+//                        Toast.makeText(ItemReview.this,child.getKey(),Toast.LENGTH_LONG).show();
+                        if(child.getKey().length() > 15){
+                            get3ReviewsNow(child.getKey());
                         }
-//                        Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-    }
-
-    private void get3reviews(String key) {
-        DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference("reviews").child(key);
-
-        //limiting number of items to be fetched
-        Query query = partdatabase.limitToLast(3);
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-
-                    //randomly selecting items to display
-//                            int ads = (int) dataSnapshot.getChildrenCount();
-//                            int rand = new Random().nextInt(ads);
-                    for(DataSnapshot child : dataSnapshot.getChildren()){
-//                            for(DataSnapshot datas: child.getChildren()){
-//                                for(int i= 0; i < rand;i++){
-//                        FetchParts(child.getKey(), which_item);
-//                                }
                     }
                 }else{
 //                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
-
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(ItemDetailsActivity.this,"Cancelled",Toast.LENGTH_LONG).show();
+            }
+        });
+
+    }
+
+    private void get3ReviewsNow(String key) {
+        DatabaseReference postData = FirebaseDatabase.getInstance().getReference("review").child(spartid).child(key);
+
+        //restricting the number of reviews that are fetched from the database with a query
+        Query getOnly_three = postData.limitToFirst(3);
+
+        getOnly_three.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot child : dataSnapshot.getChildren()){
+                        if(child.getKey().equals("individual_rate")){
+                            review_individual_rate = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("message")){
+                            review_message = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("title")){
+                            review_title = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("name")){
+                            review_name = child.getValue().toString();
+                        }
+
+                        else{
+//                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    Reviews obj = new Reviews(review_individual_rate,review_message,review_title,review_name);
+                    reviewsArray.add(obj);
+                    customer_reviewRecyclerView.setAdapter(customer_reviewAdapter);
+                    customer_reviewAdapter.notifyDataSetChanged();
+                    no_reviews.setText("GIVE YOUR FEEDBACK");
+                    loading.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(ItemDetailsActivity.this,"Cancelled",Toast.LENGTH_LONG).show();
+
             }
         });
     }
@@ -439,19 +467,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
-
-                            //randomly selecting items to display
-//                            int ads = (int) dataSnapshot.getChildrenCount();
-//                            int rand = new Random().nextInt(ads);
                         for(DataSnapshot child : dataSnapshot.getChildren()){
-//                            for(DataSnapshot datas: child.getChildren()){
-//                                for(int i= 0; i < rand;i++){
                                     FetchParts(child.getKey(), which_item);
-//                                }
                             }
                     }else{
 //                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
-
                     }
                 }
 
@@ -563,6 +583,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
         return  relatedParts;
     }
 
+    public ArrayList<Reviews> getReviewsFromDatabase(){
+        return  reviewsArray;
+    }
 
     private void showImagePopup(FragmentActivity activity,String imageString) {
         item_details_dialogue.setContentView(R.layout.custom_image_dialogue);
