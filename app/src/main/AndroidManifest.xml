@@ -20,11 +20,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ItemReview">
-        </activity>
+        <activity android:name=".AddItemReview"></activity>
+        <activity android:name=".ItemReview"></activity>
         <activity
             android:name=".WishList"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Splash_Screen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

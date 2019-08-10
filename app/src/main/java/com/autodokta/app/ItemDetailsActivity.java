@@ -83,6 +83,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private String related_item_imageurl, related_item_name, related_item_description,
             related_item_price, related_item_sellersNumber,sproduct_rating;
 
+    private RecyclerView customer_reviewRecyclerView;
+
    //initializing the dialogue class
     private Dialog item_details_dialogue;
 
@@ -119,6 +121,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         product_rating= findViewById(R.id.product_rating);
         no_reviews = findViewById(R.id.no_reviews);
         see_all = findViewById(R.id.see_all);
+        customer_reviewRecyclerView = findViewById(R.id.customer_reviewRecycler);
 
         item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
@@ -150,6 +153,15 @@ public class ItemDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showImagePopup(ItemDetailsActivity.this, simage);
+            }
+        });
+
+        no_reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addItemReview = new Intent(ItemDetailsActivity.this, AddItemReview.class);
+                addItemReview.putExtra("toReview_partId",spartid);
+                startActivity(addItemReview);
             }
         });
 
@@ -214,6 +226,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoreview = new Intent(ItemDetailsActivity.this,ItemReview.class);
                 gotoreview.putExtra("item_rating",sproduct_rating);
+                gotoreview.putExtra("item_id",spartid);
                 startActivity(gotoreview);
             }
         });
@@ -227,6 +240,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
 //        related_items_RecyclerView.setLayoutManager(related_items_mPostLayoutManager);
 
         getRelatedItems_ID();
+//        getCustomerReview_ID();
         related_items_mPostAdapter = new Related_items_PartsAdapter(getrelatedParts(),ItemDetailsActivity.this);
         related_items_RecyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
@@ -270,6 +284,64 @@ public class ItemDetailsActivity extends AppCompatActivity {
         related_items_RecyclerView.addItemDecoration(new Space(2,20,true,0));
         related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
 
+    }
+
+    private void getCustomerReview_ID() {
+        DatabaseReference numberofpersons = FirebaseDatabase.getInstance().getReference("reviews");
+        numberofpersons.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    for(DataSnapshot child : dataSnapshot.getChildren()){
+                        if(child.getKey().equals(spartid)){
+                            Toast.makeText(ItemDetailsActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
+
+//                            get3reviews(child.getKey());
+                        }else{
+                            no_reviews.setVisibility(View.VISIBLE);
+                        }
+//                        Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
+    private void get3reviews(String key) {
+        DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference("reviews").child(key);
+
+        //limiting number of items to be fetched
+        Query query = partdatabase.limitToLast(3);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+
+                    //randomly selecting items to display
+//                            int ads = (int) dataSnapshot.getChildrenCount();
+//                            int rand = new Random().nextInt(ads);
+                    for(DataSnapshot child : dataSnapshot.getChildren()){
+//                            for(DataSnapshot datas: child.getChildren()){
+//                                for(int i= 0; i < rand;i++){
+//                        FetchParts(child.getKey(), which_item);
+//                                }
+                    }
+                }else{
+//                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(ItemDetailsActivity.this,"Cancelled",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void remove_from_wishlist() {

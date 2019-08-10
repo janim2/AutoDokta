@@ -32,11 +32,11 @@
         <ImageView
             android:id="@+id/image1"
             android:layout_width="match_parent"
-            android:layout_height="200.0dp"
-            android:paddingLeft="8.0dp"
-            android:paddingTop="4.0dp"
-            android:paddingRight="8.0dp"
-            android:paddingBottom="4.0dp"
+            android:layout_height="150.0dp"
+            android:paddingLeft="10.0dp"
+            android:paddingTop="5.0dp"
+            android:paddingRight="10.0dp"
+            android:paddingBottom="5.0dp"
             android:src="@color/stay_color" />
 
         <LinearLayout
@@ -99,7 +99,7 @@
             android:layout_margin="8dp"
             android:background="@color/colorPrimary"
             android:text="BUY NOW"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:id="@+id/buyNow"
             android:textColor="@android:color/white" />
 
@@ -111,7 +111,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="8dp"
             android:text="Call TO BUY"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:onClick="onClick"
             android:textColor="@android:color/white" />
 
@@ -162,18 +162,23 @@
             android:id="@+id/product_rating"
             android:textColor="@color/colorPrimary"/>
 
-        <TextView
+        <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="This product has no reviews yet!"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:id="@+id/customer_reviewRecycler"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="WRITE THE FIRST REVIEW"
             android:id="@+id/no_reviews"
             android:padding="5dp"
-            android:textSize="13sp"
+            android:textSize="14sp"
             android:gravity="center"
+            android:background="@android:color/white"
             android:layout_marginTop="20dp"
-            android:textColor="@color/gen_black"/>
-
-
+            android:textColor="@color/colorPrimary"/>
 
 
         <TextView

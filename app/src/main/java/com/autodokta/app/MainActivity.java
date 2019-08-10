@@ -57,9 +57,9 @@ public class MainActivity extends AppCompatActivity
     public static int notificationCountCart = 0;
     FirebaseAuth mAuth;
     public Menu menu;
-    MenuItem menuItem, profilemenuitem, garageMenuItem;
-    FrameLayout layout;
-    TextView cartnumberTextView, guest_or_user;
+    private MenuItem menuItem, profilemenuitem, garageMenuItem;
+    private FrameLayout layout;
+    private TextView cartnumberTextView, guest_or_user;
     public NavigationView navigationView;
     private int cart_number;
 
@@ -69,12 +69,12 @@ public class MainActivity extends AppCompatActivity
 
 
 //    strings for loading the parts from the database
-    ArrayList resultParts = new ArrayList<CarParts>();
-    RecyclerView PostRecyclerView;
-    RecyclerView.Adapter mPostAdapter;
-    RecyclerView.LayoutManager mPostLayoutManager;
-    String imageurl, name, description, price, sellersNumber, product_rating;
-    ProgressBar loading;
+    private ArrayList resultParts = new ArrayList<CarParts>();
+    private RecyclerView PostRecyclerView;
+    private RecyclerView.Adapter mPostAdapter;
+    private RecyclerView.LayoutManager mPostLayoutManager;
+    private String imageurl, name, description, price, sellersNumber, product_rating;
+    private ProgressBar loading;
 //    strings ends here
 
     @Override
