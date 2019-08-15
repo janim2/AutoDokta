@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -33,6 +34,7 @@ import com.algolia.instantsearch.core.helpers.Searcher;
 import com.algolia.instantsearch.ui.helpers.InstantSearch;
 import com.algolia.search.saas.Client;
 import com.autodokta.app.Adapters.CarParts;
+import com.autodokta.app.Adapters.ImageAdapter;
 import com.autodokta.app.Adapters.PartsAdapter;
 import com.autodokta.app.SearchItems.ResultsListView;
 import com.autodokta.app.helpers.Space;
@@ -48,8 +50,11 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import io.fabric.sdk.android.Fabric;
+import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -76,6 +81,15 @@ public class MainActivity extends AppCompatActivity
     private String imageurl, name, description, price, sellersNumber, product_rating;
     private ProgressBar loading;
 //    strings ends here
+
+    //sliders variables starts here
+    private static ViewPager viewPager;
+    private static int currentPage = 0;
+//    private static final Integer[] pics = {R.drawable.coding,R.drawable.learning,R.drawable.python};
+    private static final Integer[] pics = {R.drawable.slider_image1,R.drawable.slider_image2,
+        R.drawable.slider_image3};
+    private ArrayList<Integer> picsArr = new ArrayList<Integer>();
+//    sliders variables ends here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +141,9 @@ public class MainActivity extends AppCompatActivity
 //            tabLayout.getTabAt(6).setText(getString(R.string.item_7));
 //            tabLayout.getTabAt(7).setText(getString(R.string.item_8));
 //        }
+
+        //initializing the image slider
+        initialize();
 
 //        getting the menu from the navigation item;
         menu = navigationView.getMenu();
@@ -180,6 +197,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main,menu);
         MenuItem wish_list = menu.findItem(R.id.wish_list);
+        MenuItem chat_system = menu.findItem(R.id.chat);
 
         if(mAuth.getCurrentUser() != null){
             wish_list.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
@@ -189,8 +207,17 @@ public class MainActivity extends AppCompatActivity
                     return false;
                 }
             });
+
+            chat_system.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    startActivity(new Intent(MainActivity.this,Chat.class));
+                    return false;
+                }
+            });
         }else{
             wish_list.setVisible(false);
+            chat_system.setVisible(false);
         }
 //        MenuItem searchMenuItem = menu.findItem(R.id.action_search); // get my MenuItem with placeholder submenu
 //        SearchView searchView = (SearchView)searchMenuItem.getActionView();
@@ -232,9 +259,11 @@ public class MainActivity extends AppCompatActivity
             case R.id.action_search:
                 startActivity(new Intent(MainActivity.this,Search_Activity.class));
                 break;
+
+            case R.id.action_notifications:
+                startActivity(new Intent(MainActivity.this,Notifications.class));
+                break;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -558,6 +587,43 @@ public class MainActivity extends AppCompatActivity
 
     public ArrayList<CarParts> getParts(){
         return  resultParts;
+    }
+
+
+    private void initialize(){
+
+        for (int i=0; i<pics.length; i++){
+            picsArr.add(pics[i]);
+        }
+
+        viewPager = (ViewPager)findViewById(R.id.viewPage);
+        viewPager.setAdapter(new ImageAdapter(picsArr,MainActivity.this));
+        CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
+        indicator.setViewPager(viewPager);
+
+//        Auto start of viewPager
+//        We use handler to update the android image slider on a new thread.Enquing an action to be performed
+//        on a different thread
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            @Override
+            public void run() {
+                if (currentPage == pics.length){
+                    currentPage = 0;
+                }
+                viewPager.setCurrentItem(currentPage++,true);
+            }
+        };
+
+//        Using the timer to  schedule task for repeated execution in a background thread
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        },5000,5000);
+
     }
 
 }

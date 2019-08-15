@@ -1,16 +1,22 @@
 package com.autodokta.app;
 
 import android.app.Dialog;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -57,6 +63,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Random;
 
 import static android.widget.Toast.LENGTH_LONG;
@@ -86,7 +93,6 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private String related_item_imageurl, related_item_name, related_item_description,
             related_item_price, related_item_sellersNumber,sproduct_rating,
             review_individual_rate, review_name, review_message, review_title;
-    ;
 
     private RecyclerView customer_reviewRecyclerView;
 
@@ -288,13 +294,13 @@ public class ItemDetailsActivity extends AppCompatActivity {
         related_items_RecyclerView.addItemDecoration(new Space(2,20,true,0));
         related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
 
-        //reviews adapter settings starts here
+        //notfications adapter settings starts here
         getCustomerReview_ID();
         customer_reviewRecyclerView.setHasFixedSize(true);
 
         customer_reviewAdapter = new ReviewAdapter(getReviewsFromDatabase(),ItemDetailsActivity.this);
         customer_reviewRecyclerView.setAdapter(customer_reviewAdapter);
-//        reviews adapter ends here
+//        notfications adapter ends here
     }
 
     private void getCustomerReview_ID() {
@@ -377,6 +383,9 @@ public class ItemDetailsActivity extends AppCompatActivity {
         the_reference.removeValue();
         Toast.makeText(ItemDetailsActivity.this,"Removed from Wishlist",Toast.LENGTH_LONG).show();
         accessories.put(spartid+"wished_or_not","no");
+        send_notification_to_user("Removed from Wishlist",sname+" has been removed from wish list",R.drawable.delete);
+        Add_this_notification_to_database("Removed from Wishlist",sname+" has been removed from wish list"
+                ,new Date().getTime(),"RWN");
     }
 
     private void adding_to_wishList() {
@@ -384,6 +393,59 @@ public class ItemDetailsActivity extends AppCompatActivity {
         the_reference.child(spartid).child("number").setValue("1");
         Toast.makeText(ItemDetailsActivity.this,"Added to Wishlist",Toast.LENGTH_LONG).show();
         accessories.put(spartid+"wished_or_not","yes");
+        send_notification_to_user("Added to Wishlist","You have successfully added "+sname+" to your wish list",R.drawable.correct);
+        Add_this_notification_to_database("Added to Wishlist","You have successfully added "+sname+" to your wish list"
+                ,new Date().getTime(),"AWN");
+
+    }
+
+    private void send_notification_to_user(String title, String message, int the_show_image) {
+        String  channel_id = "1";
+
+//        Get an instance of the NotificationServiceManager
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel notificationChannel = new NotificationChannel(channel_id,"My Notification",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+//            set the user visible description of the channel
+            notificationChannel.setDescription("Channel Description");
+            notificationChannel.enableLights(true);
+            notificationChannel.setLightColor(Color.RED);
+            notificationManager.createNotificationChannel(notificationChannel);
+        }
+
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this,channel_id);
+//        Create an intent that will fire when user taps the notification
+        Intent intent = new Intent(this,Notifications.class);
+//        last argument is a flag paaed which helps the system not to push any notification when
+//        there is changes in the system,but to update the current one
+        PendingIntent pendingIntent = PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        mBuilder.setContentIntent(pendingIntent);
+        mBuilder.setSmallIcon(the_show_image);
+        mBuilder.setContentTitle(title);
+        mBuilder.setContentText(message);
+        mBuilder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        mBuilder.setNumber(1);
+//        Automatically removes the notification when user taps it
+        mBuilder.setAutoCancel(true);
+
+        notificationManager.notify(Integer.parseInt(channel_id),mBuilder.build());
+    }
+
+    private void Add_this_notification_to_database(String title, String _message, long time, String imageType) {
+        DatabaseReference add_notification = FirebaseDatabase.getInstance().getReference("notification");
+        String notify_id = add_notification.push().getKey();
+        add_notification.child(FirebaseAuth.getInstance()
+                .getCurrentUser().getUid()).child(notify_id).child("title").setValue(title);
+
+       add_notification.child(FirebaseAuth.getInstance()
+                    .getCurrentUser().getUid()).child(notify_id).child("message").setValue(_message);
+
+       add_notification.child(FirebaseAuth.getInstance()
+                    .getCurrentUser().getUid()).child(notify_id).child("time").setValue(String.valueOf(time));
+
+       add_notification.child(FirebaseAuth.getInstance()
+                    .getCurrentUser().getUid()).child(notify_id).child("imageType").setValue(imageType);
     }
 
     @Override
@@ -517,8 +579,6 @@ public class ItemDetailsActivity extends AppCompatActivity {
                         if(child.getKey().equals("rating")){
                             sproduct_rating = child.getValue().toString();
                         }
-
-
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
 

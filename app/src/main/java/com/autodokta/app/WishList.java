@@ -45,6 +45,8 @@ public class WishList extends AppCompatActivity {
         setContentView(R.layout.activity_wish_list);
         getSupportActionBar().setTitle("WishList");
 
+        nowishItems = (TextView)findViewById(R.id.no_wish_items);
+
         nowishItems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

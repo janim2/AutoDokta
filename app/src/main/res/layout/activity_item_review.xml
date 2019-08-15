@@ -97,6 +97,7 @@
                         android:layout_height="wrap_content"
                         android:text="(1 rating)"
                         android:textSize="13sp"
+                        android:id="@+id/rating_count"
                         android:textColor="@android:color/black"
                         android:gravity="center"/>
 

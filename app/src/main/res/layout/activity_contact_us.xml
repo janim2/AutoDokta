@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical">
 
 
     <!--<android.support.design.widget.AppBarLayout-->
@@ -28,11 +32,87 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textStyle="bold"
-        android:text="We will like to hear from you.Location:Kumasi,Ashanti Region.Telephone:0266711801.Email:prino2002@yahoo.com" />
+        android:text="@string/contact_message" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/colorGrey"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter name" />
 
 
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Enter email" />
+
+
+    <EditText
+        android:id="@+id/orderEditText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"
+        android:textColorHint="@color/colorGrey"
+        android:hint="Order number" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
+        android:text="Subject"/>
+
+    <Spinner
+        android:id="@+id/subject"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_background"/>
+
+    <EditText
+        android:id="@+id/descEditText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/colorGrey"
+        android:hint="message" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/whiteTextColor"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="30dp"
+        android:text="Submit"/>
 
 </LinearLayout>
+
+</ScrollView>
 
 
 

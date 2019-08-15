@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 public class ItemReview extends AppCompatActivity {
 
-    private TextView star_text, no_reviewsTextView;
+    private TextView star_text, no_reviewsTextView, rating_count;
     private ImageView star1, star2, star3, star4, star5;
     String rating_number, item_id;
 
@@ -41,6 +41,7 @@ public class ItemReview extends AppCompatActivity {
     private RecyclerView.LayoutManager mReviewLayoutManager;
     private String individual_rate, name, message, title;
     private ProgressBar loading;
+    private int rate_count_int = 0;
 //    strings ends here
 
 
@@ -53,6 +54,7 @@ public class ItemReview extends AppCompatActivity {
         item_id = getIntent().getStringExtra("item_id");
         rating_number = getIntent().getStringExtra("item_rating");
         no_reviewsTextView  = (TextView) findViewById(R.id.no_reviews);
+        rating_count  = (TextView) findViewById(R.id.rating_count);
 
         //items to load from the database starts here
         loading  = (ProgressBar)findViewById(R.id.loading);
@@ -118,8 +120,10 @@ public class ItemReview extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot child : dataSnapshot.getChildren()){
-//                        Toast.makeText(ItemReview.this,child.getKey(),Toast.LENGTH_LONG).show();
-                        getReviewsNow(child.getKey());
+                        if(child.getKey().length() > 15){
+                            rating_count.setText(String.valueOf(rate_count_int += 1));
+                            getReviewsNow(child.getKey());
+                        }
                     }
                 }else{
 //                    Toast.makeText(getActivity(),"Cannot get ID",Toast.LENGTH_LONG).show();
