@@ -61,10 +61,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 Wheels wheels = new Wheels();
                 return wheels;
 
-
                 default:
                     return  mFragmentList.get(position);
-
         }
 //        return mFragmentList.get(position);
     }

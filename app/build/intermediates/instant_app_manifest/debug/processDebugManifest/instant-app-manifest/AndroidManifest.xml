@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.autodokta.app"
     android:targetSandboxVersion="2"
-    android:versionCode="15"
-    android:versionName="15.0" > <!-- testing -->
+    android:versionCode="36"
+    android:versionName="1.0" >
+
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="28" />
@@ -33,6 +34,44 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
+            android:name="com.autodokta.app.Notifications"
+            android:parentActivityName="com.autodokta.app.MainActivity" />
+        <activity
+            android:name="com.autodokta.app.Chat"
+            android:parentActivityName="com.autodokta.app.MainActivity" />
+        <activity android:name="com.autodokta.app.AddItemReview" />
+        <activity android:name="com.autodokta.app.ItemReview" />
+        <activity
+            android:name="com.autodokta.app.WishList"
+            android:parentActivityName="com.autodokta.app.MainActivity" />
+        <activity
+            android:name="com.autodokta.app.Splash_Screen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.autodokta.app.Search_Activity"
+            android:parentActivityName="com.autodokta.app.MainActivity" />
+        <activity
+            android:name="com.autodokta.app.Todo_inner_Service"
+            android:parentActivityName="com.autodokta.app.Todo_Services" />
+        <activity
+            android:name="com.autodokta.app.Todo_Refuel"
+            android:parentActivityName="com.autodokta.app.Todo_Services" />
+        <activity
+            android:name="com.autodokta.app.Todo_Income"
+            android:parentActivityName="com.autodokta.app.Todo_Services" />
+        <activity
+            android:name="com.autodokta.app.Todo_Services"
+            android:parentActivityName="com.autodokta.app.Garage" />
+        <activity
+            android:name="com.autodokta.app.Add_a_TodoActivity"
+            android:parentActivityName="com.autodokta.app.Garage" />
+        <activity
             android:name="com.autodokta.app.User_Profile"
             android:parentActivityName="com.autodokta.app.MainActivity" />
         <activity android:name="com.autodokta.app.Garage" />
@@ -58,13 +97,7 @@
         <activity android:name="com.autodokta.app.RegisterActivity" />
         <activity
             android:name="com.autodokta.app.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.autodokta.app.PurchasesActivity" />
         <activity
             android:name="com.autodokta.app.ServicesActivity"
@@ -72,6 +105,9 @@
         <activity android:name="com.autodokta.app.HelpCenterActivity" />
         <activity android:name="com.autodokta.app.TermsActivity" />
         <activity android:name="com.autodokta.app.ContactUsActivity" />
+        <activity
+            android:name="com.autodokta.app.TodoDetailsActivity"
+            android:parentActivityName="com.autodokta.app.Garage" />
         <activity
             android:name="com.autodokta.app.IndexActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -82,6 +118,76 @@
         <activity
             android:name="com.autodokta.app.AboutUsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.firebase.ui.auth.ui.email.ConfirmRecoverPasswordActivity"
+            android:label="@string/title_confirm_recover_password_activity"
+            android:theme="@style/FirebaseUI.Dialog" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.email.EmailHintContainerActivity"
+            android:label="@string/default_toolbar_title"
+            android:theme="@style/FirebaseUI.Translucent" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.email.RecoverPasswordActivity"
+            android:label="@string/title_recover_password_activity"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.email.RegisterEmailActivity"
+            android:label="@string/title_register_email_activity"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.email.SignInNoPasswordActivity"
+            android:label="@string/title_sign_in_no_password_activity"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.email.SignInActivity"
+            android:label="@string/title_sign_in_activity"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.account_link.SaveCredentialsActivity"
+            android:label="@string/default_toolbar_title"
+            android:theme="@style/FirebaseUI.Translucent" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.account_link.WelcomeBackIDPPrompt"
+            android:label="@string/title_welcome_back_idp_prompt"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.account_link.WelcomeBackPasswordPrompt"
+            android:label="@string/title_welcome_back_password_prompt"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity"
+            android:label="@string/default_toolbar_title"
+            android:theme="@style/FirebaseUI" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.idp.IDPSignInContainerActivity"
+            android:label="@string/default_toolbar_title"
+            android:theme="@style/FirebaseUI.Translucent" />
+        <activity
+            android:name="com.firebase.ui.auth.ui.ChooseAccountActivity"
+            android:label="@string/default_toolbar_title"
+            android:theme="@style/FirebaseUI.Translucent" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/FirebaseUI.Translucent" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/facebook_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
@@ -129,6 +235,20 @@
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:exported="true"
@@ -159,16 +279,15 @@
             android:authorities="com.autodokta.app.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
         <provider
             android:name="com.crashlytics.android.CrashlyticsInitProvider"
             android:authorities="com.autodokta.app.crashlyticsinitprovider"
             android:exported="false"
             android:initOrder="90" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.autodokta.app.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

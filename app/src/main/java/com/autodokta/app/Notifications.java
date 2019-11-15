@@ -43,8 +43,12 @@ public class Notifications extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifications);
         getSupportActionBar().setTitle("Notifications");
-        userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        try {
+            userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        }catch (NullPointerException e){
+
+        }
         loadingTextView = findViewById(R.id.loading);
         notifications_RecyclerView = findViewById(R.id.notifications_recyclerView);
         //reviews adapter settings starts here
