@@ -3,15 +3,12 @@ package com.autodokta.app;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AbsListView;
-import android.support.v7.widget.SearchView;
-import android.widget.Toast;
 
 import com.algolia.instantsearch.core.helpers.Searcher;
 import com.algolia.instantsearch.ui.helpers.InstantSearch;
@@ -50,7 +47,7 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search_menu,menu);
-        MenuItem searchMenuItem = menu.findItem( R.id.actionn_search ); // get my MenuItem with placeholder submenu
+        MenuItem searchMenuItem = menu.findItem(R.id.actionn_search ); // get my MenuItem with placeholder submenu
 
 //        automatically open search View when activity starts
         searchMenuItem.expandActionView();

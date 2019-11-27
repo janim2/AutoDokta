@@ -14,11 +14,11 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -647,7 +647,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         return  reviewsArray;
     }
 
-    private void showImagePopup(FragmentActivity activity,String imageString) {
+    private void showImagePopup(FragmentActivity activity, String imageString) {
         item_details_dialogue.setContentView(R.layout.custom_image_dialogue);
             close_button = (ImageButton)item_details_dialogue.findViewById(R.id.btnClose);
           product_image = (ImageView)item_details_dialogue.findViewById(R.id.popup_image);

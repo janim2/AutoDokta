@@ -54,7 +54,7 @@ public class BrakeSuspension extends Fragment {
         PostRecyclerView.setHasFixedSize(true);
 
 //        mPostLayoutManager = new LinearLayoutManager(getActivity());
-        mPostLayoutManager = new GridLayoutManager(getActivity(),2,LinearLayoutManager.VERTICAL,false);
+        mPostLayoutManager = new GridLayoutManager(getActivity(),2, LinearLayoutManager.VERTICAL,false);
 
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
 

@@ -56,7 +56,7 @@ public class InteriorAccessories extends Fragment {
 //
 //        mPostLayoutManager = new LinearLayoutManager(getActivity());
         mPostLayoutManager = new GridLayoutManager(getActivity(),
-                2,LinearLayoutManager.VERTICAL,false);
+                2, LinearLayoutManager.VERTICAL,false);
 
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
 

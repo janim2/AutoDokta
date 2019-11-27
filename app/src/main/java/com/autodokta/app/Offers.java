@@ -37,7 +37,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Offers extends Fragment{
+public class Offers extends Fragment {
     ArrayList resultParts = new ArrayList<CarParts>();
     RecyclerView PostRecyclerView;
     RecyclerView.Adapter mPostAdapter;
@@ -60,7 +60,7 @@ public class Offers extends Fragment{
         PostRecyclerView = (RecyclerView) offers.findViewById(R.id.recyclerViewProducts);
         PostRecyclerView.setHasFixedSize(true);
 
-        mPostLayoutManager = new GridLayoutManager(getActivity(),2,LinearLayoutManager.VERTICAL,false);
+        mPostLayoutManager = new GridLayoutManager(getActivity(),2, LinearLayoutManager.VERTICAL,false);
 //        mPostLayoutManager = new LinearLayoutManager(getActivity());
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
 
