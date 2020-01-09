@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -84,8 +85,8 @@ public class Chat extends AppCompatActivity {
     public void getTheMessages(String key) {
         DatabaseReference getMessages = FirebaseDatabase.getInstance().getReference("chat")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child(key);
-
-        getMessages.addListenerForSingleValueEvent(new ValueEventListener() {
+        Query query = getMessages.orderByValue();
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
