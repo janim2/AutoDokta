@@ -94,7 +94,8 @@
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MTN Mobile Monay"
+                android:text="MTN mobile money"
+                android:visibility="gone"
                 android:id="@+id/mtnRadio"
                 android:layout_marginTop="20dp"/>
 
@@ -152,6 +153,11 @@
 
         </RadioGroup>
 
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Mobile money"
+            android:id="@+id/mobile_money_payment"/>
 
         <LinearLayout
             android:layout_width="match_parent"

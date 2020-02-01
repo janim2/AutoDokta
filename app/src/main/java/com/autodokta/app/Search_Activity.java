@@ -124,8 +124,6 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
                         if(child.getKey().equals("rating")){
                             product_rating = child.getValue().toString();
                         }
-
-
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
                         }
@@ -138,7 +136,6 @@ public class Search_Activity extends AppCompatActivity{ //implements AbsListView
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();
 //                    loading.setVisibility(View.GONE);
-
                 }
             }
 

@@ -4,6 +4,14 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xxxhdpi-v4/logo_googleg_color_18dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_content_rave_pay.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/content_rave_pay.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable/common_google_signin_btn_text_dark.xml"
     },
@@ -28,16 +36,24 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_smartphone_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_collapsed.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/collapsed.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_favicon_white.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xhdpi-v4/com_facebook_favicon_white.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_favorite_border_black_18dp.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_favorite_border_black_18dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v21_abc_list_divider_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-v21/abc_list_divider_material.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_favorite_border_black_18dp.png.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_favorite_border_black_18dp.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/ic_arrow_back_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v21_avd_hide_password.xml.flat",
@@ -52,6 +68,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/fragment_interior_accessories.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_payment_fragment_container_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/payment_fragment_container_layout.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_discount.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_discount.png"
     },
@@ -60,16 +80,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/layout/design_navigation_item.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_logout.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/logout.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_item_details.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_item_details.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -92,24 +116,40 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_btn_colored_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/animator/mtrl_fab_transformation_sheet_collapse_spec.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_dialog_info.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/dialog_info.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_content_copy_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-ldpi-v4/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_delete.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/delete.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_light.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_movie.png.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_movie.png"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_visibility_off_black_24dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-hdpi-v4/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_movie.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_movie.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -156,6 +196,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_zm_mobile_money.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_zm_mobile_money.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_light_focused.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
@@ -164,8 +208,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/a0d0dcfb19b66ec747a91e3ffdcdf94e/res/layout/notification_template_lines_media.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_bare_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/bare_star.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_cart.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_cart.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_otp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/otp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -204,8 +256,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/slider_image2.jpeg"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_rave_logo.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/ic_rave_logo.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_purchases.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_purchases.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_back.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/back.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_rave_logo.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/ic_rave_logo.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_facebook.png.flat",
@@ -216,12 +280,12 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_local_offer_black_24dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_wishlist_attachment.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/wishlist_attachment.xml"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_wishlist_attachment.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/wishlist_attachment.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_buttondesign.xml.flat",
@@ -234,6 +298,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_favorite_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_favorite_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/anim_design_bottom_sheet_slide_out.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_background.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
@@ -256,8 +328,8 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xxhdpi-v4/logo_googleg_color_18dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_correct.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/correct.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_dialog_info.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/dialog_info.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_messenger_button_send_round_shadow.png.flat",
@@ -268,24 +340,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_dialog_info.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/dialog_info.xml"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_dialog_info.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/dialog_info.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_tooltip_black_bottomnub.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xhdpi-v4/com_facebook_tooltip_black_bottomnub.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_layout_seekbar.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/instantsearch-android-1.15.3.aar/de7a06b57d6610223b2ae937f7115d62/res/layout/layout_seekbar.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xxhdpi-v4/googleg_disabled_color_18.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_more_black_24dp.png.flat",
@@ -324,6 +396,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/anim/abc_popup_enter.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_details.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/details.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_mtrl_text_btn_text_color_selector.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/mtrl_text_btn_text_color_selector.xml"
     },
@@ -332,12 +408,24 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/automechanic.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_right.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/right.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_ratingbar_material.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_details.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/details.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_movie.png.flat",
@@ -364,12 +452,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_smartphone_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_details.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/details.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_common_google_signin_btn_text_dark.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_todo__services.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_todo__services.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_black_background_curved.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/black_background_curved.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/menu_search_menu.xml.flat",
@@ -380,8 +476,28 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_shopping_cart_white_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_dialog_material_background.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_name.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/name.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_otp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/otp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/anim-v21_design_bottom_sheet_slide_out.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_account.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_account.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_small_material.xml.flat",
@@ -392,6 +508,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_rwf_mobile_money.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_rwf_mobile_money.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_activity_chooser_view_list_item.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_activity_chooser_view_list_item.xml"
     },
@@ -400,12 +520,12 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-xxxhdpi-v4/ic_facebook.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_movie.png.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_movie.png"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_movie.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_movie.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_notifications_white_24dp.png.flat",
@@ -428,6 +548,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_blue_btn_curved.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/blue_btn_curved.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_design_ic_visibility.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable-xxhdpi-v4/design_ic_visibility.png"
     },
@@ -440,20 +564,28 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_messenger_button_send_round_shadow.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/messenger_button_send_round_shadow.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/star.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_idp_button_background_google.xml.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable/idp_button_background_google.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_messenger_button_send_round_shadow.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/messenger_button_send_round_shadow.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_idp_button_background_google.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable/idp_button_background_google.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_tint_switch_track.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_prize.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/prize.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_favorite_border_black_18dp.png.flat",
@@ -474,6 +606,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_bare_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/bare_star.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -508,6 +644,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_logout.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/logout.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
@@ -524,12 +664,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/com_facebook_button_icon_white.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_dialog_info.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/dialog_info.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_search_white_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_search_white_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_design_bottom_navigation_item_background.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable/design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -548,16 +696,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/layout/messenger_button_send_white_round.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_email_white_18dp.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xxhdpi-v4/ic_email_white_18dp.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_popup_menu_item_layout.xml.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_email_white_18dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xxhdpi-v4/ic_email_white_18dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_food.png.flat",
@@ -566,6 +714,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/ic_launcher_background.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
@@ -598,6 +750,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_subtract.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/subtract.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_prize.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/prize.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_shopping_cart_black_24dp.png.flat",
@@ -660,6 +820,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout-v21/notification_template_custom_big.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_prize.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/prize.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_list_item.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/list_item.xml"
     },
@@ -692,6 +856,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_primary_text_material_dark.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_notification_action.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout/notification_action.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -720,12 +888,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_otp_button_curved.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/otp_button_curved.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_mode_edit_black_18dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_mode_edit_black_18dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout-v16/notification_template_custom_big.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_lock_outline_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/ic_lock_outline_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -744,16 +924,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_shopping_basket_black_24dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-v23/abc_control_background_material.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xhdpi-v4/googleg_standard_color_18.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_service.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/service.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xhdpi-v4/googleg_standard_color_18.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v23_abc_control_background_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_add.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/add.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_tick_mark_material.xml.flat",
@@ -776,6 +960,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/com_facebook_tooltip_blue_bottomnub.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_subtract.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/subtract.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xhdpi-v4/googleg_disabled_color_18.png"
     },
@@ -786,6 +974,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_rave_logo.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/ic_rave_logo.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
@@ -840,6 +1032,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_favorite_black_18dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_otp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/otp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -860,12 +1056,12 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xhdpi-v4/com_facebook_tooltip_black_xout.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_messenger_button_blue_bg_selector.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable/messenger_button_blue_bg_selector.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_messenger_bubble_large_blue.png.flat",
@@ -916,28 +1112,52 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_services.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_account_circle_black_48dp.png.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_account_circle_black_48dp.png"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_card_giftcard_black_24dp.png.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_card_giftcard_black_24dp.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_account_circle_black_48dp.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_account_circle_black_48dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_card_giftcard_black_24dp.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_card_giftcard_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_ic_star_black_36dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_visa_logo_new.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/visa_logo_new.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/com_facebook_button_like_icon_selected.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_star.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/star.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_ot.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_ot.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_back.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/back.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_logout.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/logout.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/interpolator_mtrl_fast_out_slow_in.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/interpolator/mtrl_fast_out_slow_in.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_clear_black_18dp.png.flat",
@@ -968,8 +1188,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/item_event.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_card_preview_item.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/card_preview_item.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_otp_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/otp_layout.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_bare_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/bare_star.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_activity_chooser_view.xml.flat",
@@ -984,6 +1216,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-hdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_bank_transfer.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_bank_transfer.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/drawable-v21/notification_action_background.xml"
     },
@@ -996,6 +1232,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-xhdpi-v4/ic_facebook.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_padlock.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/padlock.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout-v21/notification_action_tombstone.xml"
     },
@@ -1006,6 +1246,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_action_menu_item_layout.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_content_copy_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/ic_content_copy_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_title_material.xml.flat",
@@ -1032,12 +1276,28 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_book_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_lock_outline_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/ic_lock_outline_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_right.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/right.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_local_dining_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_local_dining_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_content_copy_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/ic_content_copy_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_verve.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/verve.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_complete_order.xml.flat",
@@ -1046,6 +1306,18 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_logout.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/logout.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_padlock.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/padlock.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_right.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/right.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_text_cursor_material.xml.flat",
@@ -1072,12 +1344,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_error_black_24dp.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-anydpi-v21/ic_error_black_24dp.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/a0d0dcfb19b66ec747a91e3ffdcdf94e/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_name.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/name.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_pin.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_pin.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_email_white_18dp.png.flat",
@@ -1104,6 +1380,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_secondary_text_material_light.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_correct.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/correct.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_change_adress.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_change_adress.xml"
     },
@@ -1116,8 +1396,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/messenger_bubble_small_blue.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_gh_mobile_money.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_gh_mobile_money.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_their_chat_message.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/their_chat_message.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_mpesa.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_mpesa.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_design_ic_visibility.png.flat",
@@ -1156,12 +1444,28 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable-v21/design_password_eye.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_prize.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/prize.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_design_tint_password_toggle.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/design_tint_password_toggle.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/ic_arrow_back_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_prize.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/prize.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_email_white_18dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xxxhdpi-v4/ic_email_white_18dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_prize.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/prize.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_mtrl_snackbar_background.xml.flat",
@@ -1170,6 +1474,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_screen_content_include.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_details.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/details.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1184,6 +1492,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable-mdpi-v4/design_ic_visibility_off.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_check_circle_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/ic_check_circle_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -1194,6 +1506,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_favorite_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_favorite_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_delete.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/delete.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_switch_thumb_material.xml.flat",
@@ -1220,6 +1536,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/expense.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_list_divider_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_list_divider_material.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
     },
@@ -1240,12 +1560,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/interpolator_mtrl_linear_out_slow_in.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/interpolator/mtrl_linear_out_slow_in.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_clear_black_18dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_clear_black_18dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_right.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/right.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -1258,6 +1586,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_discount.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_discount.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_visa_logo_new.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/visa_logo_new.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_payment_method.xml.flat",
@@ -1292,12 +1624,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_back.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/back.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_twitter.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-mdpi-v4/ic_twitter.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_ukinstruction_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/ukinstruction_layout.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_collapsed.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/collapsed.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_facebook.png.flat",
@@ -1312,8 +1656,8 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_subtract.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/subtract.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_rounded_button.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable/rounded_button.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_btn_default_mtrl_shape.xml.flat",
@@ -1326,6 +1670,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_com_facebook_send_button_text_color.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/color/com_facebook_send_button_text_color.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_ach.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_ach.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -1368,6 +1716,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_select_dialog_material.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/star.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color-v23_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color-v23/abc_btn_colored_borderless_text_material.xml"
     },
@@ -1376,12 +1728,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/messenger_bubble_large_white.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_correct.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/correct.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_food.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_food.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_collapsed.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/collapsed.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -1436,12 +1796,12 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/mtrl_btn_text_btn_ripple_color.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_shopping_basket_black_24dp.png.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_shopping_basket_black_24dp.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-ldpi-v4/ic_arrow_back_black_24dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_bare_star.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/bare_star.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_shopping_basket_black_24dp.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_shopping_basket_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_action_menu_layout.xml.flat",
@@ -1468,12 +1828,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_orange_button_curved.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/orange_button_curved.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_design_bottom_navigation_item.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/layout/design_bottom_navigation_item.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_dark.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_futher_verification.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/activity_futher_verification.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
@@ -1540,12 +1908,12 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable/com_facebook_button_login_silver_background.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_star.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/star.xml"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_design_navigation_item_subheader.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_check_circle_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/ic_check_circle_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -1568,12 +1936,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_arrow_back_black_24dp.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-anydpi-v21/ic_arrow_back_black_24dp.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color-v21_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color-v21/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_delete.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/delete.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_barter.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_barter.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_terms.xml.flat",
@@ -1586,6 +1962,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_book_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_book_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_error_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/ic_error_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_material.xml.flat",
@@ -1664,6 +2044,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_ic_star_black_48dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_name.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/name.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_button_like_icon_selected.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-mdpi-v4/com_facebook_button_like_icon_selected.png"
     },
@@ -1686,6 +2070,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_add.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/add.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_support_simple_spinner_dropdown_item.xml.flat",
@@ -1732,6 +2120,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-mdpi-v4/com_facebook_favicon_white.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_error_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/ic_error_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_brakefluid.jpg.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/brakefluid.jpg"
     },
@@ -1742,6 +2134,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_tooltip_blue_xout.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-mdpi-v4/com_facebook_tooltip_blue_xout.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/interpolator_mtrl_fast_out_linear_in.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/interpolator/mtrl_fast_out_linear_in.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color-v23_abc_tint_switch_track.xml.flat",
@@ -1772,6 +2168,14 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_card_giftcard_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_right.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/right.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_avsvbv_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/avsvbv_layout.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
@@ -1782,6 +2186,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_more_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_more_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_rave_logo.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/ic_rave_logo.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_back.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/back.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_messenger_bubble_small_blue.png.flat",
@@ -1802,6 +2214,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_cab_background_internal_bg.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_bare_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/bare_star.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_action_bar_up_container.xml.flat",
@@ -1826,10 +2242,6 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_right.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/right.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_wc_black_24dp.png.flat",
@@ -1860,8 +2272,28 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_lock_outline_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/ic_lock_outline_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_add.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/add.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_apps_black_48dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_apps_black_48dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_design_password_eye.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable/design_password_eye.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_lock_outline_black_24dp.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-anydpi-v21/ic_lock_outline_black_24dp.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_rave_logo.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-anydpi-v21/ic_rave_logo.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -1870,6 +2302,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_delete.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/delete.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_shopping_cart_black_24dp.png.flat",
@@ -1884,6 +2320,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/layout/save_credentials_layout.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_back.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/back.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_mtrl_bottom_nav_colored_item_tint.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/mtrl_bottom_nav_colored_item_tint.xml"
     },
@@ -1896,8 +2336,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_otp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/otp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_visa_logo_new.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/visa_logo_new.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/menu_main.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_saved_cards.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_saved_cards.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/anim_abc_tooltip_enter.xml.flat",
@@ -1906,10 +2358,6 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_person_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_person_black_24dp.png"
-    },
-    {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_prize.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/prize.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_person_black_24dp.png.flat",
@@ -1926,6 +2374,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_delete.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/delete.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout-sw600dp-v13_mtrl_layout_snackbar.xml.flat",
@@ -1946,6 +2398,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_card.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_card.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_rave_payment_title_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/rave_payment_title_layout.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_messenger_bubble_large_white.png.flat",
@@ -1988,6 +2448,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_user__profile.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_edit_text_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_edit_text_material.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_clear_black_18dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_clear_black_18dp.png"
     },
@@ -2010,6 +2474,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_notifications_white_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_notifications_white_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_subtract.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/subtract.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2044,12 +2512,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_share_black_18dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_dialog_info.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/dialog_info.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_mtrl_fab_ripple_color.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/mtrl_fab_ripple_color.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_uk.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_uk.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -2060,8 +2536,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/layout/notification_template_part_chronometer.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_padlock.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/padlock.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_name.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/name.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_otp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/otp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -2132,6 +2620,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable-xxhdpi-v4/design_ic_visibility_off.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_black_pin_bg.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/black_pin_bg.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_order_complete.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_order_complete.xml"
     },
@@ -2148,12 +2640,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/color/common_google_signin_btn_text_light.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_mtrl_layout_snackbar_include.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/layout/mtrl_layout_snackbar_include.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_light.xml.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_primary_text_disable_only_material_light.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/star.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -2162,6 +2658,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_btn_colored_borderless_text_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2178,6 +2678,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_share_black_18dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_share_black_18dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_correct.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/correct.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_error_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/ic_error_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_shopping_cart_white_24dp.png.flat",
@@ -2204,16 +2712,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_tint_btn_checkable.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_check_circle_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-ldpi-v4/ic_check_circle_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_back.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/back.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_content_copy_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/ic_content_copy_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_rave_logo.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/ic_rave_logo.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -2240,6 +2756,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-xhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_prize.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/prize.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
@@ -2250,6 +2770,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_background_cache_hint_selector_material_light.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_name.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/name.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -2276,6 +2800,14 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-mdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_delete.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/delete.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/star.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_welcome_back_password_prompt_layout.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/layout/welcome_back_password_prompt_layout.xml"
     },
@@ -2300,8 +2832,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_btn_check_material.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_padlock.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/padlock.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_creditcard.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/creditcard.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_index.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_index.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_pin_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/pin_layout.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_search_view.xml.flat",
@@ -2310,6 +2854,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_visibility_off_black_24dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-mdpi-v4/ic_visibility_off_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_error_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/ic_error_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -2324,8 +2872,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-mdpi-v4/logo_googleg_color_18dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_collapsed.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/collapsed.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_thumb_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_delete.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/delete.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_add.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/add.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_check_circle_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/ic_check_circle_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -2346,6 +2910,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_correct.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/correct.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_help_center.xml.flat",
@@ -2400,6 +2968,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xxhdpi/ic_shopping_cart_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_subtract.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/subtract.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -2444,6 +3016,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_name.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/name.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_tint_edittext.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_tint_edittext.xml"
     },
@@ -2462,6 +3038,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_close.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/com_facebook_close.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_select_bank_list_item.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/select_bank_list_item.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_dialog_info.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/dialog_info.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -2484,6 +3068,14 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-ldrtl-xxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_logout.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/logout.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_visa_logo_new.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/visa_logo_new.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_puncture.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/puncture.png"
     },
@@ -2496,12 +3088,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_visa_logo_new.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/visa_logo_new.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_master_card_logo_svg.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/master_card_logo_svg.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_add_vendor_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/add_vendor_layout.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_indicator_material.xml.flat",
@@ -2544,6 +3148,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/slider_image3.jpeg"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_subtract.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/subtract.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_app_bar_main.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/app_bar_main.xml"
     },
@@ -2572,8 +3180,8 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_add.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/add.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/ic_arrow_back_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_mtrl_tabs_ripple_color.xml.flat",
@@ -2592,6 +3200,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_flw_icon_coloured.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/flw_icon_coloured.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_local_dining_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_local_dining_black_24dp.png"
     },
@@ -2604,8 +3216,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_details.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/details.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-ldrtl-hdpi-v17/abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_correct.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/correct.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_screen_toolbar.xml.flat",
@@ -2620,12 +3240,12 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_logo_googleg_color_18dp.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xhdpi-v4/logo_googleg_color_18dp.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_ussd.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_ussd.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_logout.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/logout.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_logo_googleg_color_18dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/drawable-xhdpi-v4/logo_googleg_color_18dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -2664,6 +3284,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_correct.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/correct.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
@@ -2672,16 +3296,24 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_add_item_review.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_action_mode_close_item_material.xml.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_action_mode_close_item_material.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_subtract.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/subtract.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_action_mode_close_item_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_book_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_book_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_collapsed.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/collapsed.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v21_ic_menu_gallery.xml.flat",
@@ -2704,6 +3336,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable/messenger_button_blue_bg_round.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_master_card_logo_svg.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/master_card_logo_svg.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_offers.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/fragment_offers.xml"
     },
@@ -2716,12 +3352,12 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/ic_launcher_background.xml"
-    },
-    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_nav_header_main.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/nav_header_main.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_master_card_logo_svg.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/master_card_logo_svg.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_filter_none_black_18dp.png.flat",
@@ -2764,6 +3400,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/com_facebook_tooltip_blue_xout.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_green_btn_curved.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/green_btn_curved.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_search_url_text.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color/abc_search_url_text.xml"
     },
@@ -2796,12 +3436,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/design_error.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_check_circle_black_24dp.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-anydpi-v21/ic_check_circle_black_24dp.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_twitter.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-xxhdpi-v4/ic_twitter.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_recycler_view_item.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/recycler_view_item.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_tooltip_black_background.9.png.flat",
@@ -2816,8 +3464,16 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_favorite_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_right.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/right.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/anim_design_snackbar_in.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_content_copy_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/ic_content_copy_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_share_black_18dp.png.flat",
@@ -2860,6 +3516,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable-hdpi-v4/design_ic_visibility_off.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_dialog_info.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/dialog_info.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_button_send_icon_white.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/com_facebook_button_send_icon_white.png"
     },
@@ -2896,6 +3556,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/com_facebook_tooltip_blue_background.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_back.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/back.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_list_menu_item_layout.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_list_menu_item_layout.xml"
     },
@@ -2904,8 +3568,16 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-mdpi/ic_notifications_white_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/star.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_com_facebook_button_send_icon_blue.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/com_facebook_button_send_icon_blue.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_logout.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/logout.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -2914,6 +3586,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_travel.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_travel.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_padlock.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/padlock.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
@@ -2948,6 +3624,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/layout/register_email_layout.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_amex.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/amex.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png"
     },
@@ -2972,6 +3652,14 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_smartphone_black_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_rave_logo.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-ldpi-v4/ic_rave_logo.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_check_circle_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xhdpi-v4/ic_check_circle_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_local_offer_black_24dp.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_local_offer_black_24dp.png"
     },
@@ -2994,6 +3682,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_holo_light.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_ug_mobile_money.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_ug_mobile_money.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_dark.xml.flat",
@@ -3052,6 +3744,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/color/common_google_signin_btn_tint.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_back.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/back.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_com_facebook_button_like_background.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable/com_facebook_button_like_background.xml"
     },
@@ -3060,12 +3756,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_lock_outline_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/ic_lock_outline_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_idp_button_background_facebook.xml.flat",
@@ -3084,12 +3784,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xhdpi-v4/messenger_bubble_small_white.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/anim_abc_slide_out_bottom.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/anim/abc_slide_out_bottom.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_check_circle_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/ic_check_circle_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-v21_ic_menu_share.xml.flat",
@@ -3108,12 +3816,24 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_error_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/ic_error_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_design_text_input_password_icon.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/layout/design_text_input_password_icon.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_mtrl_btn_text_color_selector.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/mtrl_btn_text_color_selector.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_bare_star.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/bare_star.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_add_exisiting_bank.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/add_exisiting_bank.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_direction.png.flat",
@@ -3148,12 +3868,16 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_portrait.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/color_mtrl_tabs_icon_color_selector.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/color/mtrl_tabs_icon_color_selector.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_portrait.png.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_portrait.png"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_logout.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/logout.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_design_ic_visibility_off.png.flat",
@@ -3176,6 +3900,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/seo.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_master_card_logo_svg.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/master_card_logo_svg.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
@@ -3196,6 +3924,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/layout/messenger_button_send_blue_large.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_dark_focused.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
@@ -3206,6 +3938,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_pick_saved_card_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/pick_saved_card_layout.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar.xml.flat",
@@ -3232,6 +3968,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_right.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/right.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_com_facebook_button_like_icon_selected.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xhdpi-v4/com_facebook_button_like_icon_selected.png"
     },
@@ -3246,6 +3986,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_text_select_handle_right_mtrl_light.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -3272,6 +4016,10 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/their_message_design.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_broken_link.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable/broken_link.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_favicon_white.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-xxhdpi-v4/com_facebook_favicon_white.png"
     },
@@ -3284,12 +4032,20 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/tooltip_frame_light.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_web.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_web.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_btn_radio_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_btn_radio_material.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_disabled.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/play-services-base-16.0.1.aar/e895e7a95680125fd2f607ee7a1bfbe5/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_add.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/add.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_about_us.xml.flat",
@@ -3312,12 +4068,24 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-hdpi/ic_food.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_rave_pay.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/activity_rave_pay.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_idp_button_google.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-auth-0.6.0.aar/570b758cfd7af77e08ab49b476e3e42d/res/layout/idp_button_google.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_activity_reset_password.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_reset_password.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_correct.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/correct.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_name.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/name.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_delete_black_24dp.png.flat",
@@ -3332,8 +4100,24 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/custom_row_loading.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/anim_design_bottom_sheet_slide_in.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_content_copy_black_24dp.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-anydpi-v21/ic_content_copy_black_24dp.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_delete.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/delete.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_design_ic_visibility_off.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/design-28.0.0.aar/082c290e6e69d2022f7baadae15fe33f/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_details.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/details.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_idp_button_facebook.xml.flat",
@@ -3352,8 +4136,20 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable-xhdpi/ic_search_white_24dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-mdpi-v4/ic_arrow_back_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_facebook.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-xxhdpi-v4/ic_facebook.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi_subtract.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-hdpi/subtract.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_ic_content_copy_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxxhdpi-v4/ic_content_copy_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_com_facebook_button_icon_blue.png.flat",
@@ -3388,6 +4184,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-xxhdpi-v4/ic_google.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_add.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/add.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_slide.xml.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/slide.xml"
     },
@@ -3412,6 +4212,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_avsvbv.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_avsvbv.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
@@ -3426,6 +4230,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ic_ab_back_material.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_payment_type_tile_layout.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/payment_type_tile_layout.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_head_lights.xml.flat",
@@ -3476,6 +4284,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_fragment_francophone.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/layout/fragment_francophone.xml"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_48dp.png"
     },
@@ -3486,6 +4298,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_light.xml.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_details.xml.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-anydpi-v21/details.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_shopping_basket_black_24dp.png.flat",
@@ -3504,6 +4320,10 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.1.aar/53ad1f05a62794eb8288039a0fb52b31/res/drawable-hdpi-v4/com_facebook_tooltip_black_topnub.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_master_card_logo_svg.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-hdpi-v4/master_card_logo_svg.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -3514,6 +4334,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_shadow_popup.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/instantsearch-android-1.15.3.aar/de7a06b57d6610223b2ae937f7115d62/res/drawable/shadow_popup.9.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi_bare_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xxhdpi/bare_star.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
@@ -3540,6 +4364,14 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/fragment_wheels.xml"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_error_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-ldpi-v4/ic_error_black_24dp.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_arrow_back_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/ic_arrow_back_black_24dp.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png"
     },
@@ -3564,12 +4396,12 @@
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/layout/activity_contact_us.xml"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_dialog_title_material.xml.flat",
-        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_dialog_title_material.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/star.png"
     },
     {
-        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_details.xml.flat",
-        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/details.xml"
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/layout_abc_dialog_title_material.xml.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_visibility_black_24dp.png.flat",
@@ -3582,6 +4414,14 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi_bare_star.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-ldpi/bare_star.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_lock_outline_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-xxhdpi-v4/ic_lock_outline_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_abc_ic_clear_material.xml.flat",
@@ -3624,6 +4464,14 @@
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/drawable-mdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi_add.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-xhdpi/add.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-mdpi_name.png.flat",
+        "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/generated/res/pngs/debug/drawable-mdpi/name.png"
+    },
+    {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_twitter.png.flat",
         "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/firebase-ui-0.6.0.aar/8931eee92e5158019d2ac86a49c79c39/res/drawable-xhdpi-v4/ic_twitter.png"
     },
@@ -3646,6 +4494,10 @@
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable_income.png.flat",
         "source": "/home/jesse/AndroidStudioProjects/AutoDokta/app/src/main/res/drawable/income.png"
+    },
+    {
+        "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-ldpi-v4_ic_lock_outline_black_24dp.png.flat",
+        "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/rave-android-1.0.48.aar/78de76411fd5eb522974b38993ae88b8/res/drawable-ldpi-v4/ic_lock_outline_black_24dp.png"
     },
     {
         "merged": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",

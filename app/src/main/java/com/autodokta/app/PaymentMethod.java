@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.autodokta.app.Adapters.ExpandablelistAdapter;
+import com.flutterwave.raveandroid.RaveConstants;
+import com.flutterwave.raveandroid.RavePayActivity;
+import com.flutterwave.raveandroid.RavePayManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +30,7 @@ public class PaymentMethod extends AppCompatActivity {
 //
 //    HashMap<String, List<String>> listHashMap;
 
-    RadioButton autoRbutton,mtnRadio;
+    RadioButton autoRbutton,mtnRadio, mobile_money_payment;
     LinearLayout autoRLayout,mtnLayout;
     Button next, modifyCart;
     TextView itemtotal, totaltotal;
@@ -43,6 +46,7 @@ public class PaymentMethod extends AppCompatActivity {
 
 //        autoRbutton = (RadioButton) findViewById(R.id.autodpayRadio);
         mtnRadio = (RadioButton) findViewById(R.id.mtnRadio);
+        mobile_money_payment = (RadioButton) findViewById(R.id.mobile_money_payment);
 //        autoRLayout = (LinearLayout) findViewById(R.id.atpayLayout);
         mtnLayout = (LinearLayout) findViewById(R.id.mtnlayout);
 
@@ -90,15 +94,20 @@ public class PaymentMethod extends AppCompatActivity {
 //                        startActivity(ordersummary);
 //                    }
 
-                    if(mtnRadio.isChecked()){
-                        Intent ordersummary = new Intent(PaymentMethod.this,orderSummary.class);
-                        ordersummary.putExtra("orderTotal", totalSale);
-                        ordersummary.putExtra("paymentType","mtn");
-                        startActivity(ordersummary);
-                    }else{
+//                    if(mtnRadio.isChecked()){
+//                        Intent ordersummary = new Intent(PaymentMethod.this,orderSummary.class);
+//                        ordersummary.putExtra("orderTotal", totalSale);
+//                        ordersummary.putExtra("paymentType","mtn");
+//                        startActivity(ordersummary);
+//                    }else{
+//                    Toast.makeText(PaymentMethod.this,"Select Payment Method",Toast.LENGTH_LONG).show();
+//                }
+
+                if(mobile_money_payment.isChecked()){
+                    Flutterwave_payment();
+                }else{
                     Toast.makeText(PaymentMethod.this,"Select Payment Method",Toast.LENGTH_LONG).show();
                 }
-
             }
         });
 
@@ -117,6 +126,24 @@ public class PaymentMethod extends AppCompatActivity {
 //        listView.setAdapter(listAdapter);
     }
 
+    private void Flutterwave_payment(){
+
+        new RavePayManager(PaymentMethod.this).setAmount(Double.valueOf(totalSale))
+                .setCountry("GH")
+                .setCurrency("GHS")
+                .setPublicKey("FLWPUBK-9f910be2cca606f52d4d0914badb51ec-X")
+                .setEncryptionKey("cdfdb7d775ffbd5216cf6884")
+                .setfName("Jesse")
+                .setlName("Anim")
+                .setEmail("iam@gmail.com")
+                .setNarration("AutoDokta Payment")
+                .acceptGHMobileMoneyPayments(false)
+                .acceptCardPayments(true)
+                .allowSaveCardFeature(true)
+                .onStagingEnv(true)
+                .initialize();
+    }
+
 //    private void initiateData() {
 //
 //        listDataHeader = new ArrayList<>();
@@ -131,4 +158,27 @@ public class PaymentMethod extends AppCompatActivity {
 //        List<String> mtnMomo = new ArrayList<>();
 //        mtnMomo.add("MTN Mobile Money Payment");
 //    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        /*
+         *  We advise you to do a further verification of transaction's details on your server to be
+         *  sure everything checks out before providing service or goods.
+         */
+        if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
+            String message = data.getStringExtra("response");
+            if (resultCode == RavePayActivity.RESULT_SUCCESS) {
+                Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
+            }
+            else if (resultCode == RavePayActivity.RESULT_ERROR) {
+                Toast.makeText(this, "ERROR " + message, Toast.LENGTH_SHORT).show();
+            }
+            else if (resultCode == RavePayActivity.RESULT_CANCELLED) {
+                Toast.makeText(this, "CANCELLED " + message, Toast.LENGTH_SHORT).show();
+            }
+        }
+        else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 }
