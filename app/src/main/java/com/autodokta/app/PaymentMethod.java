@@ -21,6 +21,7 @@ import com.flutterwave.raveandroid.RavePayManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class PaymentMethod extends AppCompatActivity {
 
@@ -126,20 +127,30 @@ public class PaymentMethod extends AppCompatActivity {
 //        listView.setAdapter(listAdapter);
     }
 
+    public static String emma_PUBLIC_KEY = "FLWPUBK-e634d14d9ded04eaf05d5b63a0a06d2f-X"; //test
+    public static String emma_ENCRYPTION_KEY = "bb9714020722eb4cf7a169f2";//test
     private void Flutterwave_payment(){
 
-        new RavePayManager(PaymentMethod.this).setAmount(Double.valueOf(totalSale))
+        Random d = new Random();
+        int ss = d.nextInt(454545454);
+        String refid = ss+"";
+
+        new RavePayManager(PaymentMethod.this).setAmount(Double.valueOf(totalSale) + 10)
                 .setCountry("GH")
                 .setCurrency("GHS")
-                .setPublicKey("FLWPUBK-9f910be2cca606f52d4d0914badb51ec-X")
-                .setEncryptionKey("cdfdb7d775ffbd5216cf6884")
+//                .setPublicKey("FLWPUBK-9f910be2cca606f52d4d0914badb51ec-X")
+//                .setEncryptionKey("cdfdb7d775ffbd5216cf6884")
+//
+                .setPublicKey(emma_PUBLIC_KEY)
+                .setEncryptionKey(emma_ENCRYPTION_KEY)
                 .setfName("Jesse")
                 .setlName("Anim")
                 .setEmail("iam@gmail.com")
                 .setNarration("AutoDokta Payment")
-                .acceptGHMobileMoneyPayments(false)
-                .acceptCardPayments(true)
-                .allowSaveCardFeature(true)
+                .setTxRef(refid)
+                .acceptGHMobileMoneyPayments(true)
+                .acceptCardPayments(false)
+                .allowSaveCardFeature(false)
                 .onStagingEnv(true)
                 .initialize();
     }
@@ -168,7 +179,13 @@ public class PaymentMethod extends AppCompatActivity {
         if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
             String message = data.getStringExtra("response");
             if (resultCode == RavePayActivity.RESULT_SUCCESS) {
-                Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "SUCCESS " + message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "SUCCESS ", Toast.LENGTH_SHORT).show();
+                Intent summaryIntent = new Intent(PaymentMethod.this, orderSummary.class);
+                summaryIntent.putExtra("orderTotal", String.valueOf(Double.valueOf(totalSale)));
+                summaryIntent.putExtra("paymentType", "mobilemoney");
+                startActivity(summaryIntent);
+
             }
             else if (resultCode == RavePayActivity.RESULT_ERROR) {
                 Toast.makeText(this, "ERROR " + message, Toast.LENGTH_SHORT).show();

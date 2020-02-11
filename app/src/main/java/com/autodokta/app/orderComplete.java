@@ -35,7 +35,7 @@ public class orderComplete extends AppCompatActivity {
         seeorders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(orderComplete.this,Garage.class));
+//                startActivity(new Intent(orderComplete.this,Orders.class));
             }
         });
 
