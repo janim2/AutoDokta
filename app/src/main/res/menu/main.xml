@@ -26,6 +26,12 @@
         android:title="Chat"
         app:showAsAction="never" />
 
+    <item
+        android:id="@+id/upload"
+        android:title="Upload"
+        android:icon="@drawable/upload"
+        app:showAsAction="never"/>
+
 
 
 </menu>

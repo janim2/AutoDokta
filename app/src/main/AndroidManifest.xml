@@ -12,8 +12,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -22,10 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Notifications"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".Chat"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".UploadActivity"></activity>
+        <activity
+            android:name=".Notifications"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Chat"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".AddItemReview" />
         <activity android:name=".ItemReview" />
         <activity

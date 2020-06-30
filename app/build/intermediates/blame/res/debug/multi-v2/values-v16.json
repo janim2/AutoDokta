@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/jesse/AndroidStudioProjects/AutoDokta/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "C:\\Users\\Eben-Dell\\AndroidStudioProjects\\AutoDokta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/92b5348f48699916a88ebdb1fc9b5da4/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\Eben-Dell\\.gradle\\caches\\transforms-2\\files-2.1\\88c203db9c19319321ff87fbd708f23e\\support-compat-28.0.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/jesse/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/29dce0c2b4ddbd05d0d59da52745b0df/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\Eben-Dell\\.gradle\\caches\\transforms-2\\files-2.1\\6e1d07def27dde55a4cc6b3945609ebd\\appcompat-v7-28.0.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

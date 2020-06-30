@@ -34,6 +34,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.autodokta.app.UploadActivity" />
         <activity
             android:name="com.autodokta.app.Notifications"
             android:parentActivityName="com.autodokta.app.MainActivity" />

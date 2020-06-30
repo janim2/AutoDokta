@@ -1199,6 +1199,7 @@ drawable abc_vector_test
 drawable ac
 drawable add
 drawable amex
+drawable arrow
 drawable automechanic
 drawable avd_hide_password
 drawable avd_show_password
@@ -1391,6 +1392,7 @@ drawable their_message_design
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable twitter_button
+drawable upload
 drawable verve
 drawable visa_logo_new
 drawable white_radius
@@ -1428,6 +1430,7 @@ id actionn_search
 id actions
 id activity_chooser_view_content
 id activity_main
+id ad_upload
 id add
 id add_a_todo
 id add_task
@@ -1499,6 +1502,7 @@ id chat
 id checkbox
 id choose_another_bank_tv
 id choose_another_payment_method_tv
+id choose_image
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1759,6 +1763,9 @@ id pin
 id popup_image
 id price
 id productContent
+id product_desc
+id product_name
+id product_price
 id product_rating
 id profile
 id profile_header
@@ -1890,6 +1897,8 @@ id see_all
 id seeorders
 id select_dialog_listview
 id selected
+id sell
+id seller_number
 id service_description
 id service_spinner
 id services
@@ -2012,6 +2021,8 @@ id uniform
 id unknown
 id unlabeled
 id up
+id upload
+id upload_toolbar
 id useLogo
 id username
 id ussd_code_tv
@@ -2120,6 +2131,7 @@ layout activity_todo__refuel
 layout activity_todo__services
 layout activity_todo_details
 layout activity_todo_inner__service
+layout activity_upload
 layout activity_user__profile
 layout activity_wish_list
 layout add_exisiting_bank
@@ -2500,6 +2512,9 @@ string please_enter_your_card_pin_nto_continue_your_transaction
 string please_select_a_card
 string powered_by
 string proceed
+string product_description
+string product_name
+string product_price
 string progress_dialog_loading
 string progress_dialog_sending
 string progress_dialog_signing_in
@@ -2516,6 +2531,7 @@ string save_card
 string search_hint
 string search_menu_title
 string secured_by_flutterwave
+string seller_number
 string shipping
 string sign_in
 string sign_in_no_password_title

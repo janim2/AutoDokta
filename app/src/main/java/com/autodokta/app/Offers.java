@@ -8,28 +8,19 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.algolia.instantsearch.core.helpers.Searcher;
-import com.algolia.instantsearch.ui.helpers.InstantSearch;
-import com.algolia.search.saas.Client;
-import com.algolia.search.saas.Query;
-import com.autodokta.app.SearchItems.ResultsListView;
+import com.autodokta.app.Adapters.CarParts;
+import com.autodokta.app.Adapters.PartsAdapter;
 import com.autodokta.app.helpers.Space;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.autodokta.app.Adapters.CarParts;
-import com.autodokta.app.Adapters.PartsAdapter;
-
 
 import java.util.ArrayList;
 
