@@ -115,7 +115,7 @@ public class LoginActivity extends BaseActivity {
                     return;
                 }
 
-//                progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
@@ -125,23 +125,21 @@ public class LoginActivity extends BaseActivity {
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
+                                progressBar.setVisibility(View.GONE);
                                 if (!task.isSuccessful()) {
                                     // there was an error
                                     if (password.length() < 6) {
                                         inputPassword.setError("password too short");
                                     } else {
                                         Toast.makeText(LoginActivity.this, "login failed", Toast.LENGTH_LONG).show();
-//                                        progressBar.setVisibility(View.VISIBLE);
-//                                        progressBar.getProgress();
-
                                     }
                                 } else {
 //                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 //                                    startActivity(intent);
+                                    finish();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(intent);
-                                    finish();
                                 }
                             }
                         });

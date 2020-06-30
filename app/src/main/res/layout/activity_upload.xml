@@ -1,82 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UploadActivity"
-    android:orientation="vertical">
+<LinearLayout xmlns:android     =   "http://schemas.android.com/apk/res/android"
+    xmlns:app                   =   "http://schemas.android.com/apk/res-auto"
+    xmlns:tools                 =   "http://schemas.android.com/tools"
+    android:layout_width        =   "match_parent"
+    android:layout_height       =   "match_parent"
+    tools:context               =   ".UploadActivity"
+    android:orientation         =   "vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/upload_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+<!--    <android.support.v7.widget.Toolbar-->
+<!--        android:id              =   "@+id/upload_toolbar"-->
+<!--        android:layout_width    =   "match_parent"-->
+<!--        android:layout_height   =   "?attr/actionBarSize"-->
+<!--        android:background      =   "?attr/colorPrimary"-->
+<!--        android:theme           =   "@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--        app:popupTheme          =   "@style/ThemeOverlay.AppCompat.Light"/>-->
 
     <TextView
-        android:text="Fill below forms to upload your ad"
-        android:textSize="15sp"
-        android:typeface="normal"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text                =   "Fill below forms to upload your ad"
+        android:textSize            =   "15sp"
+        android:typeface            =   "normal"
+        android:layout_marginTop    =   "5dp"
+        android:gravity             =   "center"
+        android:padding             =   "10dp"
+        android:textColor           =   "@color/colorPrimary"
+        android:layout_width        =   "match_parent"
+        android:layout_height       =   "wrap_content"/>
 
-    <EditText
-        android:id="@+id/product_name"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/product_name"
-        android:inputType="text"/>
+    <LinearLayout
+        android:layout_width        =   "match_parent"
+        android:layout_height       =   "wrap_content"
+        android:padding             =   "10dp"
+        android:orientation         =   "vertical">
 
-    <EditText
-        android:id="@+id/product_price"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/product_price"
-        android:inputType="numberDecimal"/>
+        <EditText
+            android:id                  =   "@+id/product_name"
+            android:layout_width        =   "match_parent"
+            android:hint                =   "@string/product_name"
+            android:layout_height       =   "40dp"
+            android:textSize            =   "15sp"
+            android:paddingLeft         =   "10dp"
+            android:textColorHint       =   "@android:color/black"
+            android:textColor           =   "@android:color/holo_red_dark"
+            android:background          =   "@drawable/buttondesign"
+            android:layout_marginTop    =   "10dp"
+            android:inputType           =   "text"/>
 
-    <EditText
-        android:id="@+id/seller_number"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/seller_number"
-        android:inputType="numberDecimal"/>
+        <EditText
+            android:id="@+id/product_price"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="@string/product_price"
+            android:inputType="numberDecimal"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/buttondesign"
+            android:layout_marginTop="10dp"/>
 
-    <EditText
-        android:id="@+id/product_desc"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:hint="@string/product_description"
-        android:inputType="text"/>
+        <EditText
+            android:id="@+id/seller_number"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="@string/seller_number"
+            android:inputType="numberDecimal"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/buttondesign"
+            android:layout_marginTop="10dp"/>
 
-<!--    <ImageView-->
-<!--        android:id="@+id/uploaded_image"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:background="@color/gen_white"-->
-<!--        android:scaleType="fitXY"/>-->
+        <EditText
+            android:id="@+id/product_desc"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="@string/product_description"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/buttondesign"
+            android:layout_marginTop="10dp"/>
 
-<!--    <Button-->
-<!--        android:id="@+id/choose_image"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Choose Image"/>-->
+        <!--    <ImageView-->
+        <!--        android:id="@+id/uploaded_image"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="100dp"-->
+        <!--        android:background="@color/gen_white"-->
+        <!--        android:scaleType="fitXY"/>-->
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/choose_image"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:src="@drawable/upload"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"/>
+        <!--    <Button-->
+        <!--        android:id="@+id/choose_image"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="Choose Image"/>-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/choose_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:src="@drawable/upload"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPrimary"/>
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:src="@drawable/load_image"/>
+
+        </FrameLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/ad_upload"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Upload Product"/>
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Upload Product"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:background="@color/colorPrimary"
+        />
 
 </LinearLayout>

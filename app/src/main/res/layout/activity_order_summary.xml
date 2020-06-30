@@ -209,7 +209,7 @@
                 android:layout_weight="2"
                 android:padding="4dp"
                 android:id="@+id/paymenttypetext"
-                android:text="Pay with MTN Mobile Money"
+                android:text="Pay with Mobile Money"
                 android:background="@android:color/white"
                 android:textSize="14sp"/>
 

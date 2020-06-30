@@ -29,12 +29,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.algolia.instantsearch.core.helpers.Searcher;
 import com.algolia.instantsearch.ui.helpers.InstantSearch;
-
+import com.algolia.search.saas.Client;
 import com.autodokta.app.Adapters.CarParts;
 import com.autodokta.app.Adapters.ImageAdapter;
 import com.autodokta.app.Adapters.PartsAdapter;
-//import com.autodokta.app.SearchItems.ResultsListView;
+import com.autodokta.app.SearchItems.ResultsListView;
 import com.autodokta.app.helpers.Space;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.auth.FirebaseAuth;
@@ -122,7 +123,25 @@ public class MainActivity extends AppCompatActivity
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+//        ViewPager viewPager = findViewById(R.id.viewpager);
+//        TabLayout tabLayout = findViewById(R.id.tabs);
+////        guest_or_user = navigationView.findViewById(R.id.guest_or_user);
+//
+//        if (viewPager != null) {
+//            setupViewPager(viewPager);
+//            tabLayout.setupWithViewPager(viewPager);
+//
+//            tabLayout.getTabAt(0).setText(getString(R.string.item_1));
+//            tabLayout.getTabAt(1).setText(getString(R.string.item_2));
+//            tabLayout.getTabAt(2).setText(getString(R.string.item_3));
+//            tabLayout.getTabAt(3).setText(getString(R.string.item_4));
+//            tabLayout.getTabAt(4).setText(getString(R.string.item_5));
+//            tabLayout.getTabAt(5).setText(getString(R.string.item_6));
+//            tabLayout.getTabAt(6).setText(getString(R.string.item_7));
+//            tabLayout.getTabAt(7).setText(getString(R.string.item_8));
+//        }
 
+        //initializing the image slider
         initialize();
 
 //        getting the menu from the navigation item;
@@ -166,16 +185,19 @@ public class MainActivity extends AppCompatActivity
 //        items ends here
     }
 
-
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        getSupportFragmentManager().popBackStack();
+//    }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.main,menu);
         MenuItem wish_list = menu.findItem(R.id.wish_list);
         MenuItem chat_system = menu.findItem(R.id.chat);
-        MenuItem upload = menu.findItem(R.id.upload);
+        MenuItem upload_ = menu.findItem(R.id.upload);
 
         if(mAuth.getCurrentUser() != null){
             wish_list.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
@@ -194,7 +216,7 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
-            upload.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            upload_.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem item) {
                     startActivity(new Intent(MainActivity.this,UploadActivity.class));
@@ -204,9 +226,8 @@ public class MainActivity extends AppCompatActivity
         }else{
             wish_list.setVisible(false);
             chat_system.setVisible(false);
-            upload.setVisible(false);
+            upload_.setVisible(false);
         }
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -228,8 +249,6 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -248,6 +267,7 @@ public class MainActivity extends AppCompatActivity
             layout.setVisibility(View.GONE);
             profilemenuitem.setVisible(false);
             garageMenuItem.setVisible(false);
+
             menuItem.setTitle("Login");
             menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
@@ -277,7 +297,7 @@ public class MainActivity extends AppCompatActivity
 
                         cartnumberTextView.setText("0");
 
-
+//                        Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -298,7 +318,9 @@ public class MainActivity extends AppCompatActivity
                         for(DataSnapshot child : dataSnapshot.getChildren()){
                             if(child.getKey()!=null){
                                 cart_number += 1;
-
+//                                Toast.makeText(MainActivity.this,child+"",Toast.LENGTH_LONG).show();
+//                                Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
+//                                cartnumberTextView.setText(child.getChildrenCount()+"");
                             }
                         }
                         cartnumberTextView.setText(String.valueOf(cart_number));
@@ -407,21 +429,6 @@ public class MainActivity extends AppCompatActivity
             logout.show();
             return true;
         }
-
-       if (id == R.id.sell){
-//           if user is not logged in
-           if (mAuth.getCurrentUser() ==  null){
-//               redirect user to the login activity
-               startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-           }else {
-               startActivity(new Intent(getApplicationContext(),UploadActivity.class));
-           }
-       }
-
-
-
-
-
 
 
         if (id == R.id.contact_us){

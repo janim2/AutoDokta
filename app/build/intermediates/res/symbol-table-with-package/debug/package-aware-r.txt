@@ -1199,7 +1199,6 @@ drawable abc_vector_test
 drawable ac
 drawable add
 drawable amex
-drawable arrow
 drawable automechanic
 drawable avd_hide_password
 drawable avd_show_password
@@ -1339,6 +1338,7 @@ drawable idp_button_background_google
 drawable income
 drawable insurance
 drawable justcurved
+drawable load_image
 drawable logo_googleg_color_18dp
 drawable logout
 drawable man
@@ -1897,7 +1897,6 @@ id see_all
 id seeorders
 id select_dialog_listview
 id selected
-id sell
 id seller_number
 id service_description
 id service_spinner
@@ -2022,7 +2021,6 @@ id unknown
 id unlabeled
 id up
 id upload
-id upload_toolbar
 id useLogo
 id username
 id ussd_code_tv

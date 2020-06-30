@@ -43,6 +43,9 @@ public class Garage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_garage);
+
+        getSupportActionBar().setTitle("Garage");
+
         loading = (ProgressBar) findViewById(R.id.loading);
         add_a_todo = (FloatingActionButton) findViewById(R.id.add_a_todo);
 
@@ -69,7 +72,9 @@ public class Garage extends AppCompatActivity {
 
     private void gettodoListIDs() {
         try {
-            DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("todoList").child(user.getUid());
+            DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference()
+                    .child("todoList")
+                    .child(user.getUid());
 
             partdatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -84,7 +89,8 @@ public class Garage extends AppCompatActivity {
                             }
                         }
                     }else{
-                        Toast.makeText(Garage.this,"Cannot get ID",Toast.LENGTH_LONG).show();
+//                        Toast.makeText(Garage.this,"Cannot get ID",Toast.LENGTH_LONG).show();
+                        Toast.makeText(Garage.this,"No items added",Toast.LENGTH_LONG).show();
 
                     }
                 }

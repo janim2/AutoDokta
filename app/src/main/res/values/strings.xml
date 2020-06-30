@@ -71,10 +71,9 @@
     <string name="confirm"><b>1. Confirmation</b>\n\nCongratulations, Your order was successfully submmitted and our customer service may contact you for verification.If you are paying via mobile money, please make payment within 24 hours to avoid cancellation of order.</string>
     <string name="shipping"><b>2. Shipping</b>\n\nYour order will be prepared for shipment once it is confirmed. You will receive updates.</string>
     <string name="track"><b>3. Track</b>\nYou can track your order by clicking on My Garage</string>
-
-    <string name="product_name">Product Name</string>
-    <string name="product_price">Price</string>
-    <string name="seller_number">Seller Number</string>
+    <string name="product_name">Name</string>
+    <string name="product_price">Prize</string>
+    <string name="seller_number">Phone number</string>
     <string name="product_description">Description</string>
 
 </resources>

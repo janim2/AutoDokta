@@ -20,9 +20,9 @@ public class ServicesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
 
-        final Intent putServiceIntent = new Intent(ServicesActivity.this,ServiceOrderDetails.class);
-
         getSupportActionBar().setTitle("Services");
+
+        final Intent putServiceIntent = new Intent(ServicesActivity.this,ServiceOrderDetails.class);
 
         submitted = (Button)findViewById(R.id.submitted);
         car_insuranceLayout = (LinearLayout) findViewById(R.id.car_insurance);

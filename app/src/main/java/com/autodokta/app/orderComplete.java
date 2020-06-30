@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class orderComplete extends AppCompatActivity {
 
@@ -35,7 +36,8 @@ public class orderComplete extends AppCompatActivity {
         seeorders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(orderComplete.this,Garage.class));
+//                startActivity(new Intent(orderComplete.this,Orders.class));
+                Toast.makeText(orderComplete.this, "coming soon", Toast.LENGTH_LONG).show();
             }
         });
 

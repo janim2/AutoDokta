@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword, firstname, lastname, username,
             address, phone_number;
-    private Button  btnSignUp, btnResetPassword;
+    private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     DatabaseReference mDatabase;
@@ -66,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
-
+//        btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
@@ -80,9 +80,19 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
+//        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(RegisterActivity.this, ResetPasswordActivity.class));
+//            }
+//        });
 
-
-
+//        btnSignIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -169,6 +179,7 @@ public class RegisterActivity extends AppCompatActivity {
         mDatabase.child("users").child(user).child("username").setValue(username);
         mDatabase.child("users").child(user).child("address").setValue(address);
         mDatabase.child("users").child(user).child("number").setValue(phoneNumber);
+        mDatabase.child("users").child(user).child("profileimage").setValue("none");
         Add_this_notification_to_database("Auto Dokta Registration","Welcome, " +fname
                         +" to the best car parts sales platform. Feel free to contact customter support in times of need"
                 ,new Date().getTime(),"WN");

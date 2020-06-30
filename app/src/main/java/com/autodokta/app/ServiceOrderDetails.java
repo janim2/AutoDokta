@@ -273,6 +273,9 @@ public class ServiceOrderDetails extends AppCompatActivity implements DatePicker
         }
     }
 
-
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+    }
 }
 

@@ -1,6 +1,9 @@
 package com.autodokta.app;
 
+
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -36,18 +39,27 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class UploadActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    EditText product_name,product_price,seller,product_desc;
-    CircleImageView imageView;
-    Button product;
-    String name_str,price_str,seller_str,desc_str,image_str;
-    private Uri filepath;
-//    ImageView uploaded;
-    FirebaseStorage storage;
-    StorageReference storageReference;
-    DatabaseReference databaseReference;
-    FirebaseDatabase  firebaseDatabase;
+    private EditText            product_name,   product_price,
+                                seller,         product_desc;
 
+    private CircleImageView     imageView;
+
+    private Button              upload_product;
+
+    private String              name_str,       price_str,
+                                seller_str,     desc_str, image_str;
+
+    private FirebaseStorage     storage;
+
+    private StorageReference    storageReference;
+
+    private DatabaseReference   databaseReference;
+
+    private FirebaseDatabase    firebaseDatabase;
+
+    private Uri                 imagepath;
+
+    private int                 PICK_IMAGE_     = 100;
 
 
     @Override
@@ -55,182 +67,159 @@ public class UploadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
 
+        getSupportActionBar().setTitle("Upload Item");
 
-//        Using Toolbar as the appbar
-        toolbar = (Toolbar)findViewById(R.id.upload_toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null){
-            getSupportActionBar().setTitle("Ad Upload");
+        //Calling various view using their respective id's
+        product_name    =   findViewById(R.id.product_name);
+        product_price   =   findViewById(R.id.product_price);
+        seller          =   findViewById(R.id.seller_number);
+        product_desc    =   findViewById(R.id.product_desc);
 
-        }
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        imageView       =   findViewById(R.id.choose_image);
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-//                going back to previous activity
-                startActivity(new Intent(UploadActivity.this,MainActivity.class));
-                finish();
+            public void onClick(View view) {
+                chooseImage();
             }
         });
 
+        upload_product  =   findViewById(R.id.ad_upload);
 
-
-//        Calling various view using their respective id's
-        product_name = (EditText)findViewById(R.id.product_name);
-        product_price = (EditText)findViewById(R.id.product_price);
-        seller = (EditText)findViewById(R.id.seller_number);
-        product_desc = (EditText)findViewById(R.id.product_desc);
-
-//        choose = (Button)findViewById(R.id.choose_image);
-        imageView = (CircleImageView)findViewById(R.id.choose_image);
-        product = (Button)findViewById(R.id.ad_upload);
-
-//        uploaded = (ImageView)findViewById(R.id.uploaded_image);
-
-//        setting clickListener for the product button
-        product.setOnClickListener(new View.OnClickListener() {
+        //setting clickListener for the product button
+        upload_product.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                first check if all fields are filled
-//                convert various fields to string
-                name_str = product_name.getText().toString();
-                price_str = product_price.getText().toString();
-                seller_str = seller.getText().toString();
-                desc_str = product_desc.getText().toString();
-//                image_str = choose.getText().toString();
+            //first check if all fields are filled
+            //convert various fields to string
+            name_str = product_name.getText().toString();
+            price_str = product_price.getText().toString();
+            seller_str = seller.getText().toString();
+            desc_str = product_desc.getText().toString();
 
-//                display error message for empty fields
-                if (checkEmptyFiled(name_str)||checkEmptyFiled(price_str)||checkEmptyFiled(seller_str)||checkEmptyFiled(desc_str)){
-                    Toast.makeText(getApplicationContext(),"Fields required",Toast.LENGTH_SHORT).show();
-                }else {
-
-//                        choose.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View v) {
-//                                chooseImage();
-//                            }
-//                        });
-
-                        uploadImageToFireStore();
-
-
-                    }
-
-
-
-                }
+            //display error message for empty fields
+            if (checkEmptyFiled(name_str) || checkEmptyFiled(price_str) ||
+                    checkEmptyFiled(seller_str) || checkEmptyFiled(desc_str)) {
+                    Toast.makeText(getApplicationContext(), "Fields required", Toast.LENGTH_SHORT).show();
+            }
+            else if(imagepath == null){
+                Toast.makeText(UploadActivity.this, "Please select image", Toast.LENGTH_LONG).show();
+            }
+            else {
+                uploadImageToFireStore();
+            }
+            }
 
         });
-
-
     }
-
-
 
     //    method to check for empty fields
-    public boolean checkEmptyFiled(String field){
-       if (TextUtils.isEmpty(field)){
-           return true;
-       }else {
-           return false;
-       }
-
+    public boolean checkEmptyFiled(String field) {
+        if (TextUtils.isEmpty(field)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-
-
-    private void chooseImage(){
-//        creating a new intent instance
+    private void chooseImage() {
+        //creating a new intent instance
         Intent intent = new Intent();
-//                    get an image content
+        //get an image content
         intent.setType("image/*");
-//                    image choser dialog that allows user to browse the device gallery to select the image
+        //image choser dialog that allows user to browse the device gallery to select the image
         intent.setAction(Intent.ACTION_GET_CONTENT);
-//                    receiving the selected image
-        startActivityForResult(Intent.createChooser(intent,"Select Picture"),100);
+        //receiving the selected image
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 100 && resultCode == RESULT_OK && data != null && data.getData() != null){
-            filepath = data.getData();
+        if (requestCode == 100 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            imagepath = data.getData();
             try {
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),filepath);
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagepath);
 //                display selected image in the ImageView
                 imageView.setImageBitmap(bitmap);
 
-            }catch (IOException ex){
+            } catch (IOException ex) {
                 ex.printStackTrace();
             }
         }
     }
 
-    private void uploadImageToFireStore(){
+    private void uploadImageToFireStore() {
 //        creating firebase storage instance
         storage = FirebaseStorage.getInstance();
 //        pointing to the uploaded file
-        storageReference =storage.getReference();
+        storageReference = storage.getReference();
 
-        if (filepath != null){
+        if (imagepath != null) {
             final ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Uploading");
             progressDialog.show();
 
             final StorageReference reference = storageReference.child("images/" + UUID.randomUUID().toString());
-            reference.putFile(filepath)
+            reference.putFile(imagepath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            if (taskSnapshot.getMetadata().getReference() != null){
+                            if (taskSnapshot.getMetadata().getReference() != null) {
                                 reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                     @Override
                                     public void onSuccess(Uri uri) {
                                         String url = String.valueOf(uri);
                                         saveDataToFirebase(url);
 
-
                                     }
                                 });
                             }
                             progressDialog.dismiss();
-                            Toast.makeText(UploadActivity.this,"uploaded",Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(UploadActivity.this, "uploaded", Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             progressDialog.dismiss();
-                            Toast.makeText(UploadActivity.this,"Failed"+e.getMessage(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(UploadActivity.this, "Failed" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                            double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot.getTotalByteCount());
-                            progressDialog.setMessage("uploaded: "+ (int)progress+"%");
+                            double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot.getTotalByteCount());
+                            progressDialog.setMessage("uploaded: " + (int) progress + "%");
                         }
                     });
         }
     }
 
-    private void saveDataToFirebase(String url){
+    private void saveDataToFirebase(String url) {
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference =firebaseDatabase.getReference().child("ads");
-        Map<String,String> upload = new HashMap<String, String>();
-        upload.put("title",name_str);
-        upload.put("price",price_str);
-        upload.put("seller_number",seller_str);
-        upload.put("description",desc_str);
-        upload.put("image_url",url);
+        databaseReference = firebaseDatabase.getReference().child("ads");
+        final Map<String, String> upload = new HashMap<String, String>();
+        upload.put("title", name_str);
+        upload.put("price", price_str);
+        upload.put("seller_number", seller_str);
+        upload.put("description", desc_str);
+        upload.put("image_url", url);
         databaseReference.setValue(upload).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(UploadActivity.this,"Upload successful",Toast.LENGTH_SHORT).show();
-
-                }else{
-                    Toast.makeText(UploadActivity.this,"Upload Failed",Toast.LENGTH_SHORT).show();
+                if (task.isSuccessful()) {
+                    AlertDialog.Builder uploaded = new AlertDialog.Builder(UploadActivity.this);
+                    uploaded.setMessage("Your item "+name_str+" has been uploaded.");
+                    uploaded.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                        }
+                    });
+                    uploaded.show();
+//                    Toast.makeText(UploadActivity.this, "Upload successful", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(UploadActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -241,11 +230,4 @@ public class UploadActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-
-
-
-
 }

@@ -11,10 +11,6 @@
             android:id="@+id/nav_item5"
             android:icon="@drawable/ic_book_black_24dp"
             android:title="About Us" />
-        <item
-            android:id="@+id/sell"
-            android:icon="@drawable/upload"
-            android:title="Sell"/>
 
         <item
             android:id="@+id/logout"

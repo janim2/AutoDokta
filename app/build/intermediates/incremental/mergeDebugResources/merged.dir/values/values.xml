@@ -788,7 +788,7 @@
     <string name="choose_another_payment_method">Choose another payment method</string>
     <string name="choose_saved_card">CHOOSE SAVED CARD</string>
     <string name="click_here_to_copy_the_ussd_code">Click here to copy the ussd code</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">b7996559-a237-408d-ad29-617ebdc69fb9</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">023fcf15-bf9f-4f61-966a-fadd53f46ac9</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -970,8 +970,8 @@
     <string name="powered_by">by Flutterwave</string>
     <string name="proceed">Proceed</string>
     <string name="product_description">Description</string>
-    <string name="product_name">Product Name</string>
-    <string name="product_price">Price</string>
+    <string name="product_name">Name</string>
+    <string name="product_price">Prize</string>
     <string name="progress_dialog_loading">Loading…</string>
     <string name="progress_dialog_sending">Sending…</string>
     <string name="progress_dialog_signing_in">Signing in…</string>
@@ -992,7 +992,7 @@
     <string name="search_hint">Search for Products, Brands and More</string>
     <string name="search_menu_title">Search</string>
     <string name="secured_by_flutterwave">SECURED BY FLUTTERWAVE</string>
-    <string name="seller_number">Seller Number</string>
+    <string name="seller_number">Phone number</string>
     <string name="shipping"><b>2. Shipping</b>\n\nYour order will be prepared for shipment once it is confirmed. You will receive updates.</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_in_no_password_title">Put an email to use for sign in</string>
@@ -1095,7 +1095,7 @@
     <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
   </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
