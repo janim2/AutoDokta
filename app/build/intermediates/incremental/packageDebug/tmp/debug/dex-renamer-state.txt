@@ -1,10 +1,10 @@
-#Tue Jun 30 19:31:03 GMT 2020
-path.2=classes3.dex
-path.1=classes2.dex
+#Wed Jul 01 16:36:49 BST 2020
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/home/jesse/AndroidStudioProjects/AutoDokta_old/app/build/intermediates/dex/debug/mergeDexDebug/out
-base.1=/home/jesse/AndroidStudioProjects/AutoDokta_old/app/build/intermediates/dex/debug/mergeDexDebug/out
-base.0=/home/jesse/AndroidStudioProjects/AutoDokta_old/app/build/intermediates/dex/debug/mergeDexDebug/out
+base.2=C\:\\Users\\Eben-Dell\\AndroidStudioProjects\\AutoDokta\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+base.1=C\:\\Users\\Eben-Dell\\AndroidStudioProjects\\AutoDokta\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.0=C\:\\Users\\Eben-Dell\\AndroidStudioProjects\\AutoDokta\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out

@@ -1,0 +1,15 @@
+package com.autodokta.app;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class AutoEvents extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_auto_events);
+        getSupportActionBar().setTitle("Auto Events");
+
+    }
+}

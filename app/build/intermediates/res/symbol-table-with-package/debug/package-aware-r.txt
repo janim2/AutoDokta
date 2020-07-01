@@ -1199,6 +1199,7 @@ drawable abc_vector_test
 drawable ac
 drawable add
 drawable amex
+drawable arrow
 drawable automechanic
 drawable avd_hide_password
 drawable avd_show_password

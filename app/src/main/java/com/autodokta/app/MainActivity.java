@@ -2,12 +2,10 @@ package com.autodokta.app;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -23,29 +21,22 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.algolia.instantsearch.core.helpers.Searcher;
-import com.algolia.instantsearch.ui.helpers.InstantSearch;
-import com.algolia.search.saas.Client;
 import com.autodokta.app.Adapters.CarParts;
 import com.autodokta.app.Adapters.ImageAdapter;
 import com.autodokta.app.Adapters.PartsAdapter;
-import com.autodokta.app.SearchItems.ResultsListView;
+import com.autodokta.app.fragments.ImageListFragment;
 import com.autodokta.app.helpers.Space;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.auth.FirebaseAuth;
-import com.autodokta.app.fragments.ImageListFragment;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -66,6 +57,7 @@ public class MainActivity extends AppCompatActivity
     private TextView cartnumberTextView, guest_or_user;
     public NavigationView navigationView;
     private int cart_number;
+    private DatabaseReference databaseReference;
 
     // Constants
     private static final int LOAD_MORE_THRESHOLD = 5;
@@ -73,7 +65,10 @@ public class MainActivity extends AppCompatActivity
 
 
 //    strings for loading the parts from the database
-    private ArrayList resultParts = new ArrayList<CarParts>();
+//    private ArrayList resultParts = new ArrayList<CarParts>();
+    private  ArrayList<CarParts> resultParts;
+
+
     private RecyclerView PostRecyclerView;
     private RecyclerView.Adapter mPostAdapter;
     private RecyclerView.LayoutManager mPostLayoutManager;
@@ -174,15 +169,39 @@ public class MainActivity extends AppCompatActivity
         mPostLayoutManager = new GridLayoutManager(MainActivity.this,2, LinearLayoutManager.VERTICAL,false);
 //        mPostLayoutManager = new LinearLayoutManager(getActivity());
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
+        resultParts =  new ArrayList<>();
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("ads");
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+//                    for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
+                        resultParts.add(dataSnapshot.getValue(CarParts.class));
 
-        getPartsIds();
 
-        mPostAdapter = new PartsAdapter(getParts(),MainActivity.this);
 
-        PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
 
-        PostRecyclerView.setAdapter(mPostAdapter);
+//                    }
+
+                    mPostAdapter = new PartsAdapter(resultParts,MainActivity.this);
+
+                     PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
+
+                    PostRecyclerView.setAdapter(mPostAdapter);
 //        items ends here
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                System.out.println("Database Error: " + databaseError.getMessage());
+            }
+        });
+
+//        getPartsIds();
+
+
     }
 
 //    @Override
@@ -453,6 +472,10 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.profile){
             startActivity(new Intent(MainActivity.this,User_Profile.class));
+        }
+
+        if (id == R.id.auto_event){
+            startActivity(new Intent(MainActivity.this,AutoEvents.class));
         }
 
 

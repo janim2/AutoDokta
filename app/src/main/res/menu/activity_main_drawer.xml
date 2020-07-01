@@ -39,6 +39,10 @@
             <item
                 android:id="@+id/garage"
                 android:title="Garage" />
+
+            <item
+                android:id="@+id/auto_event"
+                android:title="Auto Events" />
         </menu>
     </item>
 
