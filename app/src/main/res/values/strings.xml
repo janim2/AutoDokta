@@ -75,5 +75,10 @@
     <string name="product_price">Prize</string>
     <string name="seller_number">Phone number</string>
     <string name="product_description">Description</string>
+    <string name="upload_event">Upload Event</string>
+    <string name="event_name">Event Name</string>
+    <string name="event_location">Location</string>
+    <string name="event_description">Description</string>
+    <string name="event_upload">Upload Event</string>
 
 </resources>

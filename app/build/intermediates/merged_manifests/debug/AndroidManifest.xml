@@ -33,6 +33,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.autodokta.app.UploadEvent" />
         <activity android:name="com.autodokta.app.AutoEvents" />
         <activity
             android:name="com.autodokta.app.UploadActivity"

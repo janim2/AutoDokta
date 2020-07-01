@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UploadEvent">
+
+    <TextView
+        android:text="Fill below forms to upload your ad"
+        android:textSize=   "15sp"
+        android:typeface="normal"
+        android:layout_marginTop= "5dp"
+        android:gravit = "center"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height ="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/event_name"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="@string/product_price"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/buttondesign"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/event_location"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="@string/event_location"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/buttondesign"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <Spinner
+            android:id="@+id/rate_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/event_desc"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:hint="@string/event_description"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:paddingLeft="10dp"
+            android:textColorHint="@android:color/black"
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@drawable/buttondesign"
+            android:layout_marginTop="10dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/event_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:src="@drawable/upload"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorPrimary"/>
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center"
+                android:src="@drawable/load_image"/>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/event_upload"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Upload Event"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:background="@color/colorPrimary"
+        />
+
+
+
+
+
+</LinearLayout>
