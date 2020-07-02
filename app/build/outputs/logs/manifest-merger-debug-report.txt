@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
+INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
+INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
+INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
 MERGED from [com.android.support:multidex:1.0.2] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\7c5effa68676a546fdae526843e79041\multidex-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.Flutterwave:rave-android:1.0.48] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\9d319daee63d0fe1088d6a8ed41e5755\rave-android-1.0.48\AndroidManifest.xml:2:1-28:12
 MERGED from [com.firebaseui:firebase-ui:0.6.0] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\c94390e193a2a9af577c439b1ee4b41d\firebase-ui-0.6.0\AndroidManifest.xml:2:1-13:12
@@ -87,20 +87,20 @@ MERGED from [com.crashlytics.sdk.android:answers:1.4.5] C:\Users\Eben-Dell\.grad
 MERGED from [io.fabric.sdk.android:fabric:1.4.6] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\5acc602bdd2411a15968415150784f2e\fabric-1.4.6\AndroidManifest.xml:22:1-33:12
 MERGED from [com.scottyab:aescrypt:0.0.1] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\2dfd75261c719f35dafbe80277b4f99f\aescrypt-0.0.1\AndroidManifest.xml:2:1-12:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\9cb676ebfc3da7beca0ce739c4e7418b\play-services-measurement-base-16.0.3\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
-INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
+INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
+INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
+INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
 	package
 		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
 		INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-118:12
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:1-119:12
 		INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:2:11-69
@@ -191,7 +191,7 @@ ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\Andro
 	android:name
 		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:15:22-72
 application
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:17:5-116:19
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:17:5-117:19
 MERGED from [com.github.Flutterwave:rave-android:1.0.48] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\9d319daee63d0fe1088d6a8ed41e5755\rave-android-1.0.48\AndroidManifest.xml:11:5-26:19
 MERGED from [com.github.Flutterwave:rave-android:1.0.48] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\9d319daee63d0fe1088d6a8ed41e5755\rave-android-1.0.48\AndroidManifest.xml:11:5-26:19
 MERGED from [com.firebaseui:firebase-ui-auth:0.6.0] C:\Users\Eben-Dell\.gradle\caches\transforms-2\files-2.1\86707d4607bde27d93ba52be5a7c955a\firebase-ui-auth-0.6.0\AndroidManifest.xml:12:5-83:19
@@ -280,220 +280,224 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Us
 		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:18:9-35
 	android:theme
 		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:23:9-40
+activity#com.autodokta.app.EventDetails
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:24:9-59
+	android:name
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:24:19-47
 activity#com.autodokta.app.UploadJobs
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:24:9-57
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:25:9-48
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:24:19-45
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:25:19-45
 activity#com.autodokta.app.Jobs
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:25:9-42
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:26:9-42
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:25:19-39
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:26:19-39
 activity#com.autodokta.app.UploadEvent
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:26:9-49
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:27:9-49
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:26:19-46
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:27:19-46
 activity#com.autodokta.app.AutoEvents
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:27:9-48
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:28:9-48
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:27:19-45
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:28:19-45
 activity#com.autodokta.app.UploadActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:28:9-30:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:29:9-31:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:30:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:31:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:29:13-43
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:30:13-43
 activity#com.autodokta.app.Notifications
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:31:9-33:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:32:9-34:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:33:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:34:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:32:13-42
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:33:13-42
 activity#com.autodokta.app.Chat
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:34:9-36:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:35:9-37:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:36:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:37:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:35:13-33
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:36:13-33
 activity#com.autodokta.app.AddItemReview
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:37:9-51
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:38:9-51
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:37:19-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:38:19-48
 activity#com.autodokta.app.ItemReview
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:38:9-48
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:39:9-48
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:38:19-45
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:39:19-45
 activity#com.autodokta.app.WishList
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:39:9-41:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:40:9-42:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:41:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:42:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:40:13-37
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:41:13-37
 activity#com.autodokta.app.Splash_Screen
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:42:9-50:20
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:43:9-51:20
 	android:theme
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:44:13-69
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:45:13-69
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:43:13-42
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:44:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:45:13-49:29
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:46:13-50:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:46:17-69
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:47:17-69
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:46:25-66
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:47:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:48:17-77
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:49:17-77
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:48:27-74
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:49:27-74
 activity#com.autodokta.app.Search_Activity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:51:9-53:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:52:9-54:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:53:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:54:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:52:13-44
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:53:13-44
 activity#com.autodokta.app.Todo_inner_Service
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:54:9-56:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:55:9-57:59
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:56:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:57:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:55:13-47
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:56:13-47
 activity#com.autodokta.app.Todo_Refuel
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:57:9-59:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:58:9-60:59
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:58:13-40
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:59:13-40
 activity#com.autodokta.app.Todo_Income
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:60:9-62:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:61:9-63:59
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:62:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:63:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:61:13-40
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:62:13-40
 activity#com.autodokta.app.Todo_Services
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:63:9-65:52
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:64:9-66:52
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:65:13-49
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:66:13-49
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:64:13-42
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:65:13-42
 activity#com.autodokta.app.Add_a_TodoActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:66:9-68:52
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:67:9-69:52
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:68:13-49
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:69:13-49
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:67:13-47
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:68:13-47
 activity#com.autodokta.app.User_Profile
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:69:9-71:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:70:9-72:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:71:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:72:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:70:13-41
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:71:13-41
 activity#com.autodokta.app.Garage
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:72:9-44
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:73:9-44
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:72:19-41
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:73:19-41
 activity#com.autodokta.app.orderComplete
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:73:9-51
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:74:9-51
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:73:19-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:74:19-48
 activity#com.autodokta.app.ChangeAdress
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:74:9-50
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:75:9-50
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:74:19-47
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:75:19-47
 activity#com.autodokta.app.orderSummary
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:75:9-77:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:76:9-78:59
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:77:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:78:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:76:13-41
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:77:13-41
 activity#com.autodokta.app.PaymentMethod
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:78:9-80:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:79:9-81:59
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:80:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:81:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:79:13-42
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:80:13-42
 activity#com.autodokta.app.CompleteOrder
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:81:9-83:50
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:82:9-84:50
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:83:13-47
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:84:13-47
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:82:13-42
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:83:13-42
 activity#com.autodokta.app.Cart
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:84:9-86:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:85:9-87:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:86:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:87:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:85:13-33
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:86:13-33
 activity#com.autodokta.app.ServiceOrderDetails
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:87:9-89:62
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:88:9-90:62
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:89:13-59
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:90:13-59
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:88:13-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:89:13-48
 activity#com.autodokta.app.ResetPasswordActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:90:9-59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:91:9-59
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:90:19-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:91:19-56
 activity#com.autodokta.app.LoginActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:91:9-51
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:92:9-51
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:91:19-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:92:19-48
 activity#com.autodokta.app.RegisterActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:92:9-54
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:93:9-54
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:92:19-51
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:93:19-51
 activity#com.autodokta.app.MainActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:93:9-95:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:94:9-96:59
 	android:theme
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:95:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:96:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:94:13-41
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:95:13-41
 activity#com.autodokta.app.PurchasesActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:96:9-55
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:97:9-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:96:19-52
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:97:19-52
 activity#com.autodokta.app.ServicesActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:97:9-99:58
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:98:9-100:58
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:99:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:100:13-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:98:13-45
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:99:13-45
 activity#com.autodokta.app.HelpCenterActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:100:9-56
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:101:9-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:100:19-53
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:101:19-53
 activity#com.autodokta.app.TermsActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:101:9-51
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:102:9-51
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:101:19-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:102:19-48
 activity#com.autodokta.app.ContactUsActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:102:9-55
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:103:9-55
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:102:19-52
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:103:19-52
 activity#com.autodokta.app.TodoDetailsActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:103:9-105:52
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:104:9-106:52
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:105:13-49
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:106:13-49
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:104:13-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:105:13-48
 activity#com.autodokta.app.IndexActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:106:9-108:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:107:9-109:59
 	android:theme
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:108:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:109:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:107:13-42
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:108:13-42
 activity#com.autodokta.app.ItemDetailsActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:109:9-112:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:110:9-113:59
 	android:parentActivityName
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:111:13-55
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:112:13-55
 	android:theme
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:112:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:113:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:110:13-48
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:111:13-48
 activity#com.autodokta.app.AboutUsActivity
-ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:113:9-115:59
+ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:114:9-116:59
 	android:theme
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:115:13-56
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:116:13-56
 	android:name
-		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:114:13-44
+		ADDED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml:115:13-44
 uses-sdk
 INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Eben-Dell\AndroidStudioProjects\AutoDokta\app\src\main\AndroidManifest.xml
