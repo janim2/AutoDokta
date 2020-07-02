@@ -29,9 +29,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
 
         switch(position){
-            case 0:
-                Offers offers = new Offers();
-                return offers;
+//            case 0:
+//                Offers offers = new Offers();
+//                return offers;
 
             case 1:
                 EngineDriveTrain train = new EngineDriveTrain();

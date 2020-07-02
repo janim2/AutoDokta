@@ -43,6 +43,10 @@
             <item
                 android:id="@+id/auto_event"
                 android:title="Auto Events" />
+
+            <item
+                android:id="@+id/auto_jobs"
+                android:title="Auto Events" />
         </menu>
     </item>
 

@@ -1451,6 +1451,8 @@ id and
 id arrowIv2
 id async
 id auto
+id auto_event
+id auto_jobs
 id auto_mechanic
 id automatic
 id bankNameTv
@@ -1579,10 +1581,17 @@ id engineoil
 id enterAlways
 id enterAlwaysCollapsed
 id eq
+id event_desc
+id event_image
+id event_location
+id event_name
+id event_upload
+id events
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id expense_layout
+id experience
 id fab
 id facebook_button
 id fill
@@ -1646,6 +1655,14 @@ id itemname
 id itemprize
 id itemprizes
 id itemquantity
+id job_desc
+id job_image
+id job_menu
+id job_name
+id job_regions
+id job_responsibilities
+id job_type
+id job_upload
 id labeled
 id large
 id largeLabel
@@ -1779,6 +1796,7 @@ id puncture
 id radio
 id rate_byWho
 id rate_message
+id rate_spinner
 id rate_title
 id rating_count
 id rating_text
@@ -2098,6 +2116,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_item_review
+layout activity_auto_events
 layout activity_cart
 layout activity_change_adress
 layout activity_chat
@@ -2109,6 +2128,7 @@ layout activity_help_center
 layout activity_index
 layout activity_item_details
 layout activity_item_review
+layout activity_jobs
 layout activity_login
 layout activity_main
 layout activity_notifications
@@ -2131,6 +2151,8 @@ layout activity_todo__services
 layout activity_todo_details
 layout activity_todo_inner__service
 layout activity_upload
+layout activity_upload_event
+layout activity_upload_jobs
 layout activity_user__profile
 layout activity_wish_list
 layout add_exisiting_bank
@@ -2261,7 +2283,9 @@ layout welcome_back_idp_prompt_layout
 layout welcome_back_password_prompt_layout
 layout wishlist_attachment
 menu activity_main_drawer
+menu event
 menu items_details_menu
+menu jobs
 menu main
 menu search_menu
 mipmap ic_launcher
@@ -2408,6 +2432,10 @@ string enter_your_one_ntime_password_otp
 string error_email_does_not_exist
 string error_user_collision
 string error_weak_password
+string event_description
+string event_location
+string event_name
+string event_upload
 string expiration
 string expired
 string fab_transformation_scrim_behavior
@@ -2459,6 +2487,10 @@ string item_6
 string item_7
 string item_8
 string item_desc
+string job_desc
+string job_responsibilities
+string job_title
+string job_upload
 string login_error
 string messenger_send_button_text
 string missing_email_address
@@ -2574,6 +2606,7 @@ string unknownAuth
 string unknownAuthmsg
 string unknownResCode
 string unknownResCodemsg
+string upload_event
 string use_a_new_card
 string use_a_saved_card
 string ussd_code_placeholder

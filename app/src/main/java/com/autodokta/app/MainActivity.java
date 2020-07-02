@@ -4,9 +4,11 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
@@ -57,16 +59,14 @@ public class MainActivity extends AppCompatActivity
     private TextView cartnumberTextView, guest_or_user;
     public NavigationView navigationView;
     private int cart_number;
-    private DatabaseReference databaseReference;
 
+    ArrayList<CarParts> resultParts;
     // Constants
     private static final int LOAD_MORE_THRESHOLD = 5;
     private static final int HITS_PER_PAGE = 20;
 
 
 //    strings for loading the parts from the database
-//    private ArrayList resultParts = new ArrayList<CarParts>();
-    private  ArrayList<CarParts> resultParts;
 
 
     private RecyclerView PostRecyclerView;
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<Integer> picsArr = new ArrayList<Integer>();
 //    sliders variables ends here
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -169,46 +170,21 @@ public class MainActivity extends AppCompatActivity
         mPostLayoutManager = new GridLayoutManager(MainActivity.this,2, LinearLayoutManager.VERTICAL,false);
 //        mPostLayoutManager = new LinearLayoutManager(getActivity());
         PostRecyclerView.setLayoutManager(mPostLayoutManager);
-        resultParts =  new ArrayList<>();
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("ads");
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()){
-//                    for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
-                        resultParts.add(dataSnapshot.getValue(CarParts.class));
+
+        getPartsIds();
+        mPostAdapter = new PartsAdapter(getParts(),MainActivity.this);
+
+        PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
+//
+        PostRecyclerView.setAdapter(mPostAdapter);
 
 
 
-
-//                    }
-
-                    mPostAdapter = new PartsAdapter(resultParts,MainActivity.this);
-
-                     PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
-
-                    PostRecyclerView.setAdapter(mPostAdapter);
-//        items ends here
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                System.out.println("Database Error: " + databaseError.getMessage());
-            }
-        });
-
-//        getPartsIds();
 
 
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        getSupportFragmentManager().popBackStack();
-//    }
+
 
 
     @Override
@@ -253,9 +229,9 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.action_search:
-                startActivity(new Intent(MainActivity.this,Search_Activity.class));
-                break;
+//            case R.id.action_search:
+//                startActivity(new Intent(MainActivity.this,Search_Activity.class));
+//                break;
 
             case R.id.action_notifications:
                 if(mAuth.getCurrentUser() != null){
@@ -478,6 +454,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this,AutoEvents.class));
         }
 
+        if (id == R.id.auto_jobs){
+            startActivity(new Intent(MainActivity.this,Jobs.class));
+        }
+
 
         return false;
     }
@@ -561,7 +541,9 @@ public class MainActivity extends AppCompatActivity
                     boolean isNew = false;
                     CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew,
                             sellersNumber,"",product_rating);
-                    resultParts.add(obj);
+
+                        resultParts.add(obj);
+
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();
                     loading.setVisibility(View.GONE);
@@ -577,7 +559,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public ArrayList<CarParts> getParts(){
-        return  resultParts;
+        return resultParts;
     }
 
 

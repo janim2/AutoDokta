@@ -86,6 +86,10 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
     @Override
     public int getItemCount() {
 
+//      return itemList.size();
+        itemList = new ArrayList<CarParts>();
         return itemList.size();
+
+
     }
 }

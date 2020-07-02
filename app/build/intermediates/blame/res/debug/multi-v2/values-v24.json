@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Eben-Dell\\AndroidStudioProjects\\AutoDokta\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Eben-Dell\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\ae5a9821035d685871b53fff62af06b4\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Eben-Dell\\.gradle\\caches\\transforms-2\\files-2.1\\6e1d07def27dde55a4cc6b3945609ebd\\appcompat-v7-28.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Eben-Dell\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-28.0.0.aar\\c07efbbbe94537bee45d2ad3bd0d015d\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Eben-Dell\\.gradle\\caches\\transforms-2\\files-2.1\\01ff3d3d8e010b0bef39b9c4525ac47c\\support-media-compat-28.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
