@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 #Thu Jul 02 16:10:05 BST 2020
 path.2=classes2.dex
 path.1=classes.dex
+=======
+#Tue Feb 11 09:57:14 GMT 2020
+path.2=classes3.dex
+path.1=classes2.dex
+>>>>>>> 2ff4b9ee6dd5b44c6de8f5538683a0aa1be7820f
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

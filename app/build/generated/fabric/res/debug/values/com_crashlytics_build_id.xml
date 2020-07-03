@@ -6,5 +6,9 @@
 
   Do NOT modify, delete, or commit to source control!
 -->
+<<<<<<< HEAD
 <string tools:ignore="UnusedResources,TypographyDashes" name="com.crashlytics.android.build_id" translatable="false">043f9642-17b2-4e4e-bd75-7ef6a43da73c</string>
+=======
+<string tools:ignore="UnusedResources,TypographyDashes" name="com.crashlytics.android.build_id" translatable="false">ce8f43ff-f8d7-4ee5-b9e6-a0ba4e3472f1</string>
+>>>>>>> 2ff4b9ee6dd5b44c6de8f5538683a0aa1be7820f
 </resources>

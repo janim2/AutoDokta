@@ -130,6 +130,7 @@ public class PaymentMethod extends AppCompatActivity {
 //        listView.setAdapter(listAdapter);
     }
 
+<<<<<<< HEAD
     //sand keys
     public static String emma_PUBLIC_KEY = "FLWPUBK-e634d14d9ded04eaf05d5b63a0a06d2f-X"; //test
     public static String emma_ENCRYPTION_KEY = "bb9714020722eb4cf7a169f2";//test
@@ -172,6 +173,34 @@ public class PaymentMethod extends AppCompatActivity {
         }catch (NullPointerException e){
 
         }
+=======
+    public static String emma_PUBLIC_KEY = "FLWPUBK-e634d14d9ded04eaf05d5b63a0a06d2f-X"; //test
+    public static String emma_ENCRYPTION_KEY = "bb9714020722eb4cf7a169f2";//test
+    private void Flutterwave_payment(){
+
+        Random d = new Random();
+        int ss = d.nextInt(454545454);
+        String refid = ss+"";
+
+        new RavePayManager(PaymentMethod.this).setAmount(Double.valueOf(totalSale) + 10)
+                .setCountry("GH")
+                .setCurrency("GHS")
+//                .setPublicKey("FLWPUBK-9f910be2cca606f52d4d0914badb51ec-X")
+//                .setEncryptionKey("cdfdb7d775ffbd5216cf6884")
+//
+                .setPublicKey(emma_PUBLIC_KEY)
+                .setEncryptionKey(emma_ENCRYPTION_KEY)
+                .setfName("Jesse")
+                .setlName("Anim")
+                .setEmail("iam@gmail.com")
+                .setNarration("AutoDokta Payment")
+                .setTxRef(refid)
+                .acceptGHMobileMoneyPayments(true)
+                .acceptCardPayments(false)
+                .allowSaveCardFeature(false)
+                .onStagingEnv(true)
+                .initialize();
+>>>>>>> 2ff4b9ee6dd5b44c6de8f5538683a0aa1be7820f
     }
 
 //    private void initiateData() {

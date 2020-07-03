@@ -37,7 +37,10 @@ public class orderComplete extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                startActivity(new Intent(orderComplete.this,Orders.class));
+<<<<<<< HEAD
                 Toast.makeText(orderComplete.this, "coming soon", Toast.LENGTH_LONG).show();
+=======
+>>>>>>> 2ff4b9ee6dd5b44c6de8f5538683a0aa1be7820f
             }
         });
 
