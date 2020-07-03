@@ -53,6 +53,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri).into(eventImage);
+
             }
         });
 
