@@ -16,6 +16,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.provider.MediaStore;
@@ -100,4 +101,12 @@ public class Accessories {
     /*
     SHARED PREFERENCES END HERE:
      */
+
+    //Method to open dialer
+    public void openDialer(View v, String call_number){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:" + call_number));
+        v.getContext().startActivity(intent);
+    }
+
 }

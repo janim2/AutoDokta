@@ -44,7 +44,7 @@ public class Cart extends AppCompatActivity {
     RecyclerView.Adapter mCartAdapter;
     ArrayList resultParts = new ArrayList<CarParts>();
     FirebaseAuth firebaseAuth;
-    String imageurl, name, description, price, sellersNumber,quantity,product_rating;
+    String imageurl, name, views,description, price, sellersNumber,quantity="",product_rating;
     Button cacheout,calltoorder;
     ImageView goBack;
 
@@ -117,7 +117,6 @@ public class Cart extends AppCompatActivity {
     public void getCartIds() {
         loading.setVisibility(View.VISIBLE);
         FirebaseUser user = firebaseAuth.getCurrentUser();
-
         DatabaseReference cartdatabase = FirebaseDatabase.getInstance().getReference().child("cart").child(user.getUid());
         cartdatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -153,7 +152,8 @@ public class Cart extends AppCompatActivity {
         try{
             FirebaseUser user = firebaseAuth.getCurrentUser();
 
-            DatabaseReference cartdatabase = FirebaseDatabase.getInstance().getReference().child("cart").child(user.getUid()).child(key);
+            DatabaseReference cartdatabase = FirebaseDatabase.getInstance().getReference().child("cart")
+                    .child(user.getUid()).child(key);
             cartdatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -226,18 +226,17 @@ public class Cart extends AppCompatActivity {
     private void FetchingValues(final String key, String carPart) {
         try{
 
-//            DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child(carPart).child(key);
             DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("allParts").child(key);
             postData.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
                         for(DataSnapshot child : dataSnapshot.getChildren()){
-                            if(child.getKey().equals("image")){
+                            if(child.getKey().equals("image_url")){
                                 imageurl = child.getValue().toString();
                             }
 
-                            if(child.getKey().equals("name")){
+                            if(child.getKey().equals("title")){
                                 name = child.getValue().toString();
                             }
 
@@ -247,23 +246,25 @@ public class Cart extends AppCompatActivity {
 
                             if(child.getKey().equals("price")){
                                 price = child.getValue().toString();
-                                try {
-                                    if(quantity.equals(null)){
+//                                try {
+                                    if(quantity.equals("")){
                                         quantity = "1";
                                     }
-                                    totalPrize += Integer.valueOf(quantity) * Float.valueOf(price.replace("GHC ",""));
-
-                                }catch (NullPointerException e){
-
-                                }
+                                    totalPrize += Integer.valueOf(quantity) * Float.valueOf(price);//Float.valueOf(price.replace("GHC ",""));
+//                                }catch (NullPointerException e){
+//                                }
                             }
 
-                            if(child.getKey().equals("buyersNumber")){
+                            if(child.getKey().equals("seller_number")){
                                 sellersNumber = child.getValue().toString();
                             }
 
                             if(child.getKey().equals("rating")){
                                 product_rating = child.getValue().toString();
+                            }
+
+                            if(child.getKey().equals("views")){
+                                views = child.getValue().toString();
                             }
 
 
@@ -276,7 +277,8 @@ public class Cart extends AppCompatActivity {
                         String partid = key;
                         boolean isNew = false;
                         if(name!=null || !name.equals("")){
-                            CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew, sellersNumber,quantity,product_rating);
+                            CarParts obj = new CarParts(partid,imageurl,views,name,description,price,
+                                    isNew, sellersNumber,quantity,product_rating);
                             resultParts.add(obj);
                             cartRecyclerView.setAdapter(mCartAdapter);
                             mCartAdapter.notifyDataSetChanged();

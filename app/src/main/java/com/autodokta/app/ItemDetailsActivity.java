@@ -39,6 +39,8 @@ import com.autodokta.app.Adapters.Related_items_PartsAdapter;
 import com.autodokta.app.Adapters.ReviewAdapter;
 import com.autodokta.app.Adapters.Reviews;
 import com.autodokta.app.helpers.Space;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -64,6 +66,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Random;
 
 import static android.widget.Toast.LENGTH_LONG;
@@ -84,13 +87,13 @@ public class ItemDetailsActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private DatabaseReference reference;
     private FirebaseUser user;
-    private String item = "";
+    private String item = "", sviews;
     private ArrayList relatedParts = new ArrayList<CarParts>();
     private ArrayList reviewsArray = new ArrayList<Reviews>();
     private RecyclerView related_items_RecyclerView;
     private RecyclerView.Adapter related_items_mPostAdapter,customer_reviewAdapter;
     private RecyclerView.LayoutManager related_items_mPostLayoutManager;
-    private String related_item_imageurl, related_item_name, related_item_description,
+    private String related_item_imageurl, related_item_name, related_item_views,related_item_description,
             related_item_price, related_item_sellersNumber,sproduct_rating,
             review_individual_rate, review_name, review_message, review_title;
 
@@ -107,6 +110,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
     private Accessories accessories;
 
+    private TextView views;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,29 +125,31 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        image = findViewById(R.id.image1);
-        name = findViewById(R.id.name);
-        description = findViewById(R.id.description);
-        price = findViewById(R.id.price);
-        buyNow = findViewById(R.id.buyNow);
-        no_such_product = findViewById(R.id.no_such_product);
-        submitted = findViewById(R.id.submitted);
-        loading = findViewById(R.id.loading);
-        add_to_wishList = findViewById(R.id.ic_wishlist);
-        product_rating= findViewById(R.id.product_rating);
-        no_reviews = findViewById(R.id.no_reviews);
-        see_all = findViewById(R.id.see_all);
-        customer_reviewRecyclerView = findViewById(R.id.customer_reviewRecycler);
+        image                       =   findViewById(R.id.image1);
+        views                       =   findViewById(R.id.views);
+        name                        =   findViewById(R.id.name);
+        description                 =   findViewById(R.id.description);
+        price                       =   findViewById(R.id.price);
+        buyNow                      =   findViewById(R.id.buyNow);
+        no_such_product             =   findViewById(R.id.no_such_product);
+        submitted                   =   findViewById(R.id.submitted);
+        loading                     =   findViewById(R.id.loading);
+        add_to_wishList             =   findViewById(R.id.ic_wishlist);
+        product_rating              =   findViewById(R.id.product_rating);
+        no_reviews                  =   findViewById(R.id.no_reviews);
+        see_all                     =   findViewById(R.id.see_all);
+        customer_reviewRecyclerView =   findViewById(R.id.customer_reviewRecycler);
 
         item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
-        spartid = intent.getStringExtra("partid");
-        simage = intent.getStringExtra("theimage");
-        sname = intent.getStringExtra("thename");
-        sprice = intent.getStringExtra("theprice");
-        sdescription = intent.getStringExtra("thedescription");
-        sSellersNumber = intent.getStringExtra("thesellersNumber");
-        sproduct_rating = intent.getStringExtra("therating");
+        spartid         =   intent.getStringExtra("partid");
+        simage          =   intent.getStringExtra("theimage");
+        sviews          =   intent.getStringExtra("theviews");
+        sname           =   intent.getStringExtra("thename");
+        sprice          =   intent.getStringExtra("theprice");
+        sdescription    =   intent.getStringExtra("thedescription");
+        sSellersNumber  =   intent.getStringExtra("thesellersNumber");
+        sproduct_rating =   intent.getStringExtra("therating");
 
         //prep work before image is loaded is to load it into the cache
         DisplayImageOptions theImageOptions = new DisplayImageOptions.Builder().cacheInMemory(true).
@@ -156,6 +163,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         imageLoader.displayImage(imagelink,image);
 
         name.setText(sname);
+        views.setText(sviews);
         description.setText(sdescription);
         price.setText(sprice);
         product_rating.setText(sproduct_rating+" / 5 (rating)");
@@ -451,6 +459,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        new AddToViews().execute();
         String is_whiched = accessories.getString(spartid+"wished_or_not");
         if(is_whiched!=null){
             if(is_whiched.equals("yes")){
@@ -488,6 +497,30 @@ public class ItemDetailsActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private class AddToViews extends AsyncTask<String, Void, Void>{
+
+        @Override
+        protected Void doInBackground(String... strings) {
+            DatabaseReference updateViews = FirebaseDatabase.getInstance().getReference("allParts")
+                    .child(spartid);
+
+            final HashMap<String, Object> updated_views = new HashMap<>();
+//            Toast.makeText(context, itemList.get(position).getViews(), Toast.LENGTH_LONG).show();
+            Integer newValue = Integer.parseInt(sviews) + 1;
+            updated_views.put("views",   String.valueOf(newValue));
+            updateViews.updateChildren(updated_views).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    if(task.isSuccessful()){
+                    }
+                }
+            });
+
+            return null;
+        }
     }
 
     private void getRelatedItems_ID() {
@@ -579,6 +612,10 @@ public class ItemDetailsActivity extends AppCompatActivity {
                         if(child.getKey().equals("rating")){
                             sproduct_rating = child.getValue().toString();
                         }
+
+                        if(child.getKey().equals("views")){
+                            related_item_views = child.getValue().toString();
+                        }
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
 
@@ -587,7 +624,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,related_item_imageurl,related_item_name,related_item_description,
+                    CarParts obj = new CarParts(partid,related_item_imageurl,related_item_views,related_item_name,related_item_description,
                             related_item_price, isNew, related_item_sellersNumber,"",sproduct_rating);
                     relatedParts.add(obj);
                     related_items_RecyclerView.setAdapter(related_items_mPostAdapter);

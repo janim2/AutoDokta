@@ -30,36 +30,36 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         switch(position){
             case 0:
-                Offers offers = new Offers();
-                return offers;
+//                Offers offers = new Offers();
+//                return offers;
 
             case 1:
-                EngineDriveTrain train = new EngineDriveTrain();
-                return train;
+//                EngineDriveTrain train = new EngineDriveTrain();
+//                return train;
 
             case 2:
-                HeadLights lights = new HeadLights();
-                return lights;
+//                HeadLights lights = new HeadLights();
+//                return lights;
 
             case 3:
-                BrakeSuspension brakeSuspension = new BrakeSuspension();
-                return brakeSuspension;
+//                BrakeSuspension brakeSuspension = new BrakeSuspension();
+//                return brakeSuspension;
 
             case 4:
-                InteriorAccessories interiorAccessories = new InteriorAccessories();
-                return interiorAccessories;
+//                InteriorAccessories interiorAccessories = new InteriorAccessories();
+//                return interiorAccessories;
 
             case 5:
-                ExteriorAccessories exteriorAccessories = new ExteriorAccessories();
-                return exteriorAccessories;
+//                ExteriorAccessories exteriorAccessories = new ExteriorAccessories();
+//                return exteriorAccessories;
 
             case 6:
-                ToolsandGarage toolsandGarage = new ToolsandGarage();
-                return toolsandGarage;
+//                ToolsandGarage toolsandGarage = new ToolsandGarage();
+//                return toolsandGarage;
 
             case 7:
-                Wheels wheels = new Wheels();
-                return wheels;
+//                Wheels wheels = new Wheels();
+//                return wheels;
 
                 default:
                     return  mFragmentList.get(position);

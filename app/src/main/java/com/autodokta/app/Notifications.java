@@ -28,14 +28,18 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Notifications extends AppCompatActivity {
+
     //variables to use for getting values from the datebase
     private ArrayList notificationsArray = new ArrayList<Notify>();
-    private RecyclerView notifications_RecyclerView;
-    private RecyclerView.Adapter notifications_Adapter;
-    private String userid, notification_title, notifications_message, notifications_time,
-    notificationImage;
-    private TextView loadingTextView;
 
+    private RecyclerView notifications_RecyclerView;
+
+    private RecyclerView.Adapter notifications_Adapter;
+
+    private String userid, notification_title, notifications_message, notifications_time,
+    notificationImage, notification_status, request_id;
+
+    private TextView loadingTextView;
     //variables ends here
 
     @Override
@@ -115,16 +119,27 @@ public class Notifications extends AppCompatActivity {
                             notificationImage = child.getValue().toString();
                         }
 
+                        if(child.getKey().equals("status")){
+                            notification_status = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("request_id")){
+                            request_id = child.getValue().toString();
+                        }
+
                         else{
 //                            Toast.makeText(getActivity(),"Couldn't fetch posts",Toast.LENGTH_LONG).show();
 
                         }
                     }
 
-                    Notify obj = new Notify(notification_title,notifications_message,new Date().getTime(),notificationImage);
-                    notificationsArray.add(obj);
-                    notifications_RecyclerView.setAdapter(notifications_Adapter);
-                    notifications_Adapter.notifyDataSetChanged();
+                    if(notification_status.equals("active")){
+                        Notify obj = new Notify(notification_title,notifications_message,new Date().getTime(),notificationImage, request_id);
+                        notificationsArray.add(obj);
+                        notifications_RecyclerView.setAdapter(notifications_Adapter);
+                        notifications_Adapter.notifyDataSetChanged();
+                    }
+
                     loadingTextView.setVisibility(View.GONE);
                 }
             }

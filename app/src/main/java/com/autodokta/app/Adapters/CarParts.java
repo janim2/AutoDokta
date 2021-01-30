@@ -5,6 +5,7 @@ public class CarParts {
 
     public  String partId;
     public String image;
+    public String views;
     public String name;
     public String description;
     public String price;
@@ -18,11 +19,12 @@ public class CarParts {
 
     }
 
-    public CarParts(String partId, String image, String name, String description, String price,
+    public CarParts(String partId, String image, String views, String name, String description, String price,
                     boolean isNew, String sellersNumber,String quantity,String product_rating) {
 
         this.partId = partId;
         this.image = image;
+        this.views = views;
         this.name = name;
         this.description = description;
         this.price = price;
@@ -40,6 +42,8 @@ public class CarParts {
     public String getPartId(){return partId; }
 
     public String getImage(){return image; }
+
+    public String getViews(){return views; }
 
     public String getname(){return name; }
 

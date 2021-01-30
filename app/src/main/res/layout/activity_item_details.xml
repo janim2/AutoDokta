@@ -29,15 +29,33 @@
         </android.support.design.widget.AppBarLayout>
 
 
-        <ImageView
-            android:id="@+id/image1"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150.0dp"
-            android:paddingLeft="10.0dp"
-            android:paddingTop="5.0dp"
-            android:paddingRight="10.0dp"
-            android:paddingBottom="5.0dp"
-            android:src="@color/stay_color" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="match_parent"
+                android:layout_height="150.0dp"
+                android:paddingLeft="10.0dp"
+                android:paddingTop="5.0dp"
+                android:paddingRight="10.0dp"
+                android:paddingBottom="5.0dp"
+                android:src="@color/stay_color" />
+
+            <TextView
+                android:id="@+id/views"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_margin="10dp"
+                android:drawablePadding="5dp"
+                android:textColor="@color/red"
+                android:drawableRight="@drawable/views"
+                android:layout_gravity="right"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/layout_item_desc"
@@ -79,6 +97,7 @@
                 android:id="@+id/ic_wishlist"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
+                android:visibility="gone"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.3"
                 android:src="@drawable/ic_favorite_border_black_18dp" />
@@ -99,6 +118,7 @@
             android:layout_margin="8dp"
             android:background="@color/colorPrimary"
             android:text="BUY NOW"
+            android:visibility="gone"
             android:textSize="14sp"
             android:id="@+id/buyNow"
             android:textColor="@android:color/white" />
@@ -171,6 +191,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:visibility="gone"
             android:text="WRITE THE FIRST REVIEW"
             android:id="@+id/no_reviews"
             android:padding="5dp"
@@ -187,10 +208,12 @@
             android:text="Related Items"
             android:padding="5dp"
             android:textSize="15sp"
+            android:visibility="gone"
             android:textColor="@android:color/black"
             android:layout_marginTop="50dp"/>
         <HorizontalScrollView
             android:layout_width="wrap_content"
+            android:visibility="gone"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -215,6 +238,7 @@
             android:text="Product Not Listed?"
             android:layout_marginTop="16dp"
             android:textSize="15sp"
+            android:visibility="gone"
             android:textColor="@android:color/holo_red_dark"
             />
 
@@ -222,6 +246,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:layout_marginTop="10dp"
             >
 
@@ -244,6 +269,7 @@
             android:layout_marginBottom="40dp"
             android:layout_height="40dp"
             android:layout_gravity="end"
+            android:visibility="gone"
             android:text="Submit"
             android:textSize="14sp"
             android:textColor="@android:color/white"

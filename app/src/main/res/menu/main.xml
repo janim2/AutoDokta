@@ -6,8 +6,10 @@
         android:id="@+id/action_search"
         android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/action_search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:visible="false"
+        app:actionViewClass="android.widget.SearchView"
         app:showAsAction="always" />
+    
     <item
         android:id="@+id/action_notifications"
         android:icon="@drawable/ic_notifications_white_24dp"
@@ -18,19 +20,25 @@
         android:id="@+id/wish_list"
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="Wish List"
+        android:visible="false"
         app:showAsAction="never" />
 
      <item
         android:id="@+id/chat"
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="Chat"
+         android:visible="false"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/upload"
         android:title="Upload"
-        android:icon="@drawable/upload"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/custom_requests"
+        android:title="Custom requests"
+        app:showAsAction="never" />
 
 
 

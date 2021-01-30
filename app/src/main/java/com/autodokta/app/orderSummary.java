@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -58,7 +60,7 @@ public class orderSummary extends AppCompatActivity {
         try{
             totalPrize = summaryIntent.getStringExtra("orderTotal");
             spaymenttype = summaryIntent.getStringExtra("paymentType");
-            thingsprize.setText("GHC "+String.valueOf(Float.valueOf(totalPrize) + ".00"));
+            thingsprize.setText("GHC "+String.valueOf(Float.valueOf(totalPrize)));
             totalAmount.setText("GHC "+String.valueOf(Float.valueOf(totalPrize) + 10.00)+"0");
         }catch (NullPointerException e){
 
@@ -69,8 +71,9 @@ public class orderSummary extends AppCompatActivity {
             totalPayment.setText("Pay with AutoDokta Pay.");
         }
         else{
-            paymentImage.setImageResource(R.drawable.mtnlogo);
-            totalPayment.setText("Pay with MTN Mobile Money.");
+//            paymentImage.setImageResource(R.drawable.mtnlogo);
+            paymentImage.setImageResource(R.mipmap.ic_launcher);
+            totalPayment.setText("Pay with Mobile Money.");
         }
 
         changetheaddress.setOnClickListener(new View.OnClickListener() {
@@ -94,16 +97,27 @@ public class orderSummary extends AppCompatActivity {
             public void onClick(View v) {
                 Random random = new Random();
                 Integer d = random.nextInt(34354466);
-                String order_number = 303+d+"";
+                final String order_number = 303+d+"";
 
                 try{
                     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
                         mDatabase.child("orders").child(user.getUid()).child(order_number).child("itemPrize").setValue(totalPrize);
-                        mDatabase.child("orders").child(user.getUid()).child(order_number).child("orderStatus").setValue("Processing");
-//                      mDatabase.child("orders").child(user.getUid()).child(order_number).child("payment").setValue("No");
-                        Intent completeOrder = new Intent(orderSummary.this, orderComplete.class);
-                        completeOrder.putExtra("orderNumber",order_number);
-                        startActivity(completeOrder);
+                        mDatabase.child("orders").child(user.getUid()).child(order_number).child("orderStatus").setValue("Processing")
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        //move from cart
+                                        DatabaseReference move_from_cart = FirebaseDatabase.getInstance().getReference("cart")
+                                                .child(user.getUid());
+                                        move_from_cart.removeValue();
+
+                                        Intent completeOrder = new Intent(orderSummary.this, orderComplete.class);
+                                        completeOrder.putExtra("orderNumber",order_number);
+                                        startActivity(completeOrder);
+                                    }
+                                });
+
+
 //                mDatabase.child("orders").child(user.getUid()).child(order_number).child("itemid").setValue(itemid);
 
                 }

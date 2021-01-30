@@ -7,17 +7,19 @@ public class Notify {
     public String message;
     public long time;
     public String imagetype;
+    public String request_id;
 
     public Notify(){
 
     }
 
-    public Notify(String title, String message, long time, String imagetype) {
+    public Notify(String title, String message, long time, String imagetype, String request_id) {
 
         this.title = title;
         this.message = message;
         this.time = time;
         this.imagetype = imagetype;
+        this.request_id = request_id;
     }
 
 
@@ -29,5 +31,5 @@ public class Notify {
 
     public String getImageType(){return imagetype; }
 
-
+    public String getRequest_id(){return request_id; }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <group android:checkableBehavior="single">
         <item
@@ -11,15 +12,30 @@
             android:id="@+id/nav_item5"
             android:icon="@drawable/ic_book_black_24dp"
             android:title="About Us" />
+
         <item
-            android:id="@+id/sell"
-            android:icon="@drawable/upload"
-            android:title="Sell"/>
+            android:id="@+id/auto_event"
+            android:title="Auto Events"
+            android:icon="@drawable/event"
+            android:visible="false"
+            app:showAsAction="never"/>
+
+        <item
+            android:id="@+id/auto_jobs"
+            android:title="Auto Jobs"
+            android:icon="@drawable/work"
+            android:visible="false"
+            app:showAsAction="never"/>
 
         <item
             android:id="@+id/logout"
             android:icon="@drawable/logout"
             android:title="Logout" />
+
+        <item
+            android:id="@+id/register"
+            android:icon="@drawable/register"
+            android:title="Register" />
     </group>
 
 
@@ -38,10 +54,12 @@
 
             <item
                 android:id="@+id/services"
-                android:title="Services" />
+                android:title="Services"
+                android:visible="false"/>
 
             <item
                 android:id="@+id/garage"
+                android:visible="false"
                 android:title="Garage" />
         </menu>
     </item>

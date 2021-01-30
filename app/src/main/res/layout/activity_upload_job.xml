@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android     =   "http://schemas.android.com/apk/res/android"
+    xmlns:tools                 =   "http://schemas.android.com/tools"
+    android:layout_width        =   "match_parent"
+    android:layout_height       =   "match_parent"
+    android:orientation         =   "vertical"
+    tools:context               =   ".UploadJobActivity">
+
+    <TextView
+        android:text                =   "Post Your Job"
+        android:textSize            =   "15sp"
+        android:typeface            =   "normal"
+        android:layout_marginTop    =   "5dp"
+        android:gravity             =   "center"
+        android:padding             =   "10dp"
+        android:textColor           =   "@color/colorPrimary"
+        android:layout_width        =   "match_parent"
+        android:layout_height       =   "wrap_content"/>
+
+    <LinearLayout
+        android:layout_width        =   "match_parent"
+        android:layout_height       =   "wrap_content"
+        android:padding             =   "10dp"
+        android:orientation         =   "vertical">
+
+        <EditText
+            android:id                  =   "@+id/job_name"
+            android:layout_height       =   "43dp"
+            android:layout_width        =   "match_parent"
+            android:hint                =   "@string/job_title"
+            android:inputType           =   "text"
+            android:textSize            =   "15sp"
+            android:paddingLeft         =   "10dp"
+            android:background          =   "@android:drawable/editbox_background"
+            android:textColorHint       =   "@android:color/black"
+            android:textColor           =   "@android:color/holo_red_dark"
+            android:layout_marginTop    =   "10dp"/>
+
+        <Spinner
+            android:id              =   "@+id/job_regions"
+            android:layout_width    =   "match_parent"
+            android:layout_height   =   "wrap_content"
+            android:background      =   "@android:drawable/editbox_background"
+            />
+
+        <Spinner
+            android:id              =   "@+id/job_type"
+            android:layout_width    =   "match_parent"
+            android:layout_height   =   "wrap_content"
+            android:background      =   "@android:drawable/editbox_background"
+            />
+
+        <Spinner
+            android:id              =   "@+id/experience"
+            android:layout_width    =   "match_parent"
+            android:layout_height   =   "wrap_content"
+            android:background      =   "@android:drawable/editbox_background"
+            />
+
+
+        <EditText
+            android:id                  =   "@+id/job_responsibilities"
+            android:layout_height       =   "wrap_content"
+            android:minHeight           =   "70dp"
+            android:layout_width        =   "match_parent"
+            android:hint                =   "@string/job_responsibilities"
+            android:inputType           =   "textMultiLine"
+            android:textSize            =   "15sp"
+            android:paddingLeft         =   "10dp"
+            android:textColorHint       =   "@android:color/black"
+            android:textColor           =   "@android:color/holo_red_dark"
+            android:background          =   "@android:drawable/editbox_background"
+            android:layout_marginTop    =   "10dp"/>
+
+
+        <EditText
+            android:id                  =   "@+id/job_desc"
+            android:layout_height       =   "wrap_content"
+            android:layout_width        =   "match_parent"
+            android:minHeight           =   "70dp"
+            android:hint                =   "@string/job_desc"
+            android:inputType           =   "textMultiLine"
+            android:textSize            =   "15sp"
+            android:paddingLeft         =   "10dp"
+            android:textColorHint       =   "@android:color/black"
+            android:textColor           =   "@android:color/holo_red_dark"
+            android:background          =   "@android:drawable/editbox_background"
+            android:layout_marginTop    =   "10dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id                  =   "@+id/job_upload"
+        android:layout_width        =   "match_parent"
+        android:layout_height       =   "40dp"
+        android:layout_marginTop    =   "50dp"
+        android:text                =   "Submit"
+        android:textColor           =   "@android:color/white"
+        android:textSize            =   "15sp"
+        android:background          =   "@color/colorPrimary"
+        />
+
+</LinearLayout>

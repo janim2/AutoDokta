@@ -20,6 +20,7 @@
             android:id="@+id/image1"
             android:layout_width="match_parent"
             android:layout_height="200.0dp"
+            android:scaleType="centerCrop"
             android:src="@color/stay_color" />
 
         <LinearLayout

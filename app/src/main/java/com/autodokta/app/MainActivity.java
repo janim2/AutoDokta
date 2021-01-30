@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -25,16 +26,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.algolia.instantsearch.core.helpers.Searcher;
 import com.algolia.instantsearch.ui.helpers.InstantSearch;
-
+import com.algolia.search.saas.Client;
 import com.autodokta.app.Adapters.CarParts;
 import com.autodokta.app.Adapters.ImageAdapter;
 import com.autodokta.app.Adapters.PartsAdapter;
-//import com.autodokta.app.SearchItems.ResultsListView;
+import com.autodokta.app.SearchItems.ResultsListView;
+import com.autodokta.app.Services.NotificationService;
 import com.autodokta.app.helpers.Space;
 import com.crashlytics.android.Crashlytics;
 import com.google.firebase.auth.FirebaseAuth;
@@ -60,7 +64,7 @@ public class MainActivity extends AppCompatActivity
     public static int notificationCountCart = 0;
     FirebaseAuth mAuth;
     public Menu menu;
-    private MenuItem menuItem, profilemenuitem, garageMenuItem;
+    private MenuItem menuItem, profilemenuitem, register,garageMenuItem;
     private FrameLayout layout;
     private TextView cartnumberTextView, guest_or_user;
     public NavigationView navigationView;
@@ -71,24 +75,25 @@ public class MainActivity extends AppCompatActivity
     private static final int HITS_PER_PAGE = 20;
 
 
-//    strings for loading the parts from the database
+    //    strings for loading the parts from the database
     private ArrayList resultParts = new ArrayList<CarParts>();
     private RecyclerView PostRecyclerView;
     private RecyclerView.Adapter mPostAdapter;
     private RecyclerView.LayoutManager mPostLayoutManager;
-    private String imageurl, name, description, price, sellersNumber, product_rating;
+    private String imageurl, name, views, description, price, sellersNumber, product_rating;
     private ProgressBar loading;
 //    strings ends here
 
     //sliders variables starts here
     private static ViewPager viewPager;
     private static int currentPage = 0;
-//    private static final Integer[] pics = {R.drawable.coding,R.drawable.learning,R.drawable.python};
+    //    private static final Integer[] pics = {R.drawable.coding,R.drawable.learning,R.drawable.python};
     private static final Integer[] pics = {R.drawable.slider_image1,R.drawable.slider_image2,
-        R.drawable.slider_image3};
+            R.drawable.slider_image3};
     private ArrayList<Integer> picsArr = new ArrayList<Integer>();
 //    sliders variables ends here
 
+    private ImageButton         custom_request_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,27 +127,28 @@ public class MainActivity extends AppCompatActivity
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+        //initializing the image slider
         initialize();
 
 //        getting the menu from the navigation item;
         menu = navigationView.getMenu();
 //        getting the menuitem that i want to change
         menuItem = menu.findItem(R.id.logout);
+        register = menu.findItem(R.id.register);
         profilemenuitem = menu.findItem(R.id.profile);
         garageMenuItem = menu.findItem(R.id.garage);
 //        wishlistMenuItem = menu.findItem(R.id.wish_list);
 
+        custom_request_button = findViewById(R.id.custom_request);
+        custom_request_button.setOnClickListener(view -> {
+            startActivity(new Intent(MainActivity.this,CustomRequestActivity.class));
+        });
 
-        layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(mAuth.getCurrentUser()!=null){
-                    startActivity(new Intent(MainActivity.this,Cart.class));
-
-                }else{
-                    Toast.makeText(MainActivity.this,"Login",Toast.LENGTH_LONG).show();
-                }
+        layout.setOnClickListener(v -> {
+            if(mAuth.getCurrentUser()!=null){
+                startActivity(new Intent(MainActivity.this,Cart.class));
+            }else{
+                Toast.makeText(MainActivity.this,"Login",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -166,47 +172,46 @@ public class MainActivity extends AppCompatActivity
 //        items ends here
     }
 
-
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        getSupportFragmentManager().popBackStack();
+//    }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.main,menu);
-        MenuItem wish_list = menu.findItem(R.id.wish_list);
-        MenuItem chat_system = menu.findItem(R.id.chat);
-        MenuItem upload = menu.findItem(R.id.upload);
+        MenuItem wish_list      = menu.findItem(R.id.wish_list);
+        MenuItem chat_system    = menu.findItem(R.id.chat);
+        MenuItem upload_        = menu.findItem(R.id.upload);
+        MenuItem custom_request = menu.findItem(R.id.custom_requests);
 
         if(mAuth.getCurrentUser() != null){
-            wish_list.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    startActivity(new Intent(MainActivity.this,WishList.class));
-                    return false;
-                }
+            wish_list.setOnMenuItemClickListener(item -> {
+                startActivity(new Intent(MainActivity.this,WishList.class));
+                return false;
             });
 
-            chat_system.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    startActivity(new Intent(MainActivity.this,Chat.class));
-                    return false;
-                }
+            chat_system.setOnMenuItemClickListener(item -> {
+                startActivity(new Intent(MainActivity.this,Chat.class));
+                return false;
             });
 
-            upload.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    startActivity(new Intent(MainActivity.this,UploadActivity.class));
-                    return false;
-                }
+            upload_.setOnMenuItemClickListener(item -> {
+                startActivity(new Intent(MainActivity.this,UploadActivity.class));
+                return false;
+            });
+
+            custom_request.setOnMenuItemClickListener(item -> {
+                startActivity(new Intent(MainActivity.this,ViewCustomRequestActivity.class));
+                return false;
             });
         }else{
             wish_list.setVisible(false);
             chat_system.setVisible(false);
-            upload.setVisible(false);
+            upload_.setVisible(false);
         }
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -228,8 +233,6 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -241,13 +244,19 @@ public class MainActivity extends AppCompatActivity
 
 //        checking to see if user is logged In
         if(mAuth.getCurrentUser()!=null){
+            Intent i = new Intent(MainActivity.this, NotificationService.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startService(i);
+
             getNumber_in_Cart();
 //            guest_or_user.setText("Welcome user");
+            register.setVisible(false);
 
         }else{
             layout.setVisibility(View.GONE);
             profilemenuitem.setVisible(false);
             garageMenuItem.setVisible(false);
+
             menuItem.setTitle("Login");
             menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
@@ -265,27 +274,29 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void getNumber_in_Cart(){
-        DatabaseReference numberofpersons = FirebaseDatabase.getInstance().getReference("cart");
-        numberofpersons.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    for(DataSnapshot child : dataSnapshot.getChildren()){
-                        if(child.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
-                            getCount(child.getKey());
+        if(mAuth.getCurrentUser()!=null) {
+            DatabaseReference numberofpersons = FirebaseDatabase.getInstance().getReference("cart");
+            numberofpersons.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.exists()){
+                        for(DataSnapshot child : dataSnapshot.getChildren()){
+                            if(child.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
+                                getCount(child.getKey());
+                            }
+
+                            cartnumberTextView.setText("0");
+
+//                        Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
                         }
-
-                        cartnumberTextView.setText("0");
-
-
                     }
                 }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+        }
     }
 
     private void getCount(String key) {
@@ -298,7 +309,9 @@ public class MainActivity extends AppCompatActivity
                         for(DataSnapshot child : dataSnapshot.getChildren()){
                             if(child.getKey()!=null){
                                 cart_number += 1;
-
+//                                Toast.makeText(MainActivity.this,child+"",Toast.LENGTH_LONG).show();
+//                                Toast.makeText(MainActivity.this,child.getKey(),Toast.LENGTH_LONG).show();
+//                                cartnumberTextView.setText(child.getChildrenCount()+"");
                             }
                         }
                         cartnumberTextView.setText(String.valueOf(cart_number));
@@ -320,66 +333,33 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-        SectionsPagerAdapter adapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        ImageListFragment fragment = new ImageListFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt("type", 1);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 2);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 3);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 4);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 5);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 6);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 7);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-        fragment = new ImageListFragment();
-        bundle = new Bundle();
-        bundle.putInt("type", 8);
-        fragment.setArguments(bundle);
-        adapter.addFragment(fragment);
-
-        viewPager.setAdapter(adapter);
-
-    }
-
     @Override
     public boolean onNavigationItemSelected(@NonNull final MenuItem menuItem) {
         int id = menuItem.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.nav_item5) {
-//            manager.beginTransaction().replace(R.id.content_main,new AboutUs()).commit();
             startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
             return true;
         }
 
+        if (id == R.id.auto_event) {
+            startActivity(new Intent(MainActivity.this, AutoEventsActivity.class));
+            return true;
+        }
+
+        if (id == R.id.auto_jobs) {
+            startActivity(new Intent(MainActivity.this, AutoJobsActivity.class));
+            return true;
+        }
+
+        if (id == R.id.register) {
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+            return true;
+        }
+
         if (id == R.id.logout) {
-            AlertDialog.Builder logout = new AlertDialog.Builder(MainActivity.this, R.style.Myalert);
+            AlertDialog.Builder logout = new AlertDialog.Builder(MainActivity.this);
             logout.setTitle("Logging Out?");
             logout.setMessage("Are you sure you want to logout");
             logout.setNegativeButton("Logout", new DialogInterface.OnClickListener() {
@@ -408,21 +388,6 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
-       if (id == R.id.sell){
-//           if user is not logged in
-           if (mAuth.getCurrentUser() ==  null){
-//               redirect user to the login activity
-               startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-           }else {
-               startActivity(new Intent(getApplicationContext(),UploadActivity.class));
-           }
-       }
-
-
-
-
-
-
 
         if (id == R.id.contact_us){
             startActivity(new Intent(MainActivity.this,ContactUsActivity.class));
@@ -447,8 +412,6 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.profile){
             startActivity(new Intent(MainActivity.this,User_Profile.class));
         }
-
-
         return false;
     }
 
@@ -466,11 +429,10 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void getPartsIds() {
-
 //        DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("carparts").child("Offers");
         DatabaseReference partdatabase = FirebaseDatabase.getInstance().getReference().child("allParts");
 
-        partdatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+        partdatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
@@ -490,18 +452,18 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void FetchParts(final String key) {
-//        DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("carparts").child("Offers").child(key);
+        resultParts.clear();
         DatabaseReference postData = FirebaseDatabase.getInstance().getReference().child("allParts").child(key);
-        postData.addListenerForSingleValueEvent(new ValueEventListener() {
+        postData.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     for(DataSnapshot child : dataSnapshot.getChildren()){
-                        if(child.getKey().equals("image")){
+                        if(child.getKey().equals("image_url")){
                             imageurl = child.getValue().toString();
                         }
 
-                        if(child.getKey().equals("name")){
+                        if(child.getKey().equals("title")){
                             name = child.getValue().toString();
                         }
 
@@ -513,12 +475,16 @@ public class MainActivity extends AppCompatActivity
                             price = child.getValue().toString();
                         }
 
-                        if(child.getKey().equals("buyersNumber")){
+                        if(child.getKey().equals("seller_number")){
                             sellersNumber = child.getValue().toString();
                         }
 
                         if(child.getKey().equals("rating")){
                             product_rating = child.getValue().toString();
+                        }
+
+                        if(child.getKey().equals("views")){
+                            views = child.getValue().toString();
                         }
 
                         else{
@@ -529,7 +495,7 @@ public class MainActivity extends AppCompatActivity
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,name,description,price, isNew,
+                    CarParts obj = new CarParts(partid,imageurl,views,name,description,price, isNew,
                             sellersNumber,"",product_rating);
                     resultParts.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
@@ -549,7 +515,6 @@ public class MainActivity extends AppCompatActivity
     public ArrayList<CarParts> getParts(){
         return  resultParts;
     }
-
 
     private void initialize(){
 

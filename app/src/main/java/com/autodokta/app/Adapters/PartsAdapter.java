@@ -63,7 +63,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
         imageLoader.displayImage(imagelink,image);
 
         name.setText(itemList.get(position).getname());
-        price.setText(itemList.get(position).getPrice());
+        price.setText("GHC " + itemList.get(position).getPrice());
 
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +71,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
                 Intent intent = new Intent(v.getContext(), ItemDetailsActivity.class);
                 intent.putExtra("partid",itemList.get(position).getPartId());
                 intent.putExtra("theimage",itemList.get(position).getImage());
+                intent.putExtra("theviews",itemList.get(position).getViews());
                 intent.putExtra("thename",itemList.get(position).getname());
                 intent.putExtra("theprice",itemList.get(position).getPrice());
                 intent.putExtra("thedescription",itemList.get(position).getDescription());

@@ -369,6 +369,7 @@
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="tabIndicatorColor">@color/colorPrimary</color>
     <color name="tainted">#CBC9BFBF</color>
+    <color name="tinted_green_light">#B343A047</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
     <color name="white">#fff</color>
@@ -788,7 +789,7 @@
     <string name="choose_another_payment_method">Choose another payment method</string>
     <string name="choose_saved_card">CHOOSE SAVED CARD</string>
     <string name="click_here_to_copy_the_ussd_code">Click here to copy the ussd code</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">b7996559-a237-408d-ad29-617ebdc69fb9</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">870d6539-18f8-4cfe-b5f3-852a2f0f13f1</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -849,6 +850,8 @@
     <string name="error_email_does_not_exist">That email address doesn\'t match an existing account</string>
     <string name="error_user_collision">An account already exists with that email address.</string>
     <string name="error_weak_password">Password not strong enough. Use at least 6 characters and a mix of letters and numbers.</string>
+    <string name="event_description">Event description</string>
+    <string name="event_location">Event location</string>
     <string name="expiration">Valid Till (MM/YY)</string>
     <string name="expired">expired</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">android.support.design.transformation.FabTransformationScrimBehavior</string>
@@ -900,6 +903,9 @@
     <string name="item_7">Tools &amp; Garage</string>
     <string name="item_8">Wheels</string>
     <string name="item_desc">Lorem Ipsum della pon sad tupsim resd lorem adontom for sert, della pon sad tupsim resd lorem della pon sad tupsim resd lorem della pon sad tupsim resd lorem</string>
+    <string name="job_desc">Job description</string>
+    <string name="job_responsibilities">Responsibilities</string>
+    <string name="job_title">Job title</string>
     <string name="login_error">Login unsuccessful</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="missing_email_address">Enter your email address to continue</string>
@@ -970,8 +976,8 @@
     <string name="powered_by">by Flutterwave</string>
     <string name="proceed">Proceed</string>
     <string name="product_description">Description</string>
-    <string name="product_name">Product Name</string>
-    <string name="product_price">Price</string>
+    <string name="product_name">Name</string>
+    <string name="product_price">Prize</string>
     <string name="progress_dialog_loading">Loading…</string>
     <string name="progress_dialog_sending">Sending…</string>
     <string name="progress_dialog_signing_in">Signing in…</string>
@@ -992,7 +998,7 @@
     <string name="search_hint">Search for Products, Brands and More</string>
     <string name="search_menu_title">Search</string>
     <string name="secured_by_flutterwave">SECURED BY FLUTTERWAVE</string>
-    <string name="seller_number">Seller Number</string>
+    <string name="seller_number">Phone number</string>
     <string name="shipping"><b>2. Shipping</b>\n\nYour order will be prepared for shipment once it is confirmed. You will receive updates.</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_in_no_password_title">Put an email to use for sign in</string>
@@ -1049,6 +1055,8 @@
     <string name="unknownAuthmsg">Unknown Auth Model</string>
     <string name="unknownResCode">Unknown charge response code</string>
     <string name="unknownResCodemsg">Unknown charge response code</string>
+    <string name="upload_event">Upload Event</string>
+    <string name="upload_event_button">Upload event</string>
     <string name="use_a_new_card">Use another card</string>
     <string name="use_a_saved_card">Use a saved card</string>
     <string name="ussd_code_placeholder">*737*51*000#</string>
@@ -1095,7 +1103,7 @@
     <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
   </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
