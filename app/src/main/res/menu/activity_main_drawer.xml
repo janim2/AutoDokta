@@ -36,6 +36,13 @@
             android:id="@+id/register"
             android:icon="@drawable/register"
             android:title="Register" />
+
+        <item
+            android:id="@+id/services"
+            android:icon="@drawable/car"
+            android:title="Services"
+            />
+
     </group>
 
 
@@ -52,10 +59,7 @@
                 android:id="@+id/help_center"
                 android:title="@string/help_center" />
 
-            <item
-                android:id="@+id/services"
-                android:title="Services"
-                android:visible="false"/>
+
 
             <item
                 android:id="@+id/garage"

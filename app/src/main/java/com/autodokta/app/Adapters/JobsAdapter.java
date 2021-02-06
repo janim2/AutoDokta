@@ -57,6 +57,7 @@ public class JobsAdapter extends RecyclerView.Adapter<JobsAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return itemList.size();
     }
 

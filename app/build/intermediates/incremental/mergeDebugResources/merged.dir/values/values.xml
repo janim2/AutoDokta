@@ -22,6 +22,17 @@
 	</string-array>
     <string-array name="google_permissions">
     </string-array>
+    <string-array name="service_type_array">
+        <item>Car Rental</item>
+        <item>Car Interior Upholstery</item>
+        <item>Car Spraying</item>
+        <item>Auto Diagnostic</item>
+        <item>Car Key Proramming</item>
+        <item>Auto Diagnostic</item>
+        <item>Vehicle Insurance</item>
+        <item>Air Conditioning</item>
+        <item>Puncture and Tyre Replacement</item>
+    </string-array>
     <string-array name="ussd_banks">
         <item>Select Bank</item>
 		<item>Fidelity Bank</item>
@@ -759,6 +770,7 @@
     <string name="app_name">Auto Dokta</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="askToContinue">. Do you want to continue?</string>
+    <string name="auto_diagnostic">Auto Diagnostic</string>
     <string name="autodoktapay">You already have an account registered on AutoDokta Pay.You may proceed and complete your payment in one click!\nIf you have any balance,please select this option to use it.</string>
     <string name="back_to_app">Back to App</string>
     <string name="bank">Bank</string>
@@ -778,6 +790,8 @@
     <string name="bvn">BVN</string>
     <string name="cancel">CANCEL</string>
     <string name="cancelPayment">CANCEL PAYMENT</string>
+    <string name="car_rental">Car Rental</string>
+    <string name="car_spraying">Car Spraying</string>
     <string name="cardNoStripped">cardNoStripped</string>
     <string name="card_number">Card Number</string>
     <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
@@ -789,7 +803,7 @@
     <string name="choose_another_payment_method">Choose another payment method</string>
     <string name="choose_saved_card">CHOOSE SAVED CARD</string>
     <string name="click_here_to_copy_the_ussd_code">Click here to copy the ussd code</string>
-    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">870d6539-18f8-4cfe-b5f3-852a2f0f13f1</string>
+    <string name="com.crashlytics.android.build_id" ns2:ignore="UnusedResources,TypographyDashes" translatable="false">e22c29f0-c00d-46d4-ae23-e5fc6168e439</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b>&lt;br />on your smartphone or computer&lt;br />and enter this code</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -890,6 +904,7 @@
     <string name="i_have_made_the_transfer">I have made the transfer</string>
     <string name="idp_name_facebook">Facebook</string>
     <string name="idp_name_google">Google</string>
+    <string name="interior_upholstery">Car Interior Upholstery</string>
     <string name="invalidCharge">Invalid charge card response</string>
     <string name="invalidChargeCode">Invalid charge response code</string>
     <string name="invalid_email_address">That email address isn\'t correct</string>
@@ -906,6 +921,7 @@
     <string name="job_desc">Job description</string>
     <string name="job_responsibilities">Responsibilities</string>
     <string name="job_title">Job title</string>
+    <string name="key_programming">Car Key Programming</string>
     <string name="login_error">Login unsuccessful</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="missing_email_address">Enter your email address to continue</string>
@@ -999,6 +1015,14 @@
     <string name="search_menu_title">Search</string>
     <string name="secured_by_flutterwave">SECURED BY FLUTTERWAVE</string>
     <string name="seller_number">Phone number</string>
+    <string name="serviceImages">todo</string>
+    <string name="service_full_description">Full Description</string>
+    <string name="service_location">Location</string>
+    <string name="service_seller_number">Mobile</string>
+    <string name="service_short_description">Short Description </string>
+    <string name="service_upload">Upload Service</string>
+    <string name="service_upload_btn">Upload Service</string>
+    <string name="service_upload_text">Fill in the form to upload your service</string>
     <string name="shipping"><b>2. Shipping</b>\n\nYour order will be prepared for shipment once it is confirmed. You will receive updates.</string>
     <string name="sign_in">Sign in</string>
     <string name="sign_in_no_password_title">Put an email to use for sign in</string>
@@ -1044,6 +1068,7 @@
     <string name="track"><b>3. Track</b>\nYou can track your order by clicking on My Garage</string>
     <string name="transactionError">An error occurred while retrieving transaction fee</string>
     <string name="transfer_received_successfully">Transfer received successfully</string>
+    <string name="transport">Transportation</string>
     <string name="trouble_signing_in">Trouble signing in?</string>
     <string name="ugx_validate_instructions">
         <![CDATA[

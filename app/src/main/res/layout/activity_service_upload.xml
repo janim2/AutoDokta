@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ServiceUpload">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/service_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text                =   "@string/service_upload_text"
+                android:textSize            =   "15sp"
+                android:typeface            =   "normal"
+                android:layout_marginTop    =   "5dp"
+                android:gravity             =   "center"
+                android:padding             =   "10dp"
+                android:textColor           =   "@color/colorPrimary"
+                android:layout_width        =   "match_parent"
+                android:layout_height       =   "wrap_content"/>
+
+            <LinearLayout
+                android:layout_width        =   "match_parent"
+                android:layout_height       =   "wrap_content"
+                android:padding             =   "10dp"
+                android:orientation         =   "vertical">
+
+                <EditText
+                    android:id                  =   "@+id/service_name"
+                    android:layout_width        =   "match_parent"
+                    android:hint                =   "@string/product_name"
+                    android:layout_height       =   "40dp"
+                    android:textSize            =   "15sp"
+                    android:paddingLeft         =   "10dp"
+                    android:textColorHint       =   "@android:color/black"
+                    android:textColor           =   "@android:color/holo_red_dark"
+                    android:background          =   "@drawable/buttondesign"
+                    android:layout_marginTop    =   "10dp"
+                    android:inputType           =   "text"/>
+
+                <EditText
+                    android:id="@+id/service_price"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/product_price"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/service_seller_number"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/service_seller_number"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/service_loc"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/service_location"
+                    android:inputType="text"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"/>
+
+
+
+                <EditText
+                    android:id="@+id/service_short_desc"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/service_short_description"
+                    android:inputType="text"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/service_full_desc"
+                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:hint="@string/service_full_description"
+                    android:inputType="text"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@android:color/black"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/buttondesign"
+                    android:layout_marginTop="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/service_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="10dp"
+                        android:layout_marginTop="10dp"/>
+
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/service_image"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/upload"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/colorPrimary"/>
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/load_image"/>
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/service_upload"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/service_upload_btn"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:background="@color/colorPrimary"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    
+
+
+
+</LinearLayout>

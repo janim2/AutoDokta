@@ -84,4 +84,34 @@
     <string name="job_responsibilities">Responsibilities</string>
     <string name="job_desc">Job description</string>
 
+    <!--    services-->
+    <string name="car_rental">Car Rental</string>
+    <string name="interior_upholstery">Car Interior Upholstery</string>
+    <string name="car_spraying">Car Spraying</string>
+    <string name="auto_diagnostic">Auto Diagnostic</string>
+    <string name="key_programming">Car Key Programming</string>
+    <string name="transport">Transportation</string>
+    <string name="service_upload">Upload Service</string>
+    <string name="service_upload_text">Fill in the form to upload your service</string>
+    <string name="service_upload_btn">Upload Service</string>
+    <string name="service_full_description">Full Description</string>
+    <string name="service_short_description">Short Description </string>
+    <string name="service_seller_number">Mobile</string>
+    <string name="service_location">Location</string>
+    <string name="serviceImages">todo</string>
+
+    <string-array name="service_type_array">
+        <item>Car Rental</item>
+        <item>Car Interior Upholstery</item>
+        <item>Car Spraying</item>
+        <item>Auto Diagnostic</item>
+        <item>Car Key Programming</item>
+        <item>Auto Diagnostic</item>
+        <item>Vehicle Insurance</item>
+        <item>Air Conditioning</item>
+        <item>Engine Oil Change</item>
+        <item>Puncture and Tyre Replacement</item>
+    </string-array>
+
+
 </resources>

@@ -31,6 +31,7 @@ array array_dot_inactive
 array facebook_permissions
 array gh_mobile_money_networks
 array google_permissions
+array service_type_array
 array ussd_banks
 array zm_mobile_money_networks
 attr OTPButtonStyle
@@ -1212,6 +1213,8 @@ drawable blue_btn_curved
 drawable brakefluid
 drawable broken_link
 drawable buttondesign
+drawable car
+drawable chair
 drawable circle
 drawable circleforcart
 drawable classroom
@@ -1342,6 +1345,7 @@ drawable image
 drawable income
 drawable insurance
 drawable justcurved
+drawable key
 drawable load_image
 drawable logo_googleg_color_18dp
 drawable logout
@@ -1387,6 +1391,8 @@ drawable prize
 drawable profile_image
 drawable puncture
 drawable register
+drawable rental
+drawable repair
 drawable right
 drawable rounded_button
 drawable seo
@@ -1395,6 +1401,7 @@ drawable shadow_popup
 drawable slider_image1
 drawable slider_image2
 drawable slider_image3
+drawable spray
 drawable star
 drawable subtract
 drawable their_message_design
@@ -1500,6 +1507,7 @@ id cancel_action
 id cancel_button
 id capacity
 id car_insurance
+id car_keys
 id card_type_tv
 id card_view
 id cardview
@@ -1575,6 +1583,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id diagnostic
 id dialog_checkbox_box
 id dialog_checkbox_text
 id dialog_seekbar_bar
@@ -1670,6 +1679,7 @@ id inline
 id input
 id input_layout_email
 id instructionsTv
+id interior
 id invisible
 id italic
 id item_click_support
@@ -1739,6 +1749,7 @@ id mtnlayout
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id myImage
 id myRecyclerView
 id name
 id nameEditText
@@ -1918,6 +1929,7 @@ id refueling_layout
 id region
 id register
 id removeitem
+id rental
 id requester_name
 id review_titleTextView
 id right
@@ -1962,8 +1974,19 @@ id select_nationalID
 id selected
 id seller_number
 id service_description
+id service_form
+id service_full_desc
+id service_image
+id service_loc
+id service_name
+id service_price
+id service_seller_number
+id service_short_desc
 id service_spinner
+id service_type
+id service_upload
 id services
+id services_recyclerView
 id servicetype
 id servicing_layout
 id share
@@ -1985,6 +2008,7 @@ id sortCode
 id sortCodeName
 id spacer
 id split_action_bar
+id spraying
 id spread
 id spread_inside
 id src_atop
@@ -2035,6 +2059,9 @@ id textView5
 id textView7
 id textView9
 id textViewNew
+id textViewPrice
+id textViewShortDesc
+id textViewTitle
 id textWatcher
 id text_dialog
 id text_input_password_toggle
@@ -2168,6 +2195,7 @@ layout activity_add_item_review
 layout activity_auto_events
 layout activity_auto_jobs
 layout activity_cart
+layout activity_categorised_services
 layout activity_change_adress
 layout activity_chat
 layout activity_complete_order
@@ -2191,6 +2219,7 @@ layout activity_register
 layout activity_reset_password
 layout activity_search
 layout activity_service_order_details
+layout activity_service_upload
 layout activity_services
 layout activity_splash__screen
 layout activity_terms
@@ -2213,6 +2242,7 @@ layout auth_method_picker_layout
 layout avsvbv_layout
 layout card_preview_item
 layout cart_item
+layout categorisedservice_layout
 layout cell_movie
 layout com_facebook_activity_layout
 layout com_facebook_device_auth_dialog_fragment
@@ -2342,6 +2372,7 @@ menu items_details_menu
 menu jobs_menu
 menu main
 menu search_menu
+menu service_menu
 menu upload_event
 mipmap ic_launcher
 mipmap ic_launcher_foreground
@@ -2397,6 +2428,7 @@ string amount_placeholder
 string app_name
 string appbar_scrolling_view_behavior
 string askToContinue
+string auto_diagnostic
 string autodoktapay
 string back_to_app
 string bank
@@ -2416,6 +2448,8 @@ string button_text_send
 string bvn
 string cancel
 string cancelPayment
+string car_rental
+string car_spraying
 string cardNoStripped
 string card_number
 string character_counter_content_description
@@ -2527,6 +2561,7 @@ string i_have_completed_this_payment
 string i_have_made_the_transfer
 string idp_name_facebook
 string idp_name_google
+string interior_upholstery
 string invalidCharge
 string invalidChargeCode
 string invalid_email_address
@@ -2543,6 +2578,7 @@ string item_desc
 string job_desc
 string job_responsibilities
 string job_title
+string key_programming
 string login_error
 string messenger_send_button_text
 string missing_email_address
@@ -2615,6 +2651,14 @@ string search_hint
 string search_menu_title
 string secured_by_flutterwave
 string seller_number
+string serviceImages
+string service_full_description
+string service_location
+string service_seller_number
+string service_short_description
+string service_upload
+string service_upload_btn
+string service_upload_text
 string shipping
 string sign_in
 string sign_in_no_password_title
@@ -2651,6 +2695,7 @@ string tokenNotFound
 string track
 string transactionError
 string transfer_received_successfully
+string transport
 string trouble_signing_in
 string ugx_validate_instructions
 string uk_instruction
