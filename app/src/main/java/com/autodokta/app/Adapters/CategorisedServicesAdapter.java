@@ -1,6 +1,7 @@
 package com.autodokta.app.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,9 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.autodokta.app.CategorisedDetails;
 import com.autodokta.app.Models.CategorisedServicesModel;
 import com.autodokta.app.R;
 import com.bumptech.glide.Glide;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -25,6 +30,7 @@ public class CategorisedServicesAdapter extends RecyclerView.Adapter<Categorised
 
 //    storing all  product in  a list
     private List<CategorisedServicesModel> modelList;
+    ImageLoader imageLoader = ImageLoader.getInstance();
 
 //    contructor
 
@@ -51,13 +57,14 @@ public class CategorisedServicesAdapter extends RecyclerView.Adapter<Categorised
 
         //binding the data with the viewholder views
         viewHolder.title.setText(servicesModel.getTitle());
-        viewHolder.shortDesc.setText(servicesModel.getShortdesc());
-        viewHolder.price.setText((servicesModel.getPrice()));
+        viewHolder.shortDesc.setText(servicesModel.getShort_description());
+        viewHolder.price.setText("GHC " + servicesModel.getPrice());
+        viewHolder.location.setText(servicesModel.getLocation());
 
-        final ImageView testImage = viewHolder.itemView.findViewById(R.id.myImage);
-        Glide.with(context).load(modelList.get(i).getImage()).thumbnail(0.3f).into(testImage);
-
-
+//        Load images into the recyclerview using Glide
+        if (servicesModel.getImage_url() != null && !servicesModel.getImage_url().isEmpty()){
+            Glide.with(context).load(servicesModel.getImage_url()).into(viewHolder.serviceImage);
+        }
 
 
 
@@ -70,16 +77,33 @@ public class CategorisedServicesAdapter extends RecyclerView.Adapter<Categorised
 
     class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView title,shortDesc,price;
-//        ImageView serviceImage;
+        TextView title,shortDesc,price,location;
+        ImageView serviceImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            title = (itemView).findViewById(R.id.textViewTitle);
+            title = (itemView).findViewById(R.id.catTitle);
             shortDesc = (itemView).findViewById(R.id.textViewShortDesc);
-            price = (itemView).findViewById(R.id.textViewPrice);
-//            serviceImage = (itemView).findViewById(R.id.myImage);
+            price = (itemView).findViewById(R.id.catPrice);
+            location = (itemView).findViewById(R.id.catLocation);
+            serviceImage = (itemView).findViewById(R.id.thumbnail);
+
+            context = itemView.getContext();
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int itemPosition = getLayoutPosition();
+                    Intent intent = new Intent(context, CategorisedDetails.class);
+                    intent.putExtra("id",modelList.get(itemPosition).getId());
+                    intent.putExtra("title",modelList.get(itemPosition).getTitle());
+                    intent.putExtra("price",modelList.get(itemPosition).getPrice());
+                    intent.putExtra("short_description", modelList.get(itemPosition).getShort_description());
+                    intent.putExtra("img", modelList.get(itemPosition).getImage_url());
+                    intent.putExtra("seller_number", modelList.get(itemPosition).getSeller_number());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

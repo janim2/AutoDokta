@@ -82,9 +82,9 @@ public class NotificationService extends Service {
                     }
                     //sending notification if notification status is temporal
 //                    try {
-                    if(status.equals("temporary")){
-                            NotificationIsNowActive(notification_id);
-                        }
+//                    if(status.equals("temporary")){
+//                            NotificationIsNowActive(notification_id);
+//                        }
 //                    }catch (NullPointerException e){
 //                        e.printStackTrace();
 //                    }

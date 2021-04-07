@@ -17,7 +17,9 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.autodokta.app.ItemDetailsActivity;
 import com.autodokta.app.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
     ArrayList<CarParts> itemList;
@@ -33,7 +35,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
         }
     }
 
-    public PartsAdapter(ArrayList<CarParts> itemList,Context context){
+    public PartsAdapter(ArrayList<CarParts> itemList, Context context){
         this.itemList  = itemList;
         this.context  = context;
     }
@@ -59,10 +61,10 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
                 defaultDisplayImageOptions(theImageOptions).build();
         ImageLoader.getInstance().init(config);
 //
-        String imagelink = itemList.get(position).getImage();
+        String imagelink = itemList.get(position).getImage_url();
         imageLoader.displayImage(imagelink,image);
 
-        name.setText(itemList.get(position).getname());
+        name.setText(itemList.get(position).getTitle());
         price.setText("GHC " + itemList.get(position).getPrice());
 
         image.setOnClickListener(new View.OnClickListener() {
@@ -70,12 +72,12 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.ViewHolder>{
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ItemDetailsActivity.class);
                 intent.putExtra("partid",itemList.get(position).getPartId());
-                intent.putExtra("theimage",itemList.get(position).getImage());
+                intent.putExtra("theimage",itemList.get(position).getImage_url());
                 intent.putExtra("theviews",itemList.get(position).getViews());
-                intent.putExtra("thename",itemList.get(position).getname());
+                intent.putExtra("thename",itemList.get(position).getTitle());
                 intent.putExtra("theprice",itemList.get(position).getPrice());
                 intent.putExtra("thedescription",itemList.get(position).getDescription());
-                intent.putExtra("thesellersNumber",itemList.get(position).getsellersNumber());
+                intent.putExtra("thesellersNumber",itemList.get(position).getSeller_number());
                 intent.putExtra("therating",itemList.get(position).getProduct_rating());
                 v.getContext().startActivity(intent);
             }

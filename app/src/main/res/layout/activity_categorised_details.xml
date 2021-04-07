@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategorisedDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardview"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/categorisedImage"
+                android:layout_width="match_parent"
+                android:layout_height="150.0dp"
+                android:paddingLeft="10.0dp"
+                android:paddingTop="5.0dp"
+                android:paddingRight="10.0dp"
+                android:paddingBottom="5.0dp"
+                android:src="@color/stay_color" />
+
+            <TextView
+                android:id="@+id/views"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_margin="10dp"
+                android:drawablePadding="5dp"
+                android:textColor="@color/red"
+                android:drawableRight="@drawable/views"
+                android:layout_gravity="right"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="8.0dp"
+            android:paddingTop="4.0dp"
+            android:paddingRight="8.0dp"
+            android:paddingBottom="4.0dp"
+            android:padding="4dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:padding="4.0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metal Cannister "
+                    android:id="@+id/name"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GHC 8,999"
+                    android:id="@+id/categorisedPrice"
+                    android:textColor="#4CAF50"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ic_wishlist"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.3"
+                android:src="@drawable/ic_favorite_border_black_18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:ellipsize="end"
+            android:id="@+id/categorisedDesc"
+            android:textColor="@android:color/black"
+            android:text="" />
+
+
+
+        <Button
+            android:id="@+id/call"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Show Contact"
+            android:textSize="14sp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/userLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="3dp"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+
+
+        <TextView
+            android:id="@+id/userMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:padding="3dp"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Feedback"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product Rating and Reviews"
+                android:padding="5dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="See All"
+                android:padding="5dp"
+                android:id="@+id/see_all"
+                android:textSize="13sp"
+                android:drawableRight="@drawable/right"
+                android:textColor="@android:color/black"
+                android:layout_weight="3"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4/5 (ratings)"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:id="@+id/product_rating"
+            android:textColor="@color/colorPrimary"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            android:id="@+id/customer_reviewRecycler"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:text="WRITE THE FIRST REVIEW"
+            android:id="@+id/no_reviews"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Related Items"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="50dp"/>
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!--<include layout="@layout/item_event"/>-->
+                <android.support.v7.widget.RecyclerView
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    android:id="@+id/recyclerView_relatedProducts"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Not Listed?"
+            android:layout_marginTop="16dp"
+            android:textSize="15sp"
+            android:visibility="gone"
+            android:textColor="@android:color/holo_red_dark"
+            />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/no_such_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Product"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            android:text="Submit"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:id="@+id/submitted"
+            android:layout_marginRight="10dp"
+            />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/loading"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+
+
+</ScrollView>

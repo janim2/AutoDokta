@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,9 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.autodokta.app.Adapters.CategorisedServicesAdapter;
+import com.autodokta.app.Models.UserAds;
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,6 +40,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -46,6 +51,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnItemSelectedListener {
 
+
+
+    private static final String TAG = ServiceUpload.class.getSimpleName();
     private EditText service_name,service_price,service_seller,service_short_desc,service_full_desc,service_location;
     private CircleImageView circleImageView;
     private Button serviceUpload;
@@ -57,6 +65,9 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
     private FirebaseDatabase firebaseDatabase;
     private Uri imageUri;
     private  int PICK_IMAGE = 100;
+    private FirebaseAuth firebaseAuth;
+    UserAds userAds;
+
 
 
     @Override
@@ -65,6 +76,11 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
         setContentView(R.layout.activity_service_upload);
 
        getSupportActionBar().setTitle("Service Upload");
+
+       firebaseAuth = FirebaseAuth.getInstance();
+       String userId = firebaseAuth.getCurrentUser().getUid();
+
+
 
 //        calling various views uing their respective id's
         service_name = (EditText)findViewById(R.id.service_name);
@@ -90,6 +106,7 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
         circleImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 chooseImage();
             }
         });
@@ -113,7 +130,7 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
                 }else if(imageUri == null) {
                     Toast.makeText(ServiceUpload.this, "Image seclection required",Toast.LENGTH_SHORT).show();
                 }else {
-                    uploadImageToFireStore();
+                    uploadImageToFireStore(userId,name_str,price_str,seller_str,short_str,full_str,loc_str);
                 }
 
             }
@@ -149,6 +166,8 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
         intent.setAction(Intent.ACTION_GET_CONTENT);
         //receiving the selected image
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE);
+
+
     }
 
 
@@ -157,6 +176,8 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imageUri = data.getData();
+
+
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
 //                display selected image in the ImageView
@@ -169,7 +190,7 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
     }
 
 
-    private void uploadImageToFireStore(){
+    private void uploadImageToFireStore(String id, String title,String price,String seller, String shortDesc, String fullDesc,String location){
         firebaseStorage = FirebaseStorage.getInstance();
         storageReference = firebaseStorage.getReference();
         if (imageUri != null){
@@ -178,19 +199,21 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
             progressDialog.show();
 
             final StorageReference reference = storageReference.child("services-images/"+ UUID.randomUUID().toString());
+            Log.i(TAG,"reference: " + reference);
+
             reference.putFile(imageUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            if (taskSnapshot.getMetadata().getReference() != null){
-                                reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                    @Override
-                                    public void onSuccess(Uri uri) {
-                                        String imageUrl = uri.toString();
-                                        saveDataToFirebase(imageUrl);
-                                    }
-                                });
-                            }
+                          taskSnapshot.getStorage().getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                              @Override
+                              public void onSuccess(Uri uri) {
+                                  String imageUrl = uri.toString();
+                                  Log.i(TAG,":image url" + imageUrl);
+//                                  System.out.println("image url: " + imageUrl);
+                                  saveData(id,title,price,seller,shortDesc,fullDesc,location,imageUrl,selectedItem);
+                              }
+                          });
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -208,59 +231,83 @@ public class ServiceUpload extends AppCompatActivity  implements AdapterView.OnI
         }
     }
 
-    private void saveDataToFirebase(String url){
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference().child("services");
-        final Map<String, String> upload = new HashMap<>();
-        upload.put("title",         name_str);
-        upload.put("price",         price_str);
-        upload.put("seller_number", seller_str);
-        upload.put("short description",   short_str);
-
-        upload.put("location",   loc_str);
-        upload.put("image_url",     url);
-        upload.put("service_type",     selectedItem);
-        upload.put("uploader_id",   FirebaseAuth.getInstance().getUid());
-        upload.put("views",      "0");
-        upload.put("rating",     "0");
-        upload.put("full description",   full_str);
-        databaseReference.push().setValue(upload).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-
-                    Toast.makeText(ServiceUpload.this,"Upload Successful",Toast.LENGTH_LONG).show();
+    private void saveData(String id, String title, String price, String seller, String shortDesc,String fullDesc,String loc, String url,String itemSelected){
+            firebaseDatabase = FirebaseDatabase.getInstance();
+            databaseReference = firebaseDatabase.getReference();
+        userAds = new UserAds(id,title,shortDesc,fullDesc,price,url,loc,seller,itemSelected);
+        databaseReference.child("services").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).push().setValue(userAds)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(ServiceUpload.this,"Upload Successful",Toast.LENGTH_LONG).show();
 //                    service_name.getText().clear();
-                    clearForm((ViewGroup)findViewById(R.id.service_form));
-
-//                    AlertDialog.Builder uploaded = new AlertDialog.Builder(ServiceUpload.this);
-//                    uploaded.setCancelable(true);
-//                    uploaded.setMessage("Your item "+name_str+" has been uploaded.");
-//                    uploaded.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            dialog.dismiss();
-//
-//                        }
-//                    });
-
-//                    uploaded.show();
-
-
-
-
-
-
-                }else {
-                    Toast.makeText(ServiceUpload.this,"Upload Failed",Toast.LENGTH_SHORT).show();
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
+                            clearForm((ViewGroup)findViewById(R.id.service_form));
+                        }else {
+                            Toast.makeText(ServiceUpload.this,"Upload Failed",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 System.out.println("Exception: " +e.getMessage());
             }
         });
+
+
+//        firebaseDatabase = FirebaseDatabase.getInstance();
+//        databaseReference = firebaseDatabase.getReference().child("services");
+//        firebaseAuth = FirebaseAuth.getInstance();
+//        final Map<String, String> upload = new HashMap<>();
+//        upload.put("title",         name_str);
+//        upload.put("price",         price_str);
+//        upload.put("seller_number", seller_str);
+//        upload.put("short_description",   short_str);
+//
+//        upload.put("location",   loc_str);
+//        upload.put("image_url",     url);
+//        upload.put("service_type",     selectedItem);
+////        upload.put("uploader_id",   firebaseAuth.getCurrentUser().getUid());
+//        upload.put("views",      "0");
+//        upload.put("rating",     "0");
+//        upload.put("full description",   full_str);
+//        databaseReference.push().child(firebaseAuth.getCurrentUser().getUid()).setValue(upload).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if (task.isSuccessful()){
+//
+//                    Toast.makeText(ServiceUpload.this,"Upload Successful",Toast.LENGTH_LONG).show();
+////                    service_name.getText().clear();
+//                    clearForm((ViewGroup)findViewById(R.id.service_form));
+//
+////                    AlertDialog.Builder uploaded = new AlertDialog.Builder(ServiceUpload.this);
+////                    uploaded.setCancelable(true);
+////                    uploaded.setMessage("Your item "+name_str+" has been uploaded.");
+////                    uploaded.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+////                        @Override
+////                        public void onClick(DialogInterface dialog, int which) {
+////                            dialog.dismiss();
+////
+////                        }
+////                    });
+//
+////                    uploaded.show();
+//
+//
+//
+//
+//
+//
+//                }else {
+//                    Toast.makeText(ServiceUpload.this,"Upload Failed",Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//                System.out.println("Exception: " +e.getMessage());
+//            }
+//        });
 
     }
 

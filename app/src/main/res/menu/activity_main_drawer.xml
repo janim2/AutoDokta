@@ -43,6 +43,12 @@
             android:title="Services"
             />
 
+        <item
+            android:id="@+id/drone"
+            android:icon="@drawable/car"
+            android:title="Request drone"
+            />
+
     </group>
 
 

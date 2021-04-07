@@ -60,10 +60,10 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.ViewHo
                 defaultDisplayImageOptions(theImageOptions).build();
         ImageLoader.getInstance().init(config);
 //
-        String imagelink = itemList.get(position).getImage();
+        String imagelink = itemList.get(position).getImage_url();
         imageLoader.displayImage(imagelink,image);
 
-        name.setText(itemList.get(position).getname());
+        name.setText(itemList.get(position).getTitle());
         price.setText(itemList.get(position).getPrice());
 
         wish_layout.setOnClickListener(new View.OnClickListener() {
@@ -71,11 +71,11 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.ViewHo
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ItemDetailsActivity.class);
                 intent.putExtra("partid",itemList.get(position).getPartId());
-                intent.putExtra("theimage",itemList.get(position).getImage());
-                intent.putExtra("thename",itemList.get(position).getname());
+                intent.putExtra("theimage",itemList.get(position).getImage_url());
+                intent.putExtra("thename",itemList.get(position).getTitle());
                 intent.putExtra("theprice",itemList.get(position).getPrice());
                 intent.putExtra("thedescription",itemList.get(position).getDescription());
-                intent.putExtra("thesellersNumber",itemList.get(position).getsellersNumber());
+                intent.putExtra("thesellersNumber",itemList.get(position).getSeller_number());
                 v.getContext().startActivity(intent);
             }
         });

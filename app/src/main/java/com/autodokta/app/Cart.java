@@ -278,7 +278,7 @@ public class Cart extends AppCompatActivity {
                         boolean isNew = false;
                         if(name!=null || !name.equals("")){
                             CarParts obj = new CarParts(partid,imageurl,views,name,description,price,
-                                    isNew, sellersNumber,quantity,product_rating);
+                                    sellersNumber,product_rating,quantity,"",isNew);
                             resultParts.add(obj);
                             cartRecyclerView.setAdapter(mCartAdapter);
                             mCartAdapter.notifyDataSetChanged();

@@ -100,6 +100,9 @@
     <string name="service_location">Location</string>
     <string name="serviceImages">todo</string>
 
+    <!--    recyclerview click-->
+    <item name="item_click_support" type="id" />
+
     <string-array name="service_type_array">
         <item>Car Rental</item>
         <item>Car Interior Upholstery</item>
@@ -111,6 +114,33 @@
         <item>Air Conditioning</item>
         <item>Engine Oil Change</item>
         <item>Puncture and Tyre Replacement</item>
+    </string-array>
+
+
+    <string-array name="product_type">
+        <item></item>
+        <item>Cars</item>
+        <item>Buses and microbuses</item>
+        <item>Tools and equipment</item>
+        <item>Motorcycle and Powersports</item>
+        <item>Trucks and Trailers</item>
+        <item>Electronics and Accessories</item>
+        <item>Oil and Fluids</item>
+        <item>Replacement Part</item>
+        <item>Car Care</item>
+    </string-array>
+
+    <string-array name="region_spinner">
+        <item>Ashanti</item>
+        <item>Central Region</item>
+        <item>Greater Accra</item>
+        <item>Brong Ahafo</item>
+        <item>Eastern Region</item>
+        <item>Northern Region</item>
+        <item>UpperEast Region</item>
+        <item>UpperWest Region</item>
+        <item>Volta Region</item>
+        <item>Western Region</item>
     </string-array>
 
 

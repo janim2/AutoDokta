@@ -2,66 +2,67 @@ package com.autodokta.app.Models;
 
 public class CategorisedServicesModel {
 
-    private int id;
+    private String id;
     private String title;
-    private String shortdesc;
+    private String short_description;
+    private  String fullDesc;
 //    private double rating;
     private String price;
-    private int image;
+    private String image_url;
+    private String location;
+    private  String seller_number;
 
 //    empty constructor
     public CategorisedServicesModel(){
 
     }
 
-//    creating setters  and getters for it
+    //field constructors
 
-
-    public int getId() {
-        return id;
+    public CategorisedServicesModel(String id, String title, String short_description, String fullDesc, String price, String image_url, String location, String seller_number) {
+        this.id = id;
+        this.title = title;
+        this.short_description = short_description;
+        this.fullDesc = fullDesc;
+        this.price = price;
+        this.image_url = image_url;
+        this.location = location;
+        this.seller_number = seller_number;
     }
 
-    public void setId(int id) {
-        this.id = id;
+
+    // creating getters
+
+
+    public String getId() {
+        return id;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getShort_description() {
+        return short_description;
     }
 
-    public String getShortdesc() {
-        return shortdesc;
+    public String getFullDesc() {
+        return fullDesc;
     }
-
-    public void setShortdesc(String shortdesc) {
-        this.shortdesc = shortdesc;
-    }
-
-//    public double getRating() {
-//        return rating;
-//    }
-
-//    public void setRating(double rating) {
-//        this.rating = rating;
-//    }
 
     public String getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public String getImage_url() {
+        return image_url;
     }
 
-    public int getImage() {
-        return image;
+    public String getLocation() {
+        return location;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public String getSeller_number() {
+        return seller_number;
     }
 }

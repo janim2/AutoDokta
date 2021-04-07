@@ -3,6 +3,7 @@ package com.autodokta.app;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -16,6 +17,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -25,15 +27,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.algolia.instantsearch.core.helpers.Searcher;
+//import com.algolia.instantsearch.core.helpers.Searcher;
 import com.algolia.instantsearch.ui.helpers.InstantSearch;
-import com.algolia.search.saas.Client;
+//import com.algolia.search.saas.Client;
 import com.autodokta.app.Adapters.CarParts;
 import com.autodokta.app.Adapters.ImageAdapter;
 import com.autodokta.app.Adapters.PartsAdapter;
@@ -52,6 +57,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -59,7 +65,11 @@ import io.fabric.sdk.android.Fabric;
 import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+
+
 
     public static int notificationCountCart = 0;
     FirebaseAuth mAuth;
@@ -76,7 +86,11 @@ public class MainActivity extends AppCompatActivity
 
 
     //    strings for loading the parts from the database
-    private ArrayList resultParts = new ArrayList<CarParts>();
+//    private ArrayList resultParts = new ArrayList<CarParts>();
+//    private ArrayList resultParts = new ArrayList<CarParts>();
+    ArrayList<CarParts> resultParts = new ArrayList<CarParts>();
+
+
     private RecyclerView PostRecyclerView;
     private RecyclerView.Adapter mPostAdapter;
     private RecyclerView.LayoutManager mPostLayoutManager;
@@ -94,6 +108,11 @@ public class MainActivity extends AppCompatActivity
 //    sliders variables ends here
 
     private ImageButton         custom_request_button;
+
+    DatabaseReference reference;
+
+    CardView equipmentCardView, motorsCardView,carsCardView,busesCardView,electronicsCardView,replacement;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,7 +147,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //initializing the image slider
-        initialize();
+//        initialize();
 
 //        getting the menu from the navigation item;
         menu = navigationView.getMenu();
@@ -144,6 +163,95 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(MainActivity.this,CustomRequestActivity.class));
         });
 
+        loading  = (ProgressBar)findViewById(R.id.loading);
+
+        equipmentCardView = (CardView)findViewById(R.id.equipment);
+        equipmentCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent productTypeIntent = new Intent(MainActivity.this, CategorisedProduct.class);
+                productTypeIntent.putExtra("product_type","Tools and equipment");
+                try {
+                    startActivity(productTypeIntent);
+                }catch (ActivityNotFoundException ex){
+                    Log.i(TAG, "Next Activity: " + ex.getMessage());
+                }
+            }
+        });
+
+        motorsCardView = (CardView)findViewById(R.id.motors);
+        motorsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent productTypeIntent = new Intent(MainActivity.this, CategorisedProduct.class);
+                productTypeIntent.putExtra("product_type","Motorcycle and Powersports");
+                try {
+                    startActivity(productTypeIntent);
+                }catch (ActivityNotFoundException ex){
+                    Log.i(TAG, "Next Activity: " + ex.getMessage());
+                }
+            }
+        });
+
+        carsCardView = (CardView)findViewById(R.id.cars);
+        carsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent productTypeIntent = new Intent(MainActivity.this, CategorisedProduct.class);
+                productTypeIntent.putExtra("product_type","Cars");
+                try {
+                    startActivity(productTypeIntent);
+                }catch (ActivityNotFoundException ex){
+                    Log.i(TAG, "Next Activity: " + ex.getMessage());
+                }
+            }
+        });
+
+        busesCardView = (CardView)findViewById(R.id.buses);
+        busesCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent productTypeIntent = new Intent(MainActivity.this, CategorisedProduct.class);
+                productTypeIntent.putExtra("product_type","Buses and microbuses");
+                try {
+                    startActivity(productTypeIntent);
+                }catch (ActivityNotFoundException ex){
+                    Log.i(TAG, "Next Activity: " + ex.getMessage());
+                }
+            }
+        });
+
+        electronicsCardView = (CardView)findViewById(R.id.electronics);
+        electronicsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent productTypeIntent = new Intent(MainActivity.this, CategorisedProduct.class);
+                productTypeIntent.putExtra("product_type","Electronics and Accessories");
+                try {
+                    startActivity(productTypeIntent);
+                }catch (ActivityNotFoundException ex){
+                    Log.i(TAG, "Next Activity: " + ex.getMessage());
+                }
+            }
+        });
+
+        replacement = (CardView)findViewById(R.id.car_replacement);
+        replacement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent productTypeIntent = new Intent(MainActivity.this, CategorisedProduct.class);
+                productTypeIntent.putExtra("product_type","Replacement Part");
+                try {
+                    startActivity(productTypeIntent);
+                }catch (ActivityNotFoundException ex){
+                    Log.i(TAG, "Next Activity: " + ex.getMessage());
+                }
+            }
+        });
+
+
+
+
         layout.setOnClickListener(v -> {
             if(mAuth.getCurrentUser()!=null){
                 startActivity(new Intent(MainActivity.this,Cart.class));
@@ -151,6 +259,8 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(MainActivity.this,"Login",Toast.LENGTH_LONG).show();
             }
         });
+
+//        updateUIDefault();
 
         //items to load from the database starts here
         loading  = (ProgressBar)findViewById(R.id.loading);
@@ -169,15 +279,53 @@ public class MainActivity extends AppCompatActivity
         PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
 
         PostRecyclerView.setAdapter(mPostAdapter);
-//        items ends here
+
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        getSupportFragmentManager().popBackStack();
-//    }
 
+
+
+
+
+//    private void updateUIDefault(){
+//        PostRecyclerView = (RecyclerView) findViewById(R.id.recyclerViewProducts);
+//        PostRecyclerView.setHasFixedSize(true);
+//
+//        mPostLayoutManager = new GridLayoutManager(MainActivity.this,2, LinearLayoutManager.VERTICAL,false);
+////        mPostLayoutManager = new LinearLayoutManager(getActivity());
+//        PostRecyclerView.setLayoutManager(mPostLayoutManager);
+//
+////        getPartsIds(productCategory);
+//
+//        reference = FirebaseDatabase.getInstance().getReference().child("allParts");
+//
+//        reference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
+//                    CarParts carParts = snapshot.getValue(CarParts.class);
+//                    resultParts.add(carParts);
+//                }
+//
+//                //        mPostAdapter = new PartsAdapter(getParts(),MainActivity.this);
+//                mPostAdapter = new PartsAdapter(resultParts,MainActivity.this);
+//
+//                PostRecyclerView.addItemDecoration(new Space(2,20,true,0));
+//
+//                PostRecyclerView.setAdapter(mPostAdapter);
+//                loading.setVisibility(View.GONE);
+//
+//
+//
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//                System.out.println("database error:" + databaseError.getMessage());
+//            }
+//        });
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -214,6 +362,8 @@ public class MainActivity extends AppCompatActivity
         }
         return super.onCreateOptionsMenu(menu);
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -412,6 +562,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.profile){
             startActivity(new Intent(MainActivity.this,User_Profile.class));
         }
+
+        if (id == R.id.drone){
+            startActivity(new Intent(MainActivity.this, Drone.class));
+        }
+
+
+
+
         return false;
     }
 
@@ -495,8 +653,8 @@ public class MainActivity extends AppCompatActivity
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,views,name,description,price, isNew,
-                            sellersNumber,"",product_rating);
+                    CarParts obj = new CarParts(partid,imageurl,views,name,description,price,
+                            sellersNumber,product_rating,"", "",isNew);
                     resultParts.add(obj);
                     PostRecyclerView.setAdapter(mPostAdapter);
                     mPostAdapter.notifyDataSetChanged();
@@ -512,44 +670,46 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+
     public ArrayList<CarParts> getParts(){
+
         return  resultParts;
     }
 
-    private void initialize(){
-
-        for (int i=0; i<pics.length; i++){
-            picsArr.add(pics[i]);
-        }
-
-        viewPager = (ViewPager)findViewById(R.id.viewPage);
-        viewPager.setAdapter(new ImageAdapter(picsArr,MainActivity.this));
-        CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
-        indicator.setViewPager(viewPager);
-
-//        Auto start of viewPager
-//        We use handler to update the android image slider on a new thread.Enquing an action to be performed
-//        on a different thread
-        final Handler handler = new Handler();
-        final Runnable Update = new Runnable() {
-            @Override
-            public void run() {
-                if (currentPage == pics.length){
-                    currentPage = 0;
-                }
-                viewPager.setCurrentItem(currentPage++,true);
-            }
-        };
-
-//        Using the timer to  schedule task for repeated execution in a background thread
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(Update);
-            }
-        },5000,5000);
-
-    }
+//    private void initialize(){
+//
+//        for (int i=0; i<pics.length; i++){
+//            picsArr.add(pics[i]);
+//        }
+//
+////        viewPager = (ViewPager)findViewById(R.id.viewPage);
+//        viewPager.setAdapter(new ImageAdapter(picsArr,MainActivity.this));
+//        CircleIndicator indicator = (CircleIndicator)findViewById(R.id.indicator);
+//        indicator.setViewPager(viewPager);
+//
+////        Auto start of viewPager
+////        We use handler to update the android image slider on a new thread.Enquing an action to be performed
+////        on a different thread
+//        final Handler handler = new Handler();
+//        final Runnable Update = new Runnable() {
+//            @Override
+//            public void run() {
+//                if (currentPage == pics.length){
+//                    currentPage = 0;
+//                }
+//                viewPager.setCurrentItem(currentPage++,true);
+//            }
+//        };
+//
+////        Using the timer to  schedule task for repeated execution in a background thread
+//        Timer timer = new Timer();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                handler.post(Update);
+//            }
+//        },5000,5000);
+//
+//    }
 
 }

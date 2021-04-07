@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.autodokta.app.Cart;
+//import com.autodokta.app.Cart;
 import com.autodokta.app.ItemDetailsActivity;
 import com.autodokta.app.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,8 +23,10 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
+import java.util.List;
 
-    public class CartPartsAdapter extends RecyclerView.Adapter<CartPartsAdapter.ViewHolder>{
+public class CartPartsAdapter extends RecyclerView.Adapter<CartPartsAdapter.ViewHolder>{
+
         ArrayList<CarParts> itemList;
         Context context;
         ImageLoader imageLoader = ImageLoader.getInstance();
@@ -69,10 +71,10 @@ import java.util.ArrayList;
                     defaultDisplayImageOptions(theImageOptions).build();
             ImageLoader.getInstance().init(config);
 //
-            String imagelink = itemList.get(position).getImage();
+            String imagelink = itemList.get(position).getImage_url();
             imageLoader.displayImage(imagelink,image);
 
-            name.setText(itemList.get(position).getname());
+            name.setText(itemList.get(position).getTitle());
             price.setText(itemList.get(position).getPrice());
             quantity.setText(itemList.get(position).getQuantity());
 
@@ -85,7 +87,7 @@ import java.util.ArrayList;
                     DatabaseReference item = reference.child(itemList.get(position).getPartId());
                     item.removeValue();
                     Toast.makeText(v.getContext(),"Item Removed From Cart",Toast.LENGTH_LONG).show();
-                    v.getContext().startActivity(new Intent(v.getContext(),Cart.class));
+//                    v.getContext().startActivity(new Intent(v.getContext(),Cart.class));
                 }
             });
 
@@ -112,7 +114,7 @@ import java.util.ArrayList;
 
                         item.child("quantity").setValue(itemList.get(position).getQuantity());
 
-                        v.getContext().startActivity(new Intent(v.getContext(), Cart.class));
+//                        v.getContext().startActivity(new Intent(v.getContext(), Cart.class));
                     }
                 }
             });
@@ -128,7 +130,7 @@ import java.util.ArrayList;
                     DatabaseReference item = reference.child(itemList.get(position).getPartId());
                     item.child("quantity").setValue(itemList.get(position).getQuantity());
 
-                    v.getContext().startActivity(new Intent(v.getContext(), Cart.class));
+//                    v.getContext().startActivity(new Intent(v.getContext(), Cart.class));
 
 //                    LayoutInflater inflater = (LayoutInflater)v.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //

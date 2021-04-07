@@ -8,9 +8,13 @@
     tools:context=".Offers"
     tools:showIn="@layout/fragment_offers">
 
+
+
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
         android:id="@+id/recyclerViewProducts"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"/>
 </FrameLayout>

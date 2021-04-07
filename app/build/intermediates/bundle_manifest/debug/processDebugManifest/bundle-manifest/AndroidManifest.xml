@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.autodokta.app"
-    android:versionCode="50"
+    android:versionCode="55"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -10,13 +10,11 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -36,6 +34,20 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.autodokta.app.Drone" />
+        <activity android:name="com.autodokta.app.CategorisedProduct" />
+        <activity android:name="com.autodokta.app.EditAd" />
+        <activity android:name="com.autodokta.app.Invite" />
+        <activity android:name="com.autodokta.app.UserSettings" />
+        <activity android:name="com.autodokta.app.Membership" />
+        <activity android:name="com.autodokta.app.MyAds" />
+        <activity android:name="com.autodokta.app.CategorisedDetails" >
+            <intent-filter>
+                <action android:name="android.intent.action.CALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name="com.autodokta.app.CategorisedServices" />
         <activity android:name="com.autodokta.app.ServiceUpload" />
         <activity

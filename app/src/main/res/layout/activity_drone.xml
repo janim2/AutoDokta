@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Drone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/droneForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drone Request Form"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/individual_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp">
+
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:hint="First Name"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/droneFirstName"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@android:drawable/editbox_background"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:hint="Last Name"
+                    android:id="@+id/droneLastName"
+                    android:paddingLeft="10dp"
+                    android:inputType="textPersonName"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:layout_margin="5dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@android:drawable/editbox_background"/>
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:id="@+id/dronePhone"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Phone Number"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:hint="Pick-up Point"
+                    android:id="@+id/pickup"
+                    android:paddingLeft="10dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:hint="Drop-off point"
+                    android:id="@+id/drop_off"
+                    android:paddingLeft="10dp"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:inputType="text"/>
+
+
+
+
+
+
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="53dp"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:hint="Item to be delivered"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/delivery_item"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:text="Request"
+            android:textColor="@android:color/white"
+            android:id="@+id/drone_request_btn"
+            android:textSize="15sp"
+            android:background="@color/colorPrimary"
+            />
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+

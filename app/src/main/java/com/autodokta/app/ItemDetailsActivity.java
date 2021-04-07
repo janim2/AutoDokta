@@ -143,6 +143,11 @@ public class ItemDetailsActivity extends AppCompatActivity {
         item_details_dialogue = new Dialog(ItemDetailsActivity.this);
 
         spartid         =   intent.getStringExtra("partid");
+//        if (spartid == null){
+//            System.out.println("part id is null");
+//        }else {
+//            System.out.println("part id is not null");
+//        }
         simage          =   intent.getStringExtra("theimage");
         sviews          =   intent.getStringExtra("theviews");
         sname           =   intent.getStringExtra("thename");
@@ -159,6 +164,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         ImageLoader.getInstance().init(config);
 //
         findoutifthere();
+
         String imagelink = simage;
         imageLoader.displayImage(imagelink,image);
 
@@ -625,7 +631,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
                     String partid = key;
                     boolean isNew = false;
                     CarParts obj = new CarParts(partid,related_item_imageurl,related_item_views,related_item_name,related_item_description,
-                            related_item_price, isNew, related_item_sellersNumber,"",sproduct_rating);
+                            related_item_price, related_item_sellersNumber,sproduct_rating, "","", isNew);
                     relatedParts.add(obj);
                     related_items_RecyclerView.setAdapter(related_items_mPostAdapter);
                     related_items_mPostAdapter.notifyDataSetChanged();
@@ -653,14 +659,17 @@ public class ItemDetailsActivity extends AppCompatActivity {
         if(user!=null){
 
             reference = FirebaseDatabase.getInstance().getReference().child("cart").child(user.getUid()).child(spartid);
+//            reference = FirebaseDatabase.getInstance().getReference().child("allParts").child("uploader_id");
             reference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.exists()){
                         for(DataSnapshot child : dataSnapshot.getChildren()){
-                            if(child.getKey().equals(spartid)){
+                            if(child.getKey().equals("uploader_id")){
                                 item = child.getValue().toString();
                             }
+
+
                         }
                     }
                 }

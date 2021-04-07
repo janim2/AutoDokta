@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.autodokta.app.Accessories;
-import com.autodokta.app.Cart;
+//import com.autodokta.app.Cart;
 import com.autodokta.app.Chat;
 import com.autodokta.app.Notifications;
 import com.autodokta.app.R;

@@ -149,7 +149,7 @@ public class WishList extends AppCompatActivity {
 
                     String partid = key;
                     boolean isNew = false;
-                    CarParts obj = new CarParts(partid,imageurl,views,name,description,price, isNew, sellersNumber,"",product_rating);
+                    CarParts obj = new CarParts(partid,imageurl,views,name,description,price, sellersNumber,product_rating, "","", isNew);
                     wishlistParts.add(obj);
                     wishlistRecyclerView.setAdapter(mwishlistAdapter);
                     mwishlistAdapter.notifyDataSetChanged();
