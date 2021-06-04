@@ -16,8 +16,8 @@ import android.os.Build;
 import android.os.Bundle;
 
 import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.NotificationCompat;
+import androidx.core.app.FragmentActivity;
+import androidx.core.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -34,7 +34,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.autodokta.app.Adapters.CarParts;
-import com.autodokta.app.Adapters.PartsAdapter;
 import com.autodokta.app.Adapters.Related_items_PartsAdapter;
 import com.autodokta.app.Adapters.ReviewAdapter;
 import com.autodokta.app.Adapters.Reviews;
@@ -67,7 +66,6 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Random;
 
 import static android.widget.Toast.LENGTH_LONG;
 

@@ -2,26 +2,22 @@ package com.autodokta.app.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.autodokta.app.CategorisedDetails;
 import com.autodokta.app.Models.CategorisedServicesModel;
 import com.autodokta.app.R;
 import com.bumptech.glide.Glide;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import static java.lang.Double.parseDouble;
 
 public class CategorisedServicesAdapter extends RecyclerView.Adapter<CategorisedServicesAdapter.ViewHolder> {
 

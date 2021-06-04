@@ -1,8 +1,8 @@
 package com.autodokta.app;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.core.app.Fragment;
+import androidx.core.app.FragmentManager;
+import androidx.core.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

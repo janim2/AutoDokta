@@ -1,9 +1,6 @@
 package com.autodokta.app.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
-import android.provider.ContactsContract;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.autodokta.app.Cart;
-import com.autodokta.app.ItemDetailsActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.autodokta.app.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,7 +20,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.util.ArrayList;
-import java.util.List;
+
+//import com.autodokta.app.Cart;
 
 public class CartPartsAdapter extends RecyclerView.Adapter<CartPartsAdapter.ViewHolder>{
 
